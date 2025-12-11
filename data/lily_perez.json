@@ -1,0 +1,1626 @@
+{
+  "resourceType": "Bundle",
+  "id": "patient-bundle-0055",
+  "type": "batch",
+  "timestamp": "2025-12-11T03:30:20Z",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:patient-0055",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "0055",
+        "meta": {
+          "lastUpdated": "2025-11-26T03:30:20Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/patient-id",
+            "value": "PT-0055"
+          },
+          {
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "545-55-1944"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Perez",
+            "given": [
+              "Lily"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(859) 377-3792",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "lily.perez@email.com",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1940-06-01",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "118 Walnut Avenue"
+            ],
+            "city": "Phoenix",
+            "state": "AZ",
+            "postalCode": "85001",
+            "country": "USA"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "W",
+              "display": "Divorced"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/0055"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0055-enc-01",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0055-enc-01",
+        "meta": {
+          "lastUpdated": "2024-09-14T03:30:20Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0055-enc-01"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up"
+              }
+            ],
+            "text": "Annual Physical"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-001",
+              "display": "Dr. Sarah Williams"
+            }
+          }
+        ],
+        "period": {
+          "start": "2024-09-14T03:30:20Z",
+          "end": "2024-09-14T05:20:20Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-010",
+          "display": "Miami Health Center"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0055-enc-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0055-vital-01-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0055-vital-01-01",
+        "meta": {
+          "lastUpdated": "2025-11-28T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6",
+              "display": "Oxygen Saturation"
+            }
+          ],
+          "text": "Oxygen Saturation"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-01"
+        },
+        "effectiveDateTime": "2024-09-14T03:30:20Z",
+        "valueQuantity": {
+          "value": 99.1,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0055-vital-01-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0055-vital-01-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0055-vital-01-02",
+        "meta": {
+          "lastUpdated": "2025-11-16T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic BP"
+            }
+          ],
+          "text": "Diastolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-01"
+        },
+        "effectiveDateTime": "2024-09-14T03:30:20Z",
+        "valueQuantity": {
+          "value": 80.9,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0055-vital-01-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0055-vital-01-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0055-vital-01-03",
+        "meta": {
+          "lastUpdated": "2025-11-20T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body Temperature"
+            }
+          ],
+          "text": "Body Temperature"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-01"
+        },
+        "effectiveDateTime": "2024-09-14T03:30:20Z",
+        "valueQuantity": {
+          "value": 98.1,
+          "unit": "\u00b0F",
+          "system": "http://unitsofmeasure.org",
+          "code": "[degF]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0055-vital-01-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0055-vital-01-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0055-vital-01-04",
+        "meta": {
+          "lastUpdated": "2025-11-19T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart Rate"
+            }
+          ],
+          "text": "Heart Rate"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-01"
+        },
+        "effectiveDateTime": "2024-09-14T03:30:20Z",
+        "valueQuantity": {
+          "value": 81.7,
+          "unit": "beats/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0055-vital-01-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0055-vital-01-05",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0055-vital-01-05",
+        "meta": {
+          "lastUpdated": "2025-11-14T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-01"
+        },
+        "effectiveDateTime": "2024-09-14T03:30:20Z",
+        "valueQuantity": {
+          "value": 90.1,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0055-vital-01-05"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0055-enc-02",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0055-enc-02",
+        "meta": {
+          "lastUpdated": "2025-04-06T03:30:20Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0055-enc-02"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "308335008",
+                "display": "Patient encounter procedure"
+              }
+            ],
+            "text": "Procedure Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-005",
+              "display": "Dr. Lisa Patel"
+            }
+          }
+        ],
+        "period": {
+          "start": "2025-04-06T03:30:20Z",
+          "end": "2025-04-06T04:25:20Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-003",
+          "display": "Denver Medical Center"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0055-enc-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0055-vital-02-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0055-vital-02-01",
+        "meta": {
+          "lastUpdated": "2025-11-14T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart Rate"
+            }
+          ],
+          "text": "Heart Rate"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-02"
+        },
+        "effectiveDateTime": "2025-04-06T03:30:20Z",
+        "valueQuantity": {
+          "value": 67.8,
+          "unit": "beats/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0055-vital-02-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0055-vital-02-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0055-vital-02-02",
+        "meta": {
+          "lastUpdated": "2025-11-23T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-02"
+        },
+        "effectiveDateTime": "2025-04-06T03:30:20Z",
+        "valueQuantity": {
+          "value": 94.2,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0055-vital-02-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0055-vital-02-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0055-vital-02-03",
+        "meta": {
+          "lastUpdated": "2025-12-02T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6",
+              "display": "Oxygen Saturation"
+            }
+          ],
+          "text": "Oxygen Saturation"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-02"
+        },
+        "effectiveDateTime": "2025-04-06T03:30:20Z",
+        "valueQuantity": {
+          "value": 98.2,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0055-vital-02-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0055-vital-02-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0055-vital-02-04",
+        "meta": {
+          "lastUpdated": "2025-11-27T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body Temperature"
+            }
+          ],
+          "text": "Body Temperature"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-02"
+        },
+        "effectiveDateTime": "2025-04-06T03:30:20Z",
+        "valueQuantity": {
+          "value": 98.4,
+          "unit": "\u00b0F",
+          "system": "http://unitsofmeasure.org",
+          "code": "[degF]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0055-vital-02-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0055-vital-02-05",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0055-vital-02-05",
+        "meta": {
+          "lastUpdated": "2025-11-22T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory Rate"
+            }
+          ],
+          "text": "Respiratory Rate"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-02"
+        },
+        "effectiveDateTime": "2025-04-06T03:30:20Z",
+        "valueQuantity": {
+          "value": 13.2,
+          "unit": "breaths/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0055-vital-02-05"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0055-vital-02-06",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0055-vital-02-06",
+        "meta": {
+          "lastUpdated": "2025-11-17T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body Height"
+            }
+          ],
+          "text": "Body Height"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-02"
+        },
+        "effectiveDateTime": "2025-04-06T03:30:20Z",
+        "valueQuantity": {
+          "value": 184.6,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0055-vital-02-06"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0055-cond-01",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0055-cond-01",
+        "meta": {
+          "lastUpdated": "2025-12-03T03:30:20Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Type 2 diabetes mellitus"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "E11.9",
+              "display": "Type 2 diabetes mellitus"
+            }
+          ],
+          "text": "Type 2 diabetes mellitus"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-01"
+        },
+        "onsetDateTime": "2023-09-29T03:30:20Z",
+        "recordedDate": "2023-09-29T03:30:20Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0055-cond-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0055-cond-02",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0055-cond-02",
+        "meta": {
+          "lastUpdated": "2025-12-01T03:30:20Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "56265001",
+              "display": "Atrial fibrillation"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "I48.91",
+              "display": "Unspecified atrial fibrillation"
+            }
+          ],
+          "text": "Unspecified atrial fibrillation"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-01"
+        },
+        "onsetDateTime": "2024-04-06T03:30:20Z",
+        "recordedDate": "2024-04-06T03:30:20Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0055-cond-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0055-cond-03",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0055-cond-03",
+        "meta": {
+          "lastUpdated": "2025-11-20T03:30:20Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "49436004",
+              "display": "Common cold"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "J00",
+              "display": "Acute nasopharyngitis"
+            }
+          ],
+          "text": "Acute nasopharyngitis"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-01"
+        },
+        "onsetDateTime": "2024-12-31T03:30:20Z",
+        "recordedDate": "2024-12-31T03:30:20Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0055-cond-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0055-cond-04",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0055-cond-04",
+        "meta": {
+          "lastUpdated": "2025-11-30T03:30:20Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "84114007",
+              "display": "Urinary tract infection"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "N39.0",
+              "display": "Urinary tract infection"
+            }
+          ],
+          "text": "Urinary tract infection"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-01"
+        },
+        "onsetDateTime": "2025-01-23T03:30:20Z",
+        "recordedDate": "2025-01-23T03:30:20Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0055-cond-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medicationrequest-0055-med-01",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0055-med-01",
+        "meta": {
+          "lastUpdated": "2025-11-23T03:30:20Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/rx-id",
+            "value": "RX-0055-med-01"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "197517",
+              "display": "Omeprazole 20 MG Delayed Release Oral Capsule"
+            }
+          ],
+          "text": "Omeprazole 20 MG Delayed Release Oral Capsule"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-01"
+        },
+        "authoredOn": "2025-10-07T03:30:20Z",
+        "reasonReference": [
+          {
+            "reference": "Condition/0055-cond-01"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "Take once daily before breakfast",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 20.0,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 9,
+          "quantity": {
+            "value": 30,
+            "unit": "tablets"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "substitution": {
+          "allowedBoolean": true
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/0055-med-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medicationrequest-0055-med-02",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0055-med-02",
+        "meta": {
+          "lastUpdated": "2025-12-04T03:30:20Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/rx-id",
+            "value": "RX-0055-med-02"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "312617",
+              "display": "Losartan 50 MG Oral Tablet"
+            }
+          ],
+          "text": "Losartan 50 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-01"
+        },
+        "authoredOn": "2025-07-05T03:30:20Z",
+        "reasonReference": [
+          {
+            "reference": "Condition/0055-cond-02"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "Take once daily",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 50.0,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 6,
+          "quantity": {
+            "value": 30,
+            "unit": "tablets"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "substitution": {
+          "allowedBoolean": true
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/0055-med-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medicationrequest-0055-med-03",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0055-med-03",
+        "meta": {
+          "lastUpdated": "2025-12-04T03:30:20Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/rx-id",
+            "value": "RX-0055-med-03"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "855332",
+              "display": "Albuterol 90 MCG/ACTUAT Metered Dose Inhaler"
+            }
+          ],
+          "text": "Albuterol 90 MCG/ACTUAT Metered Dose Inhaler"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-01"
+        },
+        "authoredOn": "2025-03-24T03:30:20Z",
+        "reasonReference": [
+          {
+            "reference": "Condition/0055-cond-03"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "Take as needed for shortness of breath",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 90.0,
+                  "unit": "mcg",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 10,
+          "quantity": {
+            "value": 30,
+            "unit": "tablets"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "substitution": {
+          "allowedBoolean": true
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/0055-med-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medicationrequest-0055-med-04",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0055-med-04",
+        "meta": {
+          "lastUpdated": "2025-11-23T03:30:20Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/rx-id",
+            "value": "RX-0055-med-04"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "198211",
+              "display": "Aspirin 81 MG Oral Tablet"
+            }
+          ],
+          "text": "Aspirin 81 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-01"
+        },
+        "authoredOn": "2024-12-11T03:30:20Z",
+        "reasonReference": [
+          {
+            "reference": "Condition/0055-cond-04"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "Take once daily",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 81.0,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 5,
+          "quantity": {
+            "value": 30,
+            "unit": "tablets"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "substitution": {
+          "allowedBoolean": true
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/0055-med-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0055-lab-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0055-lab-01",
+        "meta": {
+          "lastUpdated": "2025-11-23T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium"
+            }
+          ],
+          "text": "Potassium"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-02"
+        },
+        "effectiveDateTime": "2025-03-31T03:30:20Z",
+        "valueQuantity": {
+          "value": 4.8,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 3.5,
+              "unit": "mmol/L"
+            },
+            "high": {
+              "value": 5.0,
+              "unit": "mmol/L"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0055-lab-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0055-lab-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0055-lab-02",
+        "meta": {
+          "lastUpdated": "2025-12-10T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2571-8",
+              "display": "Triglycerides"
+            }
+          ],
+          "text": "Triglycerides"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-01"
+        },
+        "effectiveDateTime": "2025-11-19T03:30:20Z",
+        "valueQuantity": {
+          "value": 137.6,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 80,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 150,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0055-lab-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0055-lab-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0055-lab-03",
+        "meta": {
+          "lastUpdated": "2025-11-29T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2093-3",
+              "display": "Total Cholesterol"
+            }
+          ],
+          "text": "Total Cholesterol"
+        },
+        "subject": {
+          "reference": "Patient/0055",
+          "display": "Lily Perez"
+        },
+        "encounter": {
+          "reference": "Encounter/0055-enc-02"
+        },
+        "effectiveDateTime": "2025-10-31T03:30:20Z",
+        "valueQuantity": {
+          "value": 192.0,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 150,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 200,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0055-lab-03"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1563 @@
+{
+  "resourceType": "Bundle",
+  "id": "patient-bundle-0072",
+  "type": "batch",
+  "timestamp": "2025-12-11T03:30:21Z",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:patient-0072",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "0072",
+        "meta": {
+          "lastUpdated": "2025-12-03T03:30:21Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/patient-id",
+            "value": "PT-0072"
+          },
+          {
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "795-61-7692"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Turner",
+            "given": [
+              "Thomas"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(418) 343-3896",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "thomas.turner@email.com",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1962-02-03",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "8883 First Place"
+            ],
+            "city": "Philadelphia",
+            "state": "PA",
+            "postalCode": "19101",
+            "country": "USA"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "M",
+              "display": "Widowed"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/0072"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0072-enc-01",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0072-enc-01",
+        "meta": {
+          "lastUpdated": "2024-03-30T03:30:21Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0072-enc-01"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185345009",
+                "display": "Encounter for symptom"
+              }
+            ],
+            "text": "Sick Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-005",
+              "display": "Dr. Lisa Patel"
+            }
+          }
+        ],
+        "period": {
+          "start": "2024-03-30T03:30:21Z",
+          "end": "2024-03-30T05:18:21Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-005",
+          "display": "Chicago Family Medicine"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0072-enc-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-vital-01-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-vital-01-01",
+        "meta": {
+          "lastUpdated": "2025-11-13T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6",
+              "display": "Oxygen Saturation"
+            }
+          ],
+          "text": "Oxygen Saturation"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-01"
+        },
+        "effectiveDateTime": "2024-03-30T03:30:21Z",
+        "valueQuantity": {
+          "value": 98.7,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-vital-01-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-vital-01-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-vital-01-02",
+        "meta": {
+          "lastUpdated": "2025-11-23T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body Height"
+            }
+          ],
+          "text": "Body Height"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-01"
+        },
+        "effectiveDateTime": "2024-03-30T03:30:21Z",
+        "valueQuantity": {
+          "value": 156.4,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-vital-01-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-vital-01-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-vital-01-03",
+        "meta": {
+          "lastUpdated": "2025-11-28T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-01"
+        },
+        "effectiveDateTime": "2024-03-30T03:30:21Z",
+        "valueQuantity": {
+          "value": 115.5,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-vital-01-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0072-enc-02",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0072-enc-02",
+        "meta": {
+          "lastUpdated": "2025-01-28T03:30:21Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0072-enc-02"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up"
+              }
+            ],
+            "text": "Annual Physical"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-003",
+              "display": "Dr. Emily Rodriguez"
+            }
+          }
+        ],
+        "period": {
+          "start": "2025-01-28T03:30:21Z",
+          "end": "2025-01-28T03:52:21Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-003",
+          "display": "Denver Medical Center"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0072-enc-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-vital-02-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-vital-02-01",
+        "meta": {
+          "lastUpdated": "2025-12-06T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart Rate"
+            }
+          ],
+          "text": "Heart Rate"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-02"
+        },
+        "effectiveDateTime": "2025-01-28T03:30:21Z",
+        "valueQuantity": {
+          "value": 68.7,
+          "unit": "beats/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-vital-02-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-vital-02-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-vital-02-02",
+        "meta": {
+          "lastUpdated": "2025-12-10T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body Temperature"
+            }
+          ],
+          "text": "Body Temperature"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-02"
+        },
+        "effectiveDateTime": "2025-01-28T03:30:21Z",
+        "valueQuantity": {
+          "value": 98.7,
+          "unit": "\u00b0F",
+          "system": "http://unitsofmeasure.org",
+          "code": "[degF]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-vital-02-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-vital-02-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-vital-02-03",
+        "meta": {
+          "lastUpdated": "2025-12-03T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body Height"
+            }
+          ],
+          "text": "Body Height"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-02"
+        },
+        "effectiveDateTime": "2025-01-28T03:30:21Z",
+        "valueQuantity": {
+          "value": 174.4,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-vital-02-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-vital-02-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-vital-02-04",
+        "meta": {
+          "lastUpdated": "2025-12-10T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-02"
+        },
+        "effectiveDateTime": "2025-01-28T03:30:21Z",
+        "valueQuantity": {
+          "value": 75.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-vital-02-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-vital-02-05",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-vital-02-05",
+        "meta": {
+          "lastUpdated": "2025-11-17T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory Rate"
+            }
+          ],
+          "text": "Respiratory Rate"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-02"
+        },
+        "effectiveDateTime": "2025-01-28T03:30:21Z",
+        "valueQuantity": {
+          "value": 18.4,
+          "unit": "breaths/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-vital-02-05"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-vital-02-06",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-vital-02-06",
+        "meta": {
+          "lastUpdated": "2025-12-09T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6",
+              "display": "Oxygen Saturation"
+            }
+          ],
+          "text": "Oxygen Saturation"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-02"
+        },
+        "effectiveDateTime": "2025-01-28T03:30:21Z",
+        "valueQuantity": {
+          "value": 94.5,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-vital-02-06"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0072-enc-03",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0072-enc-03",
+        "meta": {
+          "lastUpdated": "2025-07-01T03:30:21Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0072-enc-03"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up"
+              }
+            ],
+            "text": "Annual Physical"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-008",
+              "display": "Dr. David Wilson"
+            }
+          }
+        ],
+        "period": {
+          "start": "2025-07-01T03:30:21Z",
+          "end": "2025-07-01T04:25:21Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-007",
+          "display": "NYC Medical Group"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0072-enc-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-vital-03-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-vital-03-01",
+        "meta": {
+          "lastUpdated": "2025-11-27T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart Rate"
+            }
+          ],
+          "text": "Heart Rate"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-03"
+        },
+        "effectiveDateTime": "2025-07-01T03:30:21Z",
+        "valueQuantity": {
+          "value": 91.2,
+          "unit": "beats/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-vital-03-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-vital-03-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-vital-03-02",
+        "meta": {
+          "lastUpdated": "2025-11-28T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body Temperature"
+            }
+          ],
+          "text": "Body Temperature"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-03"
+        },
+        "effectiveDateTime": "2025-07-01T03:30:21Z",
+        "valueQuantity": {
+          "value": 98.2,
+          "unit": "\u00b0F",
+          "system": "http://unitsofmeasure.org",
+          "code": "[degF]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-vital-03-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-vital-03-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-vital-03-03",
+        "meta": {
+          "lastUpdated": "2025-12-10T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic BP"
+            }
+          ],
+          "text": "Systolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-03"
+        },
+        "effectiveDateTime": "2025-07-01T03:30:21Z",
+        "valueQuantity": {
+          "value": 110.8,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-vital-03-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0072-cond-01",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0072-cond-01",
+        "meta": {
+          "lastUpdated": "2025-12-04T03:30:21Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "267036007",
+              "display": "Chronic cough"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "R05.9",
+              "display": "Cough, unspecified"
+            }
+          ],
+          "text": "Cough, unspecified"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-01"
+        },
+        "onsetDateTime": "2025-07-05T03:30:21Z",
+        "recordedDate": "2025-07-05T03:30:21Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0072-cond-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0072-cond-02",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0072-cond-02",
+        "meta": {
+          "lastUpdated": "2025-11-13T03:30:21Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "195967001",
+              "display": "Asthma"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "J45.909",
+              "display": "Asthma, unspecified"
+            }
+          ],
+          "text": "Asthma, unspecified"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-01"
+        },
+        "onsetDateTime": "2023-08-10T03:30:21Z",
+        "recordedDate": "2023-08-10T03:30:21Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0072-cond-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medicationrequest-0072-med-01",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0072-med-01",
+        "meta": {
+          "lastUpdated": "2025-11-14T03:30:21Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/rx-id",
+            "value": "RX-0072-med-01"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "198240",
+              "display": "Acetaminophen 500 MG Oral Tablet"
+            }
+          ],
+          "text": "Acetaminophen 500 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-01"
+        },
+        "authoredOn": "2025-11-24T03:30:21Z",
+        "reasonReference": [
+          {
+            "reference": "Condition/0072-cond-01"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "Take every 6 hours as needed",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 500.0,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 1,
+          "quantity": {
+            "value": 30,
+            "unit": "tablets"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "substitution": {
+          "allowedBoolean": true
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/0072-med-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medicationrequest-0072-med-02",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0072-med-02",
+        "meta": {
+          "lastUpdated": "2025-11-27T03:30:21Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/rx-id",
+            "value": "RX-0072-med-02"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "312617",
+              "display": "Losartan 50 MG Oral Tablet"
+            }
+          ],
+          "text": "Losartan 50 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-01"
+        },
+        "authoredOn": "2025-01-30T03:30:21Z",
+        "reasonReference": [
+          {
+            "reference": "Condition/0072-cond-02"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "Take once daily",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 50.0,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 10,
+          "quantity": {
+            "value": 30,
+            "unit": "tablets"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "substitution": {
+          "allowedBoolean": true
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/0072-med-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-lab-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-lab-01",
+        "meta": {
+          "lastUpdated": "2025-11-24T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3094-0",
+              "display": "BUN"
+            }
+          ],
+          "text": "BUN"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-01"
+        },
+        "effectiveDateTime": "2025-12-05T03:30:21Z",
+        "valueQuantity": {
+          "value": 11.7,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 7,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 20,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-lab-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-lab-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-lab-02",
+        "meta": {
+          "lastUpdated": "2025-11-30T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine"
+            }
+          ],
+          "text": "Creatinine"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-02"
+        },
+        "effectiveDateTime": "2025-07-25T03:30:21Z",
+        "valueQuantity": {
+          "value": 1.2,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.6,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 1.2,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-lab-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-lab-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-lab-03",
+        "meta": {
+          "lastUpdated": "2025-12-09T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "HbA1c"
+            }
+          ],
+          "text": "HbA1c"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-03"
+        },
+        "effectiveDateTime": "2025-04-07T03:30:21Z",
+        "valueQuantity": {
+          "value": 5.3,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.5,
+              "unit": "%"
+            },
+            "high": {
+              "value": 5.7,
+              "unit": "%"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-lab-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-lab-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-lab-04",
+        "meta": {
+          "lastUpdated": "2025-11-21T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "13457-7",
+              "display": "LDL Cholesterol"
+            }
+          ],
+          "text": "LDL Cholesterol"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-01"
+        },
+        "effectiveDateTime": "2025-09-18T03:30:21Z",
+        "valueQuantity": {
+          "value": 149.6,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 70,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 100,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-lab-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0072-lab-05",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0072-lab-05",
+        "meta": {
+          "lastUpdated": "2025-11-27T03:30:21Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium"
+            }
+          ],
+          "text": "Potassium"
+        },
+        "subject": {
+          "reference": "Patient/0072",
+          "display": "Thomas Turner"
+        },
+        "encounter": {
+          "reference": "Encounter/0072-enc-01"
+        },
+        "effectiveDateTime": "2025-02-24T03:30:21Z",
+        "valueQuantity": {
+          "value": 5.4,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 3.5,
+              "unit": "mmol/L"
+            },
+            "high": {
+              "value": 5.0,
+              "unit": "mmol/L"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0072-lab-05"
+      }
+    }
+  ]
+}

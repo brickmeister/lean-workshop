@@ -1,0 +1,1528 @@
+{
+  "resourceType": "Bundle",
+  "id": "patient-bundle-0065",
+  "type": "batch",
+  "timestamp": "2025-12-11T03:30:20Z",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:patient-0065",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "0065",
+        "meta": {
+          "lastUpdated": "2025-12-11T03:30:20Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/patient-id",
+            "value": "PT-0065"
+          },
+          {
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "654-16-2070"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Taylor",
+            "given": [
+              "Thomas"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(924) 200-6762",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "thomas.taylor@email.com",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1967-09-13",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "3027 Hill Place"
+            ],
+            "city": "Nashville",
+            "state": "TN",
+            "postalCode": "37201",
+            "country": "USA"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "S",
+              "display": "Divorced"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/0065"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0065-enc-01",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0065-enc-01",
+        "meta": {
+          "lastUpdated": "2024-10-26T03:30:20Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0065-enc-01"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185345009",
+                "display": "Encounter for symptom"
+              }
+            ],
+            "text": "Sick Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-001",
+              "display": "Dr. Sarah Williams"
+            }
+          }
+        ],
+        "period": {
+          "start": "2024-10-26T03:30:20Z",
+          "end": "2024-10-26T03:53:20Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-003",
+          "display": "Denver Medical Center"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0065-enc-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-vital-01-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-vital-01-01",
+        "meta": {
+          "lastUpdated": "2025-12-04T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic BP"
+            }
+          ],
+          "text": "Systolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-01"
+        },
+        "effectiveDateTime": "2024-10-26T03:30:20Z",
+        "valueQuantity": {
+          "value": 148.8,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-vital-01-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-vital-01-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-vital-01-02",
+        "meta": {
+          "lastUpdated": "2025-11-16T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart Rate"
+            }
+          ],
+          "text": "Heart Rate"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-01"
+        },
+        "effectiveDateTime": "2024-10-26T03:30:20Z",
+        "valueQuantity": {
+          "value": 96.7,
+          "unit": "beats/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-vital-01-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-vital-01-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-vital-01-03",
+        "meta": {
+          "lastUpdated": "2025-11-17T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-01"
+        },
+        "effectiveDateTime": "2024-10-26T03:30:20Z",
+        "valueQuantity": {
+          "value": 75.7,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-vital-01-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-vital-01-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-vital-01-04",
+        "meta": {
+          "lastUpdated": "2025-11-26T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body Temperature"
+            }
+          ],
+          "text": "Body Temperature"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-01"
+        },
+        "effectiveDateTime": "2024-10-26T03:30:20Z",
+        "valueQuantity": {
+          "value": 99.4,
+          "unit": "\u00b0F",
+          "system": "http://unitsofmeasure.org",
+          "code": "[degF]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-vital-01-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0065-enc-02",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0065-enc-02",
+        "meta": {
+          "lastUpdated": "2025-03-16T03:30:20Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0065-enc-02"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "390906007",
+                "display": "Follow-up encounter"
+              }
+            ],
+            "text": "Follow-up Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-007",
+              "display": "Dr. Jennifer Martinez"
+            }
+          }
+        ],
+        "period": {
+          "start": "2025-03-16T03:30:20Z",
+          "end": "2025-03-16T03:54:20Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-001",
+          "display": "Austin Primary Care Clinic"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0065-enc-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-vital-02-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-vital-02-01",
+        "meta": {
+          "lastUpdated": "2025-12-02T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body Temperature"
+            }
+          ],
+          "text": "Body Temperature"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-02"
+        },
+        "effectiveDateTime": "2025-03-16T03:30:20Z",
+        "valueQuantity": {
+          "value": 98.8,
+          "unit": "\u00b0F",
+          "system": "http://unitsofmeasure.org",
+          "code": "[degF]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-vital-02-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-vital-02-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-vital-02-02",
+        "meta": {
+          "lastUpdated": "2025-12-06T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6",
+              "display": "Oxygen Saturation"
+            }
+          ],
+          "text": "Oxygen Saturation"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-02"
+        },
+        "effectiveDateTime": "2025-03-16T03:30:20Z",
+        "valueQuantity": {
+          "value": 95.8,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-vital-02-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-vital-02-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-vital-02-03",
+        "meta": {
+          "lastUpdated": "2025-11-25T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic BP"
+            }
+          ],
+          "text": "Diastolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-02"
+        },
+        "effectiveDateTime": "2025-03-16T03:30:20Z",
+        "valueQuantity": {
+          "value": 70.5,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-vital-02-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-vital-02-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-vital-02-04",
+        "meta": {
+          "lastUpdated": "2025-12-04T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body Height"
+            }
+          ],
+          "text": "Body Height"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-02"
+        },
+        "effectiveDateTime": "2025-03-16T03:30:20Z",
+        "valueQuantity": {
+          "value": 170.3,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-vital-02-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0065-enc-03",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0065-enc-03",
+        "meta": {
+          "lastUpdated": "2025-06-20T03:30:20Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0065-enc-03"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "371883000",
+                "display": "Outpatient procedure"
+              }
+            ],
+            "text": "Outpatient Procedure"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-003",
+              "display": "Dr. Emily Rodriguez"
+            }
+          }
+        ],
+        "period": {
+          "start": "2025-06-20T03:30:20Z",
+          "end": "2025-06-20T04:41:20Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-001",
+          "display": "Austin Primary Care Clinic"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0065-enc-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-vital-03-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-vital-03-01",
+        "meta": {
+          "lastUpdated": "2025-11-20T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic BP"
+            }
+          ],
+          "text": "Systolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-03"
+        },
+        "effectiveDateTime": "2025-06-20T03:30:20Z",
+        "valueQuantity": {
+          "value": 136.6,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-vital-03-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-vital-03-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-vital-03-02",
+        "meta": {
+          "lastUpdated": "2025-12-05T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic BP"
+            }
+          ],
+          "text": "Diastolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-03"
+        },
+        "effectiveDateTime": "2025-06-20T03:30:20Z",
+        "valueQuantity": {
+          "value": 90.8,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-vital-03-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-vital-03-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-vital-03-03",
+        "meta": {
+          "lastUpdated": "2025-11-21T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-03"
+        },
+        "effectiveDateTime": "2025-06-20T03:30:20Z",
+        "valueQuantity": {
+          "value": 102.0,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-vital-03-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0065-enc-04",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0065-enc-04",
+        "meta": {
+          "lastUpdated": "2025-11-18T03:30:20Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0065-enc-04"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "439740005",
+                "display": "Postoperative follow-up visit"
+              }
+            ],
+            "text": "Post-op Follow-up"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-010",
+              "display": "Dr. Christopher Lee"
+            }
+          }
+        ],
+        "period": {
+          "start": "2025-11-18T03:30:20Z",
+          "end": "2025-11-18T04:59:20Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-006",
+          "display": "Boston Healthcare Associates"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0065-enc-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-vital-04-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-vital-04-01",
+        "meta": {
+          "lastUpdated": "2025-11-14T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic BP"
+            }
+          ],
+          "text": "Systolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-04"
+        },
+        "effectiveDateTime": "2025-11-18T03:30:20Z",
+        "valueQuantity": {
+          "value": 123.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-vital-04-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-vital-04-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-vital-04-02",
+        "meta": {
+          "lastUpdated": "2025-11-24T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body Height"
+            }
+          ],
+          "text": "Body Height"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-04"
+        },
+        "effectiveDateTime": "2025-11-18T03:30:20Z",
+        "valueQuantity": {
+          "value": 165.9,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-vital-04-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-vital-04-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-vital-04-03",
+        "meta": {
+          "lastUpdated": "2025-11-14T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory Rate"
+            }
+          ],
+          "text": "Respiratory Rate"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-04"
+        },
+        "effectiveDateTime": "2025-11-18T03:30:20Z",
+        "valueQuantity": {
+          "value": 14.0,
+          "unit": "breaths/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-vital-04-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-vital-04-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-vital-04-04",
+        "meta": {
+          "lastUpdated": "2025-12-05T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic BP"
+            }
+          ],
+          "text": "Diastolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-04"
+        },
+        "effectiveDateTime": "2025-11-18T03:30:20Z",
+        "valueQuantity": {
+          "value": 97.2,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-vital-04-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-vital-04-05",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-vital-04-05",
+        "meta": {
+          "lastUpdated": "2025-12-05T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body Temperature"
+            }
+          ],
+          "text": "Body Temperature"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-04"
+        },
+        "effectiveDateTime": "2025-11-18T03:30:20Z",
+        "valueQuantity": {
+          "value": 98.7,
+          "unit": "\u00b0F",
+          "system": "http://unitsofmeasure.org",
+          "code": "[degF]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-vital-04-05"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0065-cond-01",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0065-cond-01",
+        "meta": {
+          "lastUpdated": "2025-11-21T03:30:20Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Type 2 diabetes mellitus"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "E11.9",
+              "display": "Type 2 diabetes mellitus"
+            }
+          ],
+          "text": "Type 2 diabetes mellitus"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-01"
+        },
+        "onsetDateTime": "2024-03-07T03:30:20Z",
+        "recordedDate": "2024-03-07T03:30:20Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0065-cond-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medicationrequest-0065-med-01",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0065-med-01",
+        "meta": {
+          "lastUpdated": "2025-12-08T03:30:20Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/rx-id",
+            "value": "RX-0065-med-01"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "197517",
+              "display": "Omeprazole 20 MG Delayed Release Oral Capsule"
+            }
+          ],
+          "text": "Omeprazole 20 MG Delayed Release Oral Capsule"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-01"
+        },
+        "authoredOn": "2025-01-05T03:30:20Z",
+        "reasonReference": [
+          {
+            "reference": "Condition/0065-cond-01"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "Take once daily before breakfast",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 20.0,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 7,
+          "quantity": {
+            "value": 30,
+            "unit": "tablets"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "substitution": {
+          "allowedBoolean": true
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/0065-med-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-lab-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-lab-01",
+        "meta": {
+          "lastUpdated": "2025-11-26T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "13457-7",
+              "display": "LDL Cholesterol"
+            }
+          ],
+          "text": "LDL Cholesterol"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-01"
+        },
+        "effectiveDateTime": "2025-06-12T03:30:20Z",
+        "valueQuantity": {
+          "value": 74.4,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 70,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 100,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-lab-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-lab-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-lab-02",
+        "meta": {
+          "lastUpdated": "2025-11-26T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2951-2",
+              "display": "Sodium"
+            }
+          ],
+          "text": "Sodium"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-04"
+        },
+        "effectiveDateTime": "2025-04-23T03:30:20Z",
+        "valueQuantity": {
+          "value": 142.5,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 136,
+              "unit": "mmol/L"
+            },
+            "high": {
+              "value": 145,
+              "unit": "mmol/L"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-lab-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0065-lab-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0065-lab-03",
+        "meta": {
+          "lastUpdated": "2025-11-29T03:30:20Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "HbA1c"
+            }
+          ],
+          "text": "HbA1c"
+        },
+        "subject": {
+          "reference": "Patient/0065",
+          "display": "Thomas Taylor"
+        },
+        "encounter": {
+          "reference": "Encounter/0065-enc-02"
+        },
+        "effectiveDateTime": "2025-11-21T03:30:20Z",
+        "valueQuantity": {
+          "value": 8.2,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.5,
+              "unit": "%"
+            },
+            "high": {
+              "value": 5.7,
+              "unit": "%"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0065-lab-03"
+      }
+    }
+  ]
+}

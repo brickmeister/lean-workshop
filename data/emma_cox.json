@@ -1,0 +1,1822 @@
+{
+  "resourceType": "Bundle",
+  "id": "patient-bundle-0022",
+  "type": "batch",
+  "timestamp": "2025-12-11T03:30:18Z",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:patient-0022",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "0022",
+        "meta": {
+          "lastUpdated": "2025-12-05T03:30:18Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/patient-id",
+            "value": "PT-0022"
+          },
+          {
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "102-29-9234"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Cox",
+            "given": [
+              "Emma"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(728) 891-3281",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "emma.cox@email.com",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1940-07-28",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "8252 Magnolia Court"
+            ],
+            "city": "Cleveland",
+            "state": "OH",
+            "postalCode": "44101",
+            "country": "USA"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "S",
+              "display": "Never Married"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/0022"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0022-enc-01",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0022-enc-01",
+        "meta": {
+          "lastUpdated": "2024-03-22T03:30:18Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0022-enc-01"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185345009",
+                "display": "Encounter for symptom"
+              }
+            ],
+            "text": "Sick Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-002",
+              "display": "Dr. Michael Chen"
+            }
+          }
+        ],
+        "period": {
+          "start": "2024-03-22T03:30:18Z",
+          "end": "2024-03-22T03:56:18Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-004",
+          "display": "Bay Area Health Partners"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0022-enc-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-vital-01-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-vital-01-01",
+        "meta": {
+          "lastUpdated": "2025-12-06T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body Temperature"
+            }
+          ],
+          "text": "Body Temperature"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-01"
+        },
+        "effectiveDateTime": "2024-03-22T03:30:18Z",
+        "valueQuantity": {
+          "value": 99.1,
+          "unit": "\u00b0F",
+          "system": "http://unitsofmeasure.org",
+          "code": "[degF]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-vital-01-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-vital-01-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-vital-01-02",
+        "meta": {
+          "lastUpdated": "2025-11-18T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic BP"
+            }
+          ],
+          "text": "Systolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-01"
+        },
+        "effectiveDateTime": "2024-03-22T03:30:18Z",
+        "valueQuantity": {
+          "value": 142.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-vital-01-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-vital-01-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-vital-01-03",
+        "meta": {
+          "lastUpdated": "2025-11-26T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-01"
+        },
+        "effectiveDateTime": "2024-03-22T03:30:18Z",
+        "valueQuantity": {
+          "value": 114.9,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-vital-01-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-vital-01-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-vital-01-04",
+        "meta": {
+          "lastUpdated": "2025-11-15T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic BP"
+            }
+          ],
+          "text": "Diastolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-01"
+        },
+        "effectiveDateTime": "2024-03-22T03:30:18Z",
+        "valueQuantity": {
+          "value": 67.2,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-vital-01-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0022-enc-02",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0022-enc-02",
+        "meta": {
+          "lastUpdated": "2025-04-15T03:30:18Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0022-enc-02"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "308335008",
+                "display": "Patient encounter procedure"
+              }
+            ],
+            "text": "Procedure Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-001",
+              "display": "Dr. Sarah Williams"
+            }
+          }
+        ],
+        "period": {
+          "start": "2025-04-15T03:30:18Z",
+          "end": "2025-04-15T04:08:18Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-003",
+          "display": "Denver Medical Center"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0022-enc-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-vital-02-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-vital-02-01",
+        "meta": {
+          "lastUpdated": "2025-12-08T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6",
+              "display": "Oxygen Saturation"
+            }
+          ],
+          "text": "Oxygen Saturation"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-02"
+        },
+        "effectiveDateTime": "2025-04-15T03:30:18Z",
+        "valueQuantity": {
+          "value": 96.4,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-vital-02-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-vital-02-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-vital-02-02",
+        "meta": {
+          "lastUpdated": "2025-11-27T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body Temperature"
+            }
+          ],
+          "text": "Body Temperature"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-02"
+        },
+        "effectiveDateTime": "2025-04-15T03:30:18Z",
+        "valueQuantity": {
+          "value": 98.9,
+          "unit": "\u00b0F",
+          "system": "http://unitsofmeasure.org",
+          "code": "[degF]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-vital-02-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-vital-02-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-vital-02-03",
+        "meta": {
+          "lastUpdated": "2025-12-08T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic BP"
+            }
+          ],
+          "text": "Systolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-02"
+        },
+        "effectiveDateTime": "2025-04-15T03:30:18Z",
+        "valueQuantity": {
+          "value": 115.6,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-vital-02-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-vital-02-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-vital-02-04",
+        "meta": {
+          "lastUpdated": "2025-12-03T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body Height"
+            }
+          ],
+          "text": "Body Height"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-02"
+        },
+        "effectiveDateTime": "2025-04-15T03:30:18Z",
+        "valueQuantity": {
+          "value": 160.1,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-vital-02-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-vital-02-05",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-vital-02-05",
+        "meta": {
+          "lastUpdated": "2025-11-24T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart Rate"
+            }
+          ],
+          "text": "Heart Rate"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-02"
+        },
+        "effectiveDateTime": "2025-04-15T03:30:18Z",
+        "valueQuantity": {
+          "value": 76.5,
+          "unit": "beats/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-vital-02-05"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0022-enc-03",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0022-enc-03",
+        "meta": {
+          "lastUpdated": "2025-05-19T03:30:18Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0022-enc-03"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "390906007",
+                "display": "Follow-up encounter"
+              }
+            ],
+            "text": "Follow-up Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-002",
+              "display": "Dr. Michael Chen"
+            }
+          }
+        ],
+        "period": {
+          "start": "2025-05-19T03:30:18Z",
+          "end": "2025-05-19T05:30:18Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-007",
+          "display": "NYC Medical Group"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0022-enc-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-vital-03-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-vital-03-01",
+        "meta": {
+          "lastUpdated": "2025-12-11T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory Rate"
+            }
+          ],
+          "text": "Respiratory Rate"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-03"
+        },
+        "effectiveDateTime": "2025-05-19T03:30:18Z",
+        "valueQuantity": {
+          "value": 17.6,
+          "unit": "breaths/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-vital-03-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-vital-03-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-vital-03-02",
+        "meta": {
+          "lastUpdated": "2025-11-14T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body Temperature"
+            }
+          ],
+          "text": "Body Temperature"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-03"
+        },
+        "effectiveDateTime": "2025-05-19T03:30:18Z",
+        "valueQuantity": {
+          "value": 99.1,
+          "unit": "\u00b0F",
+          "system": "http://unitsofmeasure.org",
+          "code": "[degF]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-vital-03-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-vital-03-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-vital-03-03",
+        "meta": {
+          "lastUpdated": "2025-11-14T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart Rate"
+            }
+          ],
+          "text": "Heart Rate"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-03"
+        },
+        "effectiveDateTime": "2025-05-19T03:30:18Z",
+        "valueQuantity": {
+          "value": 78.7,
+          "unit": "beats/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-vital-03-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-vital-03-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-vital-03-04",
+        "meta": {
+          "lastUpdated": "2025-12-06T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic BP"
+            }
+          ],
+          "text": "Diastolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-03"
+        },
+        "effectiveDateTime": "2025-05-19T03:30:18Z",
+        "valueQuantity": {
+          "value": 81.0,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-vital-03-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0022-cond-01",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0022-cond-01",
+        "meta": {
+          "lastUpdated": "2025-12-05T03:30:18Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "59621000",
+              "display": "Stage 1 hypertension"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "I10",
+              "display": "Essential hypertension"
+            }
+          ],
+          "text": "Essential hypertension"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-01"
+        },
+        "onsetDateTime": "2023-08-05T03:30:18Z",
+        "recordedDate": "2023-08-05T03:30:18Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0022-cond-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0022-cond-02",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0022-cond-02",
+        "meta": {
+          "lastUpdated": "2025-12-06T03:30:18Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "271737000",
+              "display": "Anemia"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "D64.9",
+              "display": "Anemia, unspecified"
+            }
+          ],
+          "text": "Anemia, unspecified"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-01"
+        },
+        "onsetDateTime": "2023-10-27T03:30:18Z",
+        "recordedDate": "2023-10-27T03:30:18Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0022-cond-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0022-cond-03",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0022-cond-03",
+        "meta": {
+          "lastUpdated": "2025-11-15T03:30:18Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "195967001",
+              "display": "Asthma"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "J45.909",
+              "display": "Asthma, unspecified"
+            }
+          ],
+          "text": "Asthma, unspecified"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-01"
+        },
+        "onsetDateTime": "2024-10-24T03:30:18Z",
+        "recordedDate": "2024-10-24T03:30:18Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0022-cond-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medicationrequest-0022-med-02",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0022-med-02",
+        "meta": {
+          "lastUpdated": "2025-12-01T03:30:18Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/rx-id",
+            "value": "RX-0022-med-02"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "198240",
+              "display": "Acetaminophen 500 MG Oral Tablet"
+            }
+          ],
+          "text": "Acetaminophen 500 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-01"
+        },
+        "authoredOn": "2025-04-01T03:30:18Z",
+        "reasonReference": [
+          {
+            "reference": "Condition/0022-cond-02"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "Take every 6 hours as needed",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 500.0,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 0,
+          "quantity": {
+            "value": 30,
+            "unit": "tablets"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "substitution": {
+          "allowedBoolean": true
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/0022-med-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medicationrequest-0022-med-03",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0022-med-03",
+        "meta": {
+          "lastUpdated": "2025-12-02T03:30:18Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/rx-id",
+            "value": "RX-0022-med-03"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "198211",
+              "display": "Aspirin 81 MG Oral Tablet"
+            }
+          ],
+          "text": "Aspirin 81 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-01"
+        },
+        "authoredOn": "2025-11-29T03:30:18Z",
+        "reasonReference": [
+          {
+            "reference": "Condition/0022-cond-03"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "Take once daily",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 81.0,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 0,
+          "quantity": {
+            "value": 30,
+            "unit": "tablets"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "substitution": {
+          "allowedBoolean": true
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/0022-med-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-lab-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-lab-01",
+        "meta": {
+          "lastUpdated": "2025-11-18T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "787-2",
+              "display": "MCV"
+            }
+          ],
+          "text": "MCV"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-03"
+        },
+        "effectiveDateTime": "2025-06-04T03:30:18Z",
+        "valueQuantity": {
+          "value": 99.2,
+          "unit": "fL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 75,
+              "unit": "fL"
+            },
+            "high": {
+              "value": 80,
+              "unit": "fL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-lab-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-lab-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-lab-02",
+        "meta": {
+          "lastUpdated": "2025-12-05T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "13457-7",
+              "display": "LDL Cholesterol"
+            }
+          ],
+          "text": "LDL Cholesterol"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-02"
+        },
+        "effectiveDateTime": "2025-03-03T03:30:18Z",
+        "valueQuantity": {
+          "value": 171.5,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 70,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 100,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-lab-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-lab-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-lab-03",
+        "meta": {
+          "lastUpdated": "2025-11-18T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3094-0",
+              "display": "BUN"
+            }
+          ],
+          "text": "BUN"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-02"
+        },
+        "effectiveDateTime": "2025-07-22T03:30:18Z",
+        "valueQuantity": {
+          "value": 17.7,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 7,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 20,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-lab-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-lab-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-lab-04",
+        "meta": {
+          "lastUpdated": "2025-12-11T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium"
+            }
+          ],
+          "text": "Potassium"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-03"
+        },
+        "effectiveDateTime": "2025-10-18T03:30:18Z",
+        "valueQuantity": {
+          "value": 5.4,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 3.5,
+              "unit": "mmol/L"
+            },
+            "high": {
+              "value": 5.0,
+              "unit": "mmol/L"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-lab-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-lab-05",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-lab-05",
+        "meta": {
+          "lastUpdated": "2025-11-30T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "WBC"
+            }
+          ],
+          "text": "WBC"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-02"
+        },
+        "effectiveDateTime": "2025-03-14T03:30:18Z",
+        "valueQuantity": {
+          "value": 7.7,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 10,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-lab-05"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-lab-06",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-lab-06",
+        "meta": {
+          "lastUpdated": "2025-12-10T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine"
+            }
+          ],
+          "text": "Creatinine"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-03"
+        },
+        "effectiveDateTime": "2025-06-23T03:30:18Z",
+        "valueQuantity": {
+          "value": 1.1,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 0.6,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 1.2,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-lab-06"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0022-lab-07",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0022-lab-07",
+        "meta": {
+          "lastUpdated": "2025-11-29T03:30:18Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2571-8",
+              "display": "Triglycerides"
+            }
+          ],
+          "text": "Triglycerides"
+        },
+        "subject": {
+          "reference": "Patient/0022",
+          "display": "Emma Cox"
+        },
+        "encounter": {
+          "reference": "Encounter/0022-enc-01"
+        },
+        "effectiveDateTime": "2025-05-08T03:30:18Z",
+        "valueQuantity": {
+          "value": 136.6,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 80,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 150,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0022-lab-07"
+      }
+    }
+  ]
+}

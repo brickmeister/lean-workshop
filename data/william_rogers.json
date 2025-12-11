@@ -1,0 +1,2738 @@
+{
+  "resourceType": "Bundle",
+  "id": "patient-bundle-0099",
+  "type": "batch",
+  "timestamp": "2025-12-11T03:30:22Z",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:patient-0099",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "0099",
+        "meta": {
+          "lastUpdated": "2025-11-14T03:30:22Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/patient-id",
+            "value": "PT-0099"
+          },
+          {
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "867-90-8926"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Rogers",
+            "given": [
+              "William"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(385) 838-7990",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "william.rogers@email.com",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1991-12-02",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "9246 Third Circle"
+            ],
+            "city": "Minneapolis",
+            "state": "MN",
+            "postalCode": "55401",
+            "country": "USA"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "M",
+              "display": "Divorced"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/0099"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0099-enc-01",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0099-enc-01",
+        "meta": {
+          "lastUpdated": "2024-05-11T03:30:22Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0099-enc-01"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "390906007",
+                "display": "Follow-up encounter"
+              }
+            ],
+            "text": "Follow-up Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-003",
+              "display": "Dr. Emily Rodriguez"
+            }
+          }
+        ],
+        "period": {
+          "start": "2024-05-11T03:30:22Z",
+          "end": "2024-05-11T04:29:22Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-005",
+          "display": "Chicago Family Medicine"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0099-enc-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-01-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-01-01",
+        "meta": {
+          "lastUpdated": "2025-11-23T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory Rate"
+            }
+          ],
+          "text": "Respiratory Rate"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-01"
+        },
+        "effectiveDateTime": "2024-05-11T03:30:22Z",
+        "valueQuantity": {
+          "value": 17.7,
+          "unit": "breaths/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-01-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-01-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-01-02",
+        "meta": {
+          "lastUpdated": "2025-11-25T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart Rate"
+            }
+          ],
+          "text": "Heart Rate"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-01"
+        },
+        "effectiveDateTime": "2024-05-11T03:30:22Z",
+        "valueQuantity": {
+          "value": 98.7,
+          "unit": "beats/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-01-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-01-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-01-03",
+        "meta": {
+          "lastUpdated": "2025-11-23T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body Height"
+            }
+          ],
+          "text": "Body Height"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-01"
+        },
+        "effectiveDateTime": "2024-05-11T03:30:22Z",
+        "valueQuantity": {
+          "value": 170.9,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-01-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-01-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-01-04",
+        "meta": {
+          "lastUpdated": "2025-12-04T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic BP"
+            }
+          ],
+          "text": "Systolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-01"
+        },
+        "effectiveDateTime": "2024-05-11T03:30:22Z",
+        "valueQuantity": {
+          "value": 112.3,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-01-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-01-05",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-01-05",
+        "meta": {
+          "lastUpdated": "2025-11-26T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6",
+              "display": "Oxygen Saturation"
+            }
+          ],
+          "text": "Oxygen Saturation"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-01"
+        },
+        "effectiveDateTime": "2024-05-11T03:30:22Z",
+        "valueQuantity": {
+          "value": 95.3,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-01-05"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0099-enc-02",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0099-enc-02",
+        "meta": {
+          "lastUpdated": "2024-06-17T03:30:22Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0099-enc-02"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "371883000",
+                "display": "Outpatient procedure"
+              }
+            ],
+            "text": "Outpatient Procedure"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-009",
+              "display": "Dr. Amanda Foster"
+            }
+          }
+        ],
+        "period": {
+          "start": "2024-06-17T03:30:22Z",
+          "end": "2024-06-17T04:47:22Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-009",
+          "display": "Phoenix Care Network"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0099-enc-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-02-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-02-01",
+        "meta": {
+          "lastUpdated": "2025-11-30T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart Rate"
+            }
+          ],
+          "text": "Heart Rate"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-02"
+        },
+        "effectiveDateTime": "2024-06-17T03:30:22Z",
+        "valueQuantity": {
+          "value": 81.5,
+          "unit": "beats/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-02-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-02-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-02-02",
+        "meta": {
+          "lastUpdated": "2025-11-11T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body Height"
+            }
+          ],
+          "text": "Body Height"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-02"
+        },
+        "effectiveDateTime": "2024-06-17T03:30:22Z",
+        "valueQuantity": {
+          "value": 160.3,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-02-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-02-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-02-03",
+        "meta": {
+          "lastUpdated": "2025-12-01T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-02"
+        },
+        "effectiveDateTime": "2024-06-17T03:30:22Z",
+        "valueQuantity": {
+          "value": 114.2,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-02-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0099-enc-03",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0099-enc-03",
+        "meta": {
+          "lastUpdated": "2024-12-04T03:30:22Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0099-enc-03"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "308335008",
+                "display": "Patient encounter procedure"
+              }
+            ],
+            "text": "Procedure Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-008",
+              "display": "Dr. David Wilson"
+            }
+          }
+        ],
+        "period": {
+          "start": "2024-12-04T03:30:22Z",
+          "end": "2024-12-04T04:02:22Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-010",
+          "display": "Miami Health Center"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0099-enc-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-03-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-03-01",
+        "meta": {
+          "lastUpdated": "2025-11-17T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body Height"
+            }
+          ],
+          "text": "Body Height"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-03"
+        },
+        "effectiveDateTime": "2024-12-04T03:30:22Z",
+        "valueQuantity": {
+          "value": 181.3,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-03-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-03-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-03-02",
+        "meta": {
+          "lastUpdated": "2025-11-19T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic BP"
+            }
+          ],
+          "text": "Systolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-03"
+        },
+        "effectiveDateTime": "2024-12-04T03:30:22Z",
+        "valueQuantity": {
+          "value": 150.5,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-03-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-03-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-03-03",
+        "meta": {
+          "lastUpdated": "2025-12-05T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic BP"
+            }
+          ],
+          "text": "Diastolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-03"
+        },
+        "effectiveDateTime": "2024-12-04T03:30:22Z",
+        "valueQuantity": {
+          "value": 97.0,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-03-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-03-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-03-04",
+        "meta": {
+          "lastUpdated": "2025-11-20T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-03"
+        },
+        "effectiveDateTime": "2024-12-04T03:30:22Z",
+        "valueQuantity": {
+          "value": 76.8,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-03-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-03-05",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-03-05",
+        "meta": {
+          "lastUpdated": "2025-12-10T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6",
+              "display": "Oxygen Saturation"
+            }
+          ],
+          "text": "Oxygen Saturation"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-03"
+        },
+        "effectiveDateTime": "2024-12-04T03:30:22Z",
+        "valueQuantity": {
+          "value": 98.8,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-03-05"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-03-06",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-03-06",
+        "meta": {
+          "lastUpdated": "2025-11-16T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory Rate"
+            }
+          ],
+          "text": "Respiratory Rate"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-03"
+        },
+        "effectiveDateTime": "2024-12-04T03:30:22Z",
+        "valueQuantity": {
+          "value": 18.0,
+          "unit": "breaths/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-03-06"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0099-enc-04",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0099-enc-04",
+        "meta": {
+          "lastUpdated": "2025-03-16T03:30:22Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0099-enc-04"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "390906007",
+                "display": "Follow-up encounter"
+              }
+            ],
+            "text": "Follow-up Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-001",
+              "display": "Dr. Sarah Williams"
+            }
+          }
+        ],
+        "period": {
+          "start": "2025-03-16T03:30:22Z",
+          "end": "2025-03-16T04:54:22Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-003",
+          "display": "Denver Medical Center"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0099-enc-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-04-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-04-01",
+        "meta": {
+          "lastUpdated": "2025-11-20T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart Rate"
+            }
+          ],
+          "text": "Heart Rate"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-04"
+        },
+        "effectiveDateTime": "2025-03-16T03:30:22Z",
+        "valueQuantity": {
+          "value": 55.1,
+          "unit": "beats/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-04-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-04-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-04-02",
+        "meta": {
+          "lastUpdated": "2025-11-18T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic BP"
+            }
+          ],
+          "text": "Diastolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-04"
+        },
+        "effectiveDateTime": "2025-03-16T03:30:22Z",
+        "valueQuantity": {
+          "value": 72.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-04-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-04-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-04-03",
+        "meta": {
+          "lastUpdated": "2025-11-16T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6",
+              "display": "Oxygen Saturation"
+            }
+          ],
+          "text": "Oxygen Saturation"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-04"
+        },
+        "effectiveDateTime": "2025-03-16T03:30:22Z",
+        "valueQuantity": {
+          "value": 98.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-04-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0099-enc-05",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0099-enc-05",
+        "meta": {
+          "lastUpdated": "2025-08-07T03:30:22Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0099-enc-05"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185345009",
+                "display": "Encounter for symptom"
+              }
+            ],
+            "text": "Sick Visit"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-004",
+              "display": "Dr. James Thompson"
+            }
+          }
+        ],
+        "period": {
+          "start": "2025-08-07T03:30:22Z",
+          "end": "2025-08-07T04:47:22Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-010",
+          "display": "Miami Health Center"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0099-enc-05"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-05-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-05-01",
+        "meta": {
+          "lastUpdated": "2025-11-12T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body Temperature"
+            }
+          ],
+          "text": "Body Temperature"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-05"
+        },
+        "effectiveDateTime": "2025-08-07T03:30:22Z",
+        "valueQuantity": {
+          "value": 98.7,
+          "unit": "\u00b0F",
+          "system": "http://unitsofmeasure.org",
+          "code": "[degF]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-05-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-05-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-05-02",
+        "meta": {
+          "lastUpdated": "2025-11-22T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body Height"
+            }
+          ],
+          "text": "Body Height"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-05"
+        },
+        "effectiveDateTime": "2025-08-07T03:30:22Z",
+        "valueQuantity": {
+          "value": 194.9,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-05-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-05-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-05-03",
+        "meta": {
+          "lastUpdated": "2025-11-11T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-05"
+        },
+        "effectiveDateTime": "2025-08-07T03:30:22Z",
+        "valueQuantity": {
+          "value": 119.7,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-05-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-05-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-05-04",
+        "meta": {
+          "lastUpdated": "2025-11-13T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic BP"
+            }
+          ],
+          "text": "Diastolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-05"
+        },
+        "effectiveDateTime": "2025-08-07T03:30:22Z",
+        "valueQuantity": {
+          "value": 92.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-05-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-vital-05-05",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-vital-05-05",
+        "meta": {
+          "lastUpdated": "2025-11-14T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart Rate"
+            }
+          ],
+          "text": "Heart Rate"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-05"
+        },
+        "effectiveDateTime": "2025-08-07T03:30:22Z",
+        "valueQuantity": {
+          "value": 71.4,
+          "unit": "beats/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-vital-05-05"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0099-cond-01",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0099-cond-01",
+        "meta": {
+          "lastUpdated": "2025-12-03T03:30:22Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "73430006",
+              "display": "Prediabetes"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "R73.03",
+              "display": "Prediabetes"
+            }
+          ],
+          "text": "Prediabetes"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-01"
+        },
+        "onsetDateTime": "2023-09-22T03:30:22Z",
+        "recordedDate": "2023-09-22T03:30:22Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0099-cond-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0099-cond-02",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0099-cond-02",
+        "meta": {
+          "lastUpdated": "2025-11-24T03:30:22Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "56265001",
+              "display": "Atrial fibrillation"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "I48.91",
+              "display": "Unspecified atrial fibrillation"
+            }
+          ],
+          "text": "Unspecified atrial fibrillation"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-01"
+        },
+        "onsetDateTime": "2025-10-07T03:30:22Z",
+        "recordedDate": "2025-10-07T03:30:22Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0099-cond-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0099-cond-03",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0099-cond-03",
+        "meta": {
+          "lastUpdated": "2025-11-24T03:30:22Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "197480006",
+              "display": "Low back pain"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "M54.5",
+              "display": "Low back pain"
+            }
+          ],
+          "text": "Low back pain"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-01"
+        },
+        "onsetDateTime": "2024-02-12T03:30:22Z",
+        "recordedDate": "2024-02-12T03:30:22Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0099-cond-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0099-cond-04",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0099-cond-04",
+        "meta": {
+          "lastUpdated": "2025-11-12T03:30:22Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "25064002",
+              "display": "Migraine"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "G43.909",
+              "display": "Migraine, unspecified"
+            }
+          ],
+          "text": "Migraine, unspecified"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-01"
+        },
+        "onsetDateTime": "2023-05-14T03:30:22Z",
+        "recordedDate": "2023-05-14T03:30:22Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0099-cond-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medicationrequest-0099-med-01",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0099-med-01",
+        "meta": {
+          "lastUpdated": "2025-12-01T03:30:22Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/rx-id",
+            "value": "RX-0099-med-01"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "197361",
+              "display": "Amlodipine 5 MG Oral Tablet"
+            }
+          ],
+          "text": "Amlodipine 5 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-01"
+        },
+        "authoredOn": "2025-03-03T03:30:22Z",
+        "reasonReference": [
+          {
+            "reference": "Condition/0099-cond-01"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "Take once daily",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 5.0,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 11,
+          "quantity": {
+            "value": 30,
+            "unit": "tablets"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "substitution": {
+          "allowedBoolean": true
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/0099-med-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medicationrequest-0099-med-02",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0099-med-02",
+        "meta": {
+          "lastUpdated": "2025-12-09T03:30:22Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/rx-id",
+            "value": "RX-0099-med-02"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "860975",
+              "display": "Metformin 500 MG Oral Tablet"
+            }
+          ],
+          "text": "Metformin 500 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-01"
+        },
+        "authoredOn": "2025-07-10T03:30:22Z",
+        "reasonReference": [
+          {
+            "reference": "Condition/0099-cond-02"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "Take twice daily",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 500.0,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 0,
+          "quantity": {
+            "value": 30,
+            "unit": "tablets"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "substitution": {
+          "allowedBoolean": true
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/0099-med-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medicationrequest-0099-med-03",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0099-med-03",
+        "meta": {
+          "lastUpdated": "2025-11-28T03:30:22Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/rx-id",
+            "value": "RX-0099-med-03"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "197517",
+              "display": "Omeprazole 20 MG Delayed Release Oral Capsule"
+            }
+          ],
+          "text": "Omeprazole 20 MG Delayed Release Oral Capsule"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-01"
+        },
+        "authoredOn": "2025-05-01T03:30:22Z",
+        "reasonReference": [
+          {
+            "reference": "Condition/0099-cond-03"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "Take once daily before breakfast",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 20.0,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 6,
+          "quantity": {
+            "value": 30,
+            "unit": "tablets"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "substitution": {
+          "allowedBoolean": true
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/0099-med-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medicationrequest-0099-med-04",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0099-med-04",
+        "meta": {
+          "lastUpdated": "2025-12-04T03:30:22Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/rx-id",
+            "value": "RX-0099-med-04"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "198211",
+              "display": "Aspirin 81 MG Oral Tablet"
+            }
+          ],
+          "text": "Aspirin 81 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-01"
+        },
+        "authoredOn": "2025-10-24T03:30:22Z",
+        "reasonReference": [
+          {
+            "reference": "Condition/0099-cond-04"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "Take once daily",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 81.0,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 2,
+          "quantity": {
+            "value": 30,
+            "unit": "tablets"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "substitution": {
+          "allowedBoolean": true
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/0099-med-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-lab-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-lab-01",
+        "meta": {
+          "lastUpdated": "2025-11-13T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3094-0",
+              "display": "BUN"
+            }
+          ],
+          "text": "BUN"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-05"
+        },
+        "effectiveDateTime": "2025-08-04T03:30:22Z",
+        "valueQuantity": {
+          "value": 17.2,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 7,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 20,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-lab-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-lab-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-lab-02",
+        "meta": {
+          "lastUpdated": "2025-11-18T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "13457-7",
+              "display": "LDL Cholesterol"
+            }
+          ],
+          "text": "LDL Cholesterol"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-03"
+        },
+        "effectiveDateTime": "2025-10-08T03:30:22Z",
+        "valueQuantity": {
+          "value": 105.7,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 70,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 100,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-lab-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-lab-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-lab-03",
+        "meta": {
+          "lastUpdated": "2025-11-27T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2093-3",
+              "display": "Total Cholesterol"
+            }
+          ],
+          "text": "Total Cholesterol"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-03"
+        },
+        "effectiveDateTime": "2024-12-17T03:30:22Z",
+        "valueQuantity": {
+          "value": 181.6,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 150,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 200,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-lab-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-lab-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-lab-04",
+        "meta": {
+          "lastUpdated": "2025-12-07T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2339-0",
+              "display": "Glucose"
+            }
+          ],
+          "text": "Glucose"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-01"
+        },
+        "effectiveDateTime": "2025-02-12T03:30:22Z",
+        "valueQuantity": {
+          "value": 139.1,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 70,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 100,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-lab-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-lab-05",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-lab-05",
+        "meta": {
+          "lastUpdated": "2025-12-06T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "HbA1c"
+            }
+          ],
+          "text": "HbA1c"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-05"
+        },
+        "effectiveDateTime": "2025-11-01T03:30:22Z",
+        "valueQuantity": {
+          "value": 8.8,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.5,
+              "unit": "%"
+            },
+            "high": {
+              "value": 5.7,
+              "unit": "%"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-lab-05"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-lab-06",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-lab-06",
+        "meta": {
+          "lastUpdated": "2025-11-19T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin"
+            }
+          ],
+          "text": "Hemoglobin"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-02"
+        },
+        "effectiveDateTime": "2025-03-05T03:30:22Z",
+        "valueQuantity": {
+          "value": 15.4,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 11,
+              "unit": "g/dL"
+            },
+            "high": {
+              "value": 12,
+              "unit": "g/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-lab-06"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-lab-07",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-lab-07",
+        "meta": {
+          "lastUpdated": "2025-12-05T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "WBC"
+            }
+          ],
+          "text": "WBC"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-03"
+        },
+        "effectiveDateTime": "2025-10-06T03:30:22Z",
+        "valueQuantity": {
+          "value": 8.5,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 10,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-lab-07"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0099-lab-08",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0099-lab-08",
+        "meta": {
+          "lastUpdated": "2025-11-16T03:30:22Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "777-3",
+              "display": "Platelets"
+            }
+          ],
+          "text": "Platelets"
+        },
+        "subject": {
+          "reference": "Patient/0099",
+          "display": "William Rogers"
+        },
+        "encounter": {
+          "reference": "Encounter/0099-enc-05"
+        },
+        "effectiveDateTime": "2025-03-09T03:30:22Z",
+        "valueQuantity": {
+          "value": 315.2,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 150,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 150,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0099-lab-08"
+      }
+    }
+  ]
+}

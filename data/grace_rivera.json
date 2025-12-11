@@ -1,0 +1,1905 @@
+{
+  "resourceType": "Bundle",
+  "id": "patient-bundle-0007",
+  "type": "batch",
+  "timestamp": "2025-12-11T03:30:17Z",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:patient-0007",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "0007",
+        "meta": {
+          "lastUpdated": "2025-12-10T03:30:17Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/patient-id",
+            "value": "PT-0007"
+          },
+          {
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "566-84-4790"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "use": "official",
+            "family": "Rivera",
+            "given": [
+              "Grace"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "(203) 603-2816",
+            "use": "home"
+          },
+          {
+            "system": "email",
+            "value": "grace.rivera@email.com",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "2000-12-04",
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "5256 Second Place"
+            ],
+            "city": "Boston",
+            "state": "MA",
+            "postalCode": "02101",
+            "country": "USA"
+          }
+        ],
+        "maritalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+              "code": "M",
+              "display": "Married"
+            }
+          ]
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Patient/0007"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0007-enc-01",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0007-enc-01",
+        "meta": {
+          "lastUpdated": "2023-12-16T03:30:17Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0007-enc-01"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "439740005",
+                "display": "Postoperative follow-up visit"
+              }
+            ],
+            "text": "Post-op Follow-up"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-010",
+              "display": "Dr. Christopher Lee"
+            }
+          }
+        ],
+        "period": {
+          "start": "2023-12-16T03:30:17Z",
+          "end": "2023-12-16T04:49:17Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-007",
+          "display": "NYC Medical Group"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0007-enc-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-vital-01-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-vital-01-01",
+        "meta": {
+          "lastUpdated": "2025-11-16T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart Rate"
+            }
+          ],
+          "text": "Heart Rate"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-01"
+        },
+        "effectiveDateTime": "2023-12-16T03:30:17Z",
+        "valueQuantity": {
+          "value": 84.7,
+          "unit": "beats/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-vital-01-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-vital-01-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-vital-01-02",
+        "meta": {
+          "lastUpdated": "2025-12-01T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory Rate"
+            }
+          ],
+          "text": "Respiratory Rate"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-01"
+        },
+        "effectiveDateTime": "2023-12-16T03:30:17Z",
+        "valueQuantity": {
+          "value": 19.5,
+          "unit": "breaths/min",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-vital-01-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-vital-01-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-vital-01-03",
+        "meta": {
+          "lastUpdated": "2025-11-11T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-01"
+        },
+        "effectiveDateTime": "2023-12-16T03:30:17Z",
+        "valueQuantity": {
+          "value": 81.6,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-vital-01-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-vital-01-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-vital-01-04",
+        "meta": {
+          "lastUpdated": "2025-12-11T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic BP"
+            }
+          ],
+          "text": "Systolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-01"
+        },
+        "effectiveDateTime": "2023-12-16T03:30:17Z",
+        "valueQuantity": {
+          "value": 126.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-vital-01-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0007-enc-02",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0007-enc-02",
+        "meta": {
+          "lastUpdated": "2024-06-30T03:30:17Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0007-enc-02"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "371883000",
+                "display": "Outpatient procedure"
+              }
+            ],
+            "text": "Outpatient Procedure"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-008",
+              "display": "Dr. David Wilson"
+            }
+          }
+        ],
+        "period": {
+          "start": "2024-06-30T03:30:17Z",
+          "end": "2024-06-30T03:54:17Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-009",
+          "display": "Phoenix Care Network"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0007-enc-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-vital-02-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-vital-02-01",
+        "meta": {
+          "lastUpdated": "2025-12-03T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8310-5",
+              "display": "Body Temperature"
+            }
+          ],
+          "text": "Body Temperature"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-02"
+        },
+        "effectiveDateTime": "2024-06-30T03:30:17Z",
+        "valueQuantity": {
+          "value": 97.2,
+          "unit": "\u00b0F",
+          "system": "http://unitsofmeasure.org",
+          "code": "[degF]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-vital-02-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-vital-02-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-vital-02-02",
+        "meta": {
+          "lastUpdated": "2025-11-23T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2708-6",
+              "display": "Oxygen Saturation"
+            }
+          ],
+          "text": "Oxygen Saturation"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-02"
+        },
+        "effectiveDateTime": "2024-06-30T03:30:17Z",
+        "valueQuantity": {
+          "value": 96.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-vital-02-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-vital-02-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-vital-02-03",
+        "meta": {
+          "lastUpdated": "2025-11-11T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic BP"
+            }
+          ],
+          "text": "Systolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-02"
+        },
+        "effectiveDateTime": "2024-06-30T03:30:17Z",
+        "valueQuantity": {
+          "value": 150.1,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-vital-02-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:encounter-0007-enc-03",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "0007-enc-03",
+        "meta": {
+          "lastUpdated": "2024-10-05T03:30:17Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/encounter-id",
+            "value": "ENC-0007-enc-03"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB",
+          "display": "ambulatory"
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "185349003",
+                "display": "Encounter for check up"
+              }
+            ],
+            "text": "Annual Physical"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "code": "PPRF",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "Practitioner/practitioner-002",
+              "display": "Dr. Michael Chen"
+            }
+          }
+        ],
+        "period": {
+          "start": "2024-10-05T03:30:17Z",
+          "end": "2024-10-05T03:46:17Z"
+        },
+        "serviceProvider": {
+          "reference": "Organization/org-009",
+          "display": "Phoenix Care Network"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Encounter/0007-enc-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-vital-03-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-vital-03-01",
+        "meta": {
+          "lastUpdated": "2025-11-22T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "29463-7",
+              "display": "Body Weight"
+            }
+          ],
+          "text": "Body Weight"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-03"
+        },
+        "effectiveDateTime": "2024-10-05T03:30:17Z",
+        "valueQuantity": {
+          "value": 63.3,
+          "unit": "kg",
+          "system": "http://unitsofmeasure.org",
+          "code": "kg"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-vital-03-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-vital-03-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-vital-03-02",
+        "meta": {
+          "lastUpdated": "2025-11-17T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic BP"
+            }
+          ],
+          "text": "Systolic BP"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-03"
+        },
+        "effectiveDateTime": "2024-10-05T03:30:17Z",
+        "valueQuantity": {
+          "value": 155.1,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-vital-03-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-vital-03-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-vital-03-03",
+        "meta": {
+          "lastUpdated": "2025-12-07T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8302-2",
+              "display": "Body Height"
+            }
+          ],
+          "text": "Body Height"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-03"
+        },
+        "effectiveDateTime": "2024-10-05T03:30:17Z",
+        "valueQuantity": {
+          "value": 184.8,
+          "unit": "cm",
+          "system": "http://unitsofmeasure.org",
+          "code": "cm"
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-vital-03-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0007-cond-01",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0007-cond-01",
+        "meta": {
+          "lastUpdated": "2025-11-13T03:30:17Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "230690007",
+              "display": "Insomnia"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "G47.00",
+              "display": "Insomnia, unspecified"
+            }
+          ],
+          "text": "Insomnia, unspecified"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-01"
+        },
+        "onsetDateTime": "2025-07-03T03:30:17Z",
+        "recordedDate": "2025-07-03T03:30:17Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0007-cond-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0007-cond-02",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0007-cond-02",
+        "meta": {
+          "lastUpdated": "2025-11-26T03:30:17Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Type 2 diabetes mellitus"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "E11.9",
+              "display": "Type 2 diabetes mellitus"
+            }
+          ],
+          "text": "Type 2 diabetes mellitus"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-01"
+        },
+        "onsetDateTime": "2025-08-29T03:30:17Z",
+        "recordedDate": "2025-08-29T03:30:17Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0007-cond-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0007-cond-03",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0007-cond-03",
+        "meta": {
+          "lastUpdated": "2025-11-18T03:30:17Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "386661006",
+              "display": "Fever"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "R50.9",
+              "display": "Fever, unspecified"
+            }
+          ],
+          "text": "Fever, unspecified"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-01"
+        },
+        "onsetDateTime": "2023-08-31T03:30:17Z",
+        "recordedDate": "2023-08-31T03:30:17Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0007-cond-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:condition-0007-cond-04",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "0007-cond-04",
+        "meta": {
+          "lastUpdated": "2025-11-20T03:30:17Z"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active",
+              "display": "Active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "73211009",
+              "display": "Hyperlipidemia"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "E78.5",
+              "display": "Hyperlipidemia, unspecified"
+            }
+          ],
+          "text": "Hyperlipidemia, unspecified"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-01"
+        },
+        "onsetDateTime": "2025-09-08T03:30:17Z",
+        "recordedDate": "2025-09-08T03:30:17Z"
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Condition/0007-cond-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medicationrequest-0007-med-01",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0007-med-01",
+        "meta": {
+          "lastUpdated": "2025-11-17T03:30:17Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/rx-id",
+            "value": "RX-0007-med-01"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "198211",
+              "display": "Aspirin 81 MG Oral Tablet"
+            }
+          ],
+          "text": "Aspirin 81 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-01"
+        },
+        "authoredOn": "2025-06-05T03:30:17Z",
+        "reasonReference": [
+          {
+            "reference": "Condition/0007-cond-01"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "Take once daily",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 81.0,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 11,
+          "quantity": {
+            "value": 30,
+            "unit": "tablets"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "substitution": {
+          "allowedBoolean": true
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/0007-med-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medicationrequest-0007-med-02",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0007-med-02",
+        "meta": {
+          "lastUpdated": "2025-11-22T03:30:17Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/rx-id",
+            "value": "RX-0007-med-02"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "198211",
+              "display": "Aspirin 81 MG Oral Tablet"
+            }
+          ],
+          "text": "Aspirin 81 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-01"
+        },
+        "authoredOn": "2025-07-26T03:30:17Z",
+        "reasonReference": [
+          {
+            "reference": "Condition/0007-cond-02"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "Take once daily",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 81.0,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 3,
+          "quantity": {
+            "value": 30,
+            "unit": "tablets"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "substitution": {
+          "allowedBoolean": true
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/0007-med-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:medicationrequest-0007-med-04",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "id": "0007-med-04",
+        "meta": {
+          "lastUpdated": "2025-11-12T03:30:17Z"
+        },
+        "identifier": [
+          {
+            "system": "http://hospital.example.org/rx-id",
+            "value": "RX-0007-med-04"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                "code": "outpatient",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "311995",
+              "display": "Lisinopril 10 MG Oral Tablet"
+            }
+          ],
+          "text": "Lisinopril 10 MG Oral Tablet"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-01"
+        },
+        "authoredOn": "2024-12-18T03:30:17Z",
+        "reasonReference": [
+          {
+            "reference": "Condition/0007-cond-04"
+          }
+        ],
+        "dosageInstruction": [
+          {
+            "text": "Take once daily",
+            "route": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 10.0,
+                  "unit": "mg",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "numberOfRepeatsAllowed": 8,
+          "quantity": {
+            "value": 30,
+            "unit": "tablets"
+          },
+          "expectedSupplyDuration": {
+            "value": 30,
+            "unit": "days",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "substitution": {
+          "allowedBoolean": true
+        }
+      },
+      "request": {
+        "method": "PUT",
+        "url": "MedicationRequest/0007-med-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-lab-01",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-lab-01",
+        "meta": {
+          "lastUpdated": "2025-11-18T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2951-2",
+              "display": "Sodium"
+            }
+          ],
+          "text": "Sodium"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-01"
+        },
+        "effectiveDateTime": "2025-08-08T03:30:17Z",
+        "valueQuantity": {
+          "value": 147.4,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 136,
+              "unit": "mmol/L"
+            },
+            "high": {
+              "value": 145,
+              "unit": "mmol/L"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-lab-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-lab-02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-lab-02",
+        "meta": {
+          "lastUpdated": "2025-11-29T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "777-3",
+              "display": "Platelets"
+            }
+          ],
+          "text": "Platelets"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-01"
+        },
+        "effectiveDateTime": "2024-12-23T03:30:17Z",
+        "valueQuantity": {
+          "value": 159.3,
+          "unit": "10*3/uL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 150,
+              "unit": "10*3/uL"
+            },
+            "high": {
+              "value": 150,
+              "unit": "10*3/uL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-lab-02"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-lab-03",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-lab-03",
+        "meta": {
+          "lastUpdated": "2025-11-24T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4",
+              "display": "HbA1c"
+            }
+          ],
+          "text": "HbA1c"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-02"
+        },
+        "effectiveDateTime": "2025-02-22T03:30:17Z",
+        "valueQuantity": {
+          "value": 9.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 4.5,
+              "unit": "%"
+            },
+            "high": {
+              "value": 5.7,
+              "unit": "%"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-lab-03"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-lab-04",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-lab-04",
+        "meta": {
+          "lastUpdated": "2025-11-22T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2093-3",
+              "display": "Total Cholesterol"
+            }
+          ],
+          "text": "Total Cholesterol"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-01"
+        },
+        "effectiveDateTime": "2025-04-19T03:30:17Z",
+        "valueQuantity": {
+          "value": 194.8,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 150,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 200,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-lab-04"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-lab-05",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-lab-05",
+        "meta": {
+          "lastUpdated": "2025-11-11T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "13457-7",
+              "display": "LDL Cholesterol"
+            }
+          ],
+          "text": "LDL Cholesterol"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-02"
+        },
+        "effectiveDateTime": "2025-12-07T03:30:17Z",
+        "valueQuantity": {
+          "value": 161.1,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 70,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 100,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-lab-05"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-lab-06",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-lab-06",
+        "meta": {
+          "lastUpdated": "2025-11-17T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2339-0",
+              "display": "Glucose"
+            }
+          ],
+          "text": "Glucose"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-02"
+        },
+        "effectiveDateTime": "2025-10-11T03:30:17Z",
+        "valueQuantity": {
+          "value": 78.5,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 70,
+              "unit": "mg/dL"
+            },
+            "high": {
+              "value": 100,
+              "unit": "mg/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-lab-06"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-lab-07",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-lab-07",
+        "meta": {
+          "lastUpdated": "2025-11-16T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "718-7",
+              "display": "Hemoglobin"
+            }
+          ],
+          "text": "Hemoglobin"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-03"
+        },
+        "effectiveDateTime": "2025-07-19T03:30:17Z",
+        "valueQuantity": {
+          "value": 14.0,
+          "unit": "g/dL",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 11,
+              "unit": "g/dL"
+            },
+            "high": {
+              "value": 12,
+              "unit": "g/dL"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-lab-07"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:observation-0007-lab-08",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "0007-lab-08",
+        "meta": {
+          "lastUpdated": "2025-12-01T03:30:17Z"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium"
+            }
+          ],
+          "text": "Potassium"
+        },
+        "subject": {
+          "reference": "Patient/0007",
+          "display": "Grace Rivera"
+        },
+        "encounter": {
+          "reference": "Encounter/0007-enc-03"
+        },
+        "effectiveDateTime": "2025-08-01T03:30:17Z",
+        "valueQuantity": {
+          "value": 4.9,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 3.5,
+              "unit": "mmol/L"
+            },
+            "high": {
+              "value": 5.0,
+              "unit": "mmol/L"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "PUT",
+        "url": "Observation/0007-lab-08"
+      }
+    }
+  ]
+}
