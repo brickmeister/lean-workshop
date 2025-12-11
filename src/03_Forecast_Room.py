@@ -51,7 +51,7 @@ for _query in (f"USE CATALOG {catalog_name}", f"USE DATABASE {database_name}"):
 # MAGIC              ADT_A31,
 # MAGIC              ADT_A03,
 # MAGIC              ADT_A01
-# MAGIC       FROM patient_journey_train
+# MAGIC       FROM patient_journey
 # MAGIC       PIVOT (1 FOR ADT_CODE IN ("ADT_A02", "ADT_A31", "ADT_A03", "ADT_A01"))
 # MAGIC     ),
 # MAGIC     _DATA_AGG AS (
@@ -168,7 +168,3 @@ Write results to delta
 """
 
 predict_df.write.format("delta").mode("overwrite").saveAsTable(f"{catalog_name}.{database_name}.beds_capacity_forecasted")
-
-# COMMAND ----------
-
-

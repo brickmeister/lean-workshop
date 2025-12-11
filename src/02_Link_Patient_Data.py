@@ -286,7 +286,7 @@ for _query in (f"USE CATALOG {catalog_name}", f"USE DATABASE {database_name}"):
 # MAGIC --
 # MAGIC
 # MAGIC SELECT *
-# MAGIC FROM PATIENT_JOURNEY_TRAIN;
+# MAGIC FROM PATIENT_JOURNEY;
 
 # COMMAND ----------
 
