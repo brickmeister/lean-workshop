@@ -120,7 +120,7 @@ train_df = spark.read.format("delta").table(f"{catalog_name}.{database_name}.bed
 try:
   # Run AutoML
   summary = automl.regress(train_df, target_col="NEXT_ROOM_COUNTS", timeout_minutes=30)
-except Exception as error:
+except Exception as err:
   raise ValueError(f"Failed to train regressor, error : {err}")
 
 # COMMAND ----------
