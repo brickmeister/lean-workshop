@@ -1,0 +1,5629 @@
+{
+  "resourceType": "Bundle",
+  "id": "adt-patient-bundle-0093",
+  "type": "collection",
+  "timestamp": "2025-12-11T04:12:48Z",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bundle"
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:adt-msg-1",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0093-001",
+        "type": "message",
+        "timestamp": "2024-01-24T04:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:edb3f059-4c5c-4846-bf8f-89b68b605651",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0093-001",
+              "meta": {
+                "lastUpdated": "2024-01-24T04:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://austin-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Austin General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://austin-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0093"
+                },
+                {
+                  "reference": "Encounter/0093-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0093",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0093",
+              "meta": {
+                "lastUpdated": "2024-06-19T07:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0093"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "780-60-2981"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Martinez",
+                  "given": [
+                    "Jacob"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(788) 732-9900",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(626) 648-9721",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "jacob.martinez@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1966-02-07",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2011 Washington Place"
+                  ],
+                  "city": "Dallas",
+                  "state": "TX",
+                  "postalCode": "75201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Martinez",
+                    "given": [
+                      "Camila"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(824) 863-2842"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0093-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0093-01",
+              "meta": {
+                "lastUpdated": "2024-01-24T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0093-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V654736"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0093",
+                "display": "Jacob Martinez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-01-24T04:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "40055000",
+                      "display": "GI bleeding"
+                    }
+                  ],
+                  "text": "Upper GI hemorrhage"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Upper GI hemorrhage"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0093-01-01",
+                    "display": "Surgical ICU - Room 235, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0093-01-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0093-01-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SICU-235-B"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical ICU - Room 235, Bed B",
+              "description": "Bed B in Room 235 of Surgical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Surgical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-2",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0093-002",
+        "type": "message",
+        "timestamp": "2024-01-24T14:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:d71bf2b8-7e01-4f89-a2a7-ed1ac4ce39ce",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0093-002",
+              "meta": {
+                "lastUpdated": "2024-01-24T14:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://austin-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Austin General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://austin-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0093"
+                },
+                {
+                  "reference": "Encounter/0093-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0093",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0093",
+              "meta": {
+                "lastUpdated": "2024-06-19T07:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0093"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "780-60-2981"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Martinez",
+                  "given": [
+                    "Jacob"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(788) 732-9900",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(626) 648-9721",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "jacob.martinez@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1966-02-07",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2011 Washington Place"
+                  ],
+                  "city": "Dallas",
+                  "state": "TX",
+                  "postalCode": "75201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Martinez",
+                    "given": [
+                      "Camila"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(824) 863-2842"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0093-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0093-01",
+              "meta": {
+                "lastUpdated": "2024-01-24T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0093-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V651446"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0093",
+                "display": "Jacob Martinez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-01-24T04:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "40055000",
+                      "display": "GI bleeding"
+                    }
+                  ],
+                  "text": "Upper GI hemorrhage"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Upper GI hemorrhage"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0093-01-t01",
+                    "display": "Medical Floor - Room 336, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0093-01-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0093-01-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-MED-336-B"
+                }
+              ],
+              "status": "active",
+              "name": "Medical Floor - Room 336, Bed B",
+              "description": "Bed B in Room 336 of Medical Floor",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Medical Floor"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-3",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0093-003",
+        "type": "message",
+        "timestamp": "2024-01-26T14:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:084d3eca-df0b-4553-ad73-84dcb4f2f4af",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0093-003",
+              "meta": {
+                "lastUpdated": "2024-01-26T14:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://austin-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Austin General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://austin-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0093"
+                },
+                {
+                  "reference": "Encounter/0093-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0093",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0093",
+              "meta": {
+                "lastUpdated": "2024-06-19T07:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0093"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "780-60-2981"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Martinez",
+                  "given": [
+                    "Jacob"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(788) 732-9900",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(626) 648-9721",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "jacob.martinez@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1966-02-07",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2011 Washington Place"
+                  ],
+                  "city": "Dallas",
+                  "state": "TX",
+                  "postalCode": "75201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Martinez",
+                    "given": [
+                      "Camila"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(824) 863-2842"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0093-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0093-01",
+              "meta": {
+                "lastUpdated": "2024-01-24T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0093-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V390670"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0093",
+                "display": "Jacob Martinez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-01-24T04:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "40055000",
+                      "display": "GI bleeding"
+                    }
+                  ],
+                  "text": "Upper GI hemorrhage"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Upper GI hemorrhage"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0093-01-t02",
+                    "display": "Surgical ICU - Room 162, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0093-01-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0093-01-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SICU-162-A"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical ICU - Room 162, Bed A",
+              "description": "Bed A in Room 162 of Surgical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Surgical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-4",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0093-004",
+        "type": "message",
+        "timestamp": "2024-01-27T13:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:66e8ed26-b7c1-48be-a2e5-ef5810660047",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0093-004",
+              "meta": {
+                "lastUpdated": "2024-01-27T13:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://austin-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Austin General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://austin-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0093"
+                },
+                {
+                  "reference": "Encounter/0093-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0093",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0093",
+              "meta": {
+                "lastUpdated": "2024-06-19T07:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0093"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "780-60-2981"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Martinez",
+                  "given": [
+                    "Jacob"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(788) 732-9900",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(626) 648-9721",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "jacob.martinez@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1966-02-07",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2011 Washington Place"
+                  ],
+                  "city": "Dallas",
+                  "state": "TX",
+                  "postalCode": "75201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Martinez",
+                    "given": [
+                      "Camila"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(824) 863-2842"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0093-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0093-01",
+              "meta": {
+                "lastUpdated": "2024-01-24T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0093-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V150574"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0093",
+                "display": "Jacob Martinez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-01-24T04:12:48Z",
+                "end": "2024-01-27T13:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "40055000",
+                      "display": "GI bleeding"
+                    }
+                  ],
+                  "text": "Upper GI hemorrhage"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Upper GI hemorrhage"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0093-01-t02",
+                    "display": "Surgical ICU - Room 162, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "hosp-trans",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "home",
+                      "display": "Home"
+                    }
+                  ],
+                  "text": "Patient discharged to home"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0093-01-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0093-01-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SICU-162-A"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical ICU - Room 162, Bed A",
+              "description": "Bed A in Room 162 of Surgical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Surgical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-5",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0093-005",
+        "type": "message",
+        "timestamp": "2024-06-12T13:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:72809f01-e710-46d2-a90c-1afeb9cc4ec7",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0093-005",
+              "meta": {
+                "lastUpdated": "2024-06-12T13:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A04",
+                "display": "ADT/ACK - Register a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://austin-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Austin General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://austin-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "register",
+                    "display": "Register"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0093"
+                },
+                {
+                  "reference": "Encounter/0093-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0093",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0093",
+              "meta": {
+                "lastUpdated": "2024-06-19T07:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0093"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "780-60-2981"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Martinez",
+                  "given": [
+                    "Jacob"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(788) 732-9900",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(626) 648-9721",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "jacob.martinez@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1966-02-07",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2011 Washington Place"
+                  ],
+                  "city": "Dallas",
+                  "state": "TX",
+                  "postalCode": "75201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Martinez",
+                    "given": [
+                      "Camila"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(824) 863-2842"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0093-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0093-02",
+              "meta": {
+                "lastUpdated": "2024-06-12T13:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0093-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V415289"
+                }
+              ],
+              "status": "planned",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "EMER",
+                "display": "emergency"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0093",
+                "display": "Jacob Martinez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-06-12T13:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "84114007",
+                      "display": "Sepsis"
+                    }
+                  ],
+                  "text": "Septicemia"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Septicemia"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0093-02-reg",
+                    "display": "Emergency Department - Room 16, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0093-02-reg",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0093-02-reg",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-16-B"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 16, Bed B",
+              "description": "Bed B in Room 16 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-6",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0093-006",
+        "type": "message",
+        "timestamp": "2024-06-12T14:27:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:e4df0705-038d-418a-9ee1-a3d61579f6ac",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0093-006",
+              "meta": {
+                "lastUpdated": "2024-06-12T14:27:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://austin-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Austin General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://austin-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0093"
+                },
+                {
+                  "reference": "Encounter/0093-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0093",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0093",
+              "meta": {
+                "lastUpdated": "2024-06-19T07:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0093"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "780-60-2981"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Martinez",
+                  "given": [
+                    "Jacob"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(788) 732-9900",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(626) 648-9721",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "jacob.martinez@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1966-02-07",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2011 Washington Place"
+                  ],
+                  "city": "Dallas",
+                  "state": "TX",
+                  "postalCode": "75201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Martinez",
+                    "given": [
+                      "Camila"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(824) 863-2842"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0093-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0093-02",
+              "meta": {
+                "lastUpdated": "2024-06-12T14:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0093-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V785339"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0093",
+                "display": "Jacob Martinez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-06-12T14:27:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "84114007",
+                      "display": "Sepsis"
+                    }
+                  ],
+                  "text": "Septicemia"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Septicemia"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0093-02-01",
+                    "display": "Neurology Unit - Room 365, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0093-02-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0093-02-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-NEURO-365-C"
+                }
+              ],
+              "status": "active",
+              "name": "Neurology Unit - Room 365, Bed C",
+              "description": "Bed C in Room 365 of Neurology Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Neurology Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-7",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0093-007",
+        "type": "message",
+        "timestamp": "2024-06-14T14:27:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:cf00ada1-ed9e-4768-9738-c39749ed7362",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0093-007",
+              "meta": {
+                "lastUpdated": "2024-06-14T14:27:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://austin-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Austin General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://austin-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0093"
+                },
+                {
+                  "reference": "Encounter/0093-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0093",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0093",
+              "meta": {
+                "lastUpdated": "2024-06-19T07:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0093"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "780-60-2981"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Martinez",
+                  "given": [
+                    "Jacob"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(788) 732-9900",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(626) 648-9721",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "jacob.martinez@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1966-02-07",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2011 Washington Place"
+                  ],
+                  "city": "Dallas",
+                  "state": "TX",
+                  "postalCode": "75201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Martinez",
+                    "given": [
+                      "Camila"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(824) 863-2842"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0093-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0093-02",
+              "meta": {
+                "lastUpdated": "2024-06-12T14:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0093-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V759605"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0093",
+                "display": "Jacob Martinez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-06-12T14:27:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "84114007",
+                      "display": "Sepsis"
+                    }
+                  ],
+                  "text": "Septicemia"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Septicemia"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0093-02-t01",
+                    "display": "Emergency Department - Room 228, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0093-02-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0093-02-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-228-A"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 228, Bed A",
+              "description": "Bed A in Room 228 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-8",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0093-008",
+        "type": "message",
+        "timestamp": "2024-06-17T00:27:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:19bd890b-0108-4578-a888-1be50686b10e",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0093-008",
+              "meta": {
+                "lastUpdated": "2024-06-17T00:27:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://austin-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Austin General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://austin-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0093"
+                },
+                {
+                  "reference": "Encounter/0093-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0093",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0093",
+              "meta": {
+                "lastUpdated": "2024-06-19T07:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0093"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "780-60-2981"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Martinez",
+                  "given": [
+                    "Jacob"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(788) 732-9900",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(626) 648-9721",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "jacob.martinez@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1966-02-07",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2011 Washington Place"
+                  ],
+                  "city": "Dallas",
+                  "state": "TX",
+                  "postalCode": "75201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Martinez",
+                    "given": [
+                      "Camila"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(824) 863-2842"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0093-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0093-02",
+              "meta": {
+                "lastUpdated": "2024-06-12T14:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0093-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V549785"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0093",
+                "display": "Jacob Martinez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-06-12T14:27:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "84114007",
+                      "display": "Sepsis"
+                    }
+                  ],
+                  "text": "Septicemia"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Septicemia"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0093-02-t02",
+                    "display": "Surgical Floor - Room 421, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0093-02-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0093-02-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SURG-421-C"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical Floor - Room 421, Bed C",
+              "description": "Bed C in Room 421 of Surgical Floor",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Surgical Floor"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-9",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0093-009",
+        "type": "message",
+        "timestamp": "2024-06-19T07:27:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:404ac36f-16a0-41ad-9b4e-ec897ab9b938",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0093-009",
+              "meta": {
+                "lastUpdated": "2024-06-19T07:27:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A08",
+                "display": "ADT/ACK - Update Patient Information"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://austin-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Austin General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://austin-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "update",
+                    "display": "Update"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0093"
+                },
+                {
+                  "reference": "Encounter/0093-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0093",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0093",
+              "meta": {
+                "lastUpdated": "2024-06-19T07:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0093"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "780-60-2981"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Martinez",
+                  "given": [
+                    "Jacob"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(788) 732-9900",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(626) 648-9721",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "jacob.martinez@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1966-02-07",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2011 Washington Place"
+                  ],
+                  "city": "Dallas",
+                  "state": "TX",
+                  "postalCode": "75201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Martinez",
+                    "given": [
+                      "Camila"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(824) 863-2842"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0093-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0093-02",
+              "meta": {
+                "lastUpdated": "2024-06-12T14:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0093-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V958843"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0093",
+                "display": "Jacob Martinez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-06-12T14:27:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "84114007",
+                      "display": "Sepsis"
+                    }
+                  ],
+                  "text": "Septicemia"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Septicemia"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0093-02-t02",
+                    "display": "Surgical Floor - Room 421, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0093-02-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0093-02-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SURG-421-C"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical Floor - Room 421, Bed C",
+              "description": "Bed C in Room 421 of Surgical Floor",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Surgical Floor"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-10",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0093-010",
+        "type": "message",
+        "timestamp": "2024-06-19T12:27:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:8d001b9d-1be8-4816-ab92-620b5be43139",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0093-010",
+              "meta": {
+                "lastUpdated": "2024-06-19T12:27:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://austin-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Austin General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://austin-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0093"
+                },
+                {
+                  "reference": "Encounter/0093-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0093",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0093",
+              "meta": {
+                "lastUpdated": "2024-06-19T07:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0093"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "780-60-2981"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Martinez",
+                  "given": [
+                    "Jacob"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(788) 732-9900",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(626) 648-9721",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "jacob.martinez@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1966-02-07",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2011 Washington Place"
+                  ],
+                  "city": "Dallas",
+                  "state": "TX",
+                  "postalCode": "75201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Martinez",
+                    "given": [
+                      "Camila"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(824) 863-2842"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0093-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0093-02",
+              "meta": {
+                "lastUpdated": "2024-06-12T14:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0093-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V816509"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0093",
+                "display": "Jacob Martinez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-06-12T14:27:48Z",
+                "end": "2024-06-19T12:27:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "84114007",
+                      "display": "Sepsis"
+                    }
+                  ],
+                  "text": "Septicemia"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Septicemia"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0093-02-t02",
+                    "display": "Surgical Floor - Room 421, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "emd",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "home",
+                      "display": "Home"
+                    }
+                  ],
+                  "text": "Patient discharged to home"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0093-02-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0093-02-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SURG-421-C"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical Floor - Room 421, Bed C",
+              "description": "Bed C in Room 421 of Surgical Floor",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Surgical Floor"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-11",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0093-011",
+        "type": "message",
+        "timestamp": "2025-05-02T12:27:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:3ab89724-b9a4-4672-8d72-519241615855",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0093-011",
+              "meta": {
+                "lastUpdated": "2025-05-02T12:27:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://austin-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Austin General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://austin-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0093"
+                },
+                {
+                  "reference": "Encounter/0093-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0093",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0093",
+              "meta": {
+                "lastUpdated": "2024-06-19T07:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0093"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "780-60-2981"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Martinez",
+                  "given": [
+                    "Jacob"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(788) 732-9900",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(626) 648-9721",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "jacob.martinez@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1966-02-07",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2011 Washington Place"
+                  ],
+                  "city": "Dallas",
+                  "state": "TX",
+                  "postalCode": "75201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Martinez",
+                    "given": [
+                      "Camila"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(824) 863-2842"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0093-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0093-03",
+              "meta": {
+                "lastUpdated": "2025-05-02T12:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0093-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V485556"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0093",
+                "display": "Jacob Martinez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-05-02T12:27:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "386661006",
+                      "display": "Fever of unknown origin"
+                    }
+                  ],
+                  "text": "FUO workup"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "FUO workup"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0093-03-01",
+                    "display": "Pediatric Unit - Room 258, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0093-03-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0093-03-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-PEDS-258-B"
+                }
+              ],
+              "status": "active",
+              "name": "Pediatric Unit - Room 258, Bed B",
+              "description": "Bed B in Room 258 of Pediatric Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Pediatric Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-12",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0093-012",
+        "type": "message",
+        "timestamp": "2025-05-02T18:27:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:fd6c1ff1-5b66-4efe-98a1-245eb947e0af",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0093-012",
+              "meta": {
+                "lastUpdated": "2025-05-02T18:27:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://austin-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Austin General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://austin-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0093"
+                },
+                {
+                  "reference": "Encounter/0093-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0093",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0093",
+              "meta": {
+                "lastUpdated": "2024-06-19T07:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0093"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "780-60-2981"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Martinez",
+                  "given": [
+                    "Jacob"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(788) 732-9900",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(626) 648-9721",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "jacob.martinez@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1966-02-07",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2011 Washington Place"
+                  ],
+                  "city": "Dallas",
+                  "state": "TX",
+                  "postalCode": "75201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Martinez",
+                    "given": [
+                      "Camila"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(824) 863-2842"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0093-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0093-03",
+              "meta": {
+                "lastUpdated": "2025-05-02T12:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0093-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V395889"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0093",
+                "display": "Jacob Martinez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-05-02T12:27:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "386661006",
+                      "display": "Fever of unknown origin"
+                    }
+                  ],
+                  "text": "FUO workup"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "FUO workup"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0093-03-t01",
+                    "display": "Medical ICU - Room 119, Bed D"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0093-03-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0093-03-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-MICU-119-D"
+                }
+              ],
+              "status": "active",
+              "name": "Medical ICU - Room 119, Bed D",
+              "description": "Bed D in Room 119 of Medical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Medical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-13",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0093-013",
+        "type": "message",
+        "timestamp": "2025-05-04T19:27:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:f9ba9256-5cf3-40d5-8020-70c76d2467ac",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0093-013",
+              "meta": {
+                "lastUpdated": "2025-05-04T19:27:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://austin-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Austin General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://austin-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0093"
+                },
+                {
+                  "reference": "Encounter/0093-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0093",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0093",
+              "meta": {
+                "lastUpdated": "2024-06-19T07:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0093"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "780-60-2981"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Martinez",
+                  "given": [
+                    "Jacob"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(788) 732-9900",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(626) 648-9721",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "jacob.martinez@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1966-02-07",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2011 Washington Place"
+                  ],
+                  "city": "Dallas",
+                  "state": "TX",
+                  "postalCode": "75201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Martinez",
+                    "given": [
+                      "Camila"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(824) 863-2842"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0093-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0093-03",
+              "meta": {
+                "lastUpdated": "2025-05-02T12:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0093-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V800238"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0093",
+                "display": "Jacob Martinez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-05-02T12:27:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "386661006",
+                      "display": "Fever of unknown origin"
+                    }
+                  ],
+                  "text": "FUO workup"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "FUO workup"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0093-03-t02",
+                    "display": "Post-Anesthesia Care Unit - Room 334, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0093-03-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0093-03-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-PACU-334-B"
+                }
+              ],
+              "status": "active",
+              "name": "Post-Anesthesia Care Unit - Room 334, Bed B",
+              "description": "Bed B in Room 334 of Post-Anesthesia Care Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Post-Anesthesia Care Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-14",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0093-014",
+        "type": "message",
+        "timestamp": "2025-05-06T22:27:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:ce34dd6b-7cf9-41e9-9b38-7132f65e2e4a",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0093-014",
+              "meta": {
+                "lastUpdated": "2025-05-06T22:27:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://austin-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Austin General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://austin-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0093"
+                },
+                {
+                  "reference": "Encounter/0093-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0093",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0093",
+              "meta": {
+                "lastUpdated": "2024-06-19T07:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0093"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "780-60-2981"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Martinez",
+                  "given": [
+                    "Jacob"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(788) 732-9900",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(626) 648-9721",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "jacob.martinez@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1966-02-07",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2011 Washington Place"
+                  ],
+                  "city": "Dallas",
+                  "state": "TX",
+                  "postalCode": "75201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Martinez",
+                    "given": [
+                      "Camila"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(824) 863-2842"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0093-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0093-03",
+              "meta": {
+                "lastUpdated": "2025-05-02T12:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0093-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V710792"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0093",
+                "display": "Jacob Martinez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-05-02T12:27:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "386661006",
+                      "display": "Fever of unknown origin"
+                    }
+                  ],
+                  "text": "FUO workup"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "FUO workup"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0093-03-t03",
+                    "display": "Pediatric Unit - Room 116, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0093-03-t03",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0093-03-t03",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-PEDS-116-B"
+                }
+              ],
+              "status": "active",
+              "name": "Pediatric Unit - Room 116, Bed B",
+              "description": "Bed B in Room 116 of Pediatric Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Pediatric Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-15",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0093-015",
+        "type": "message",
+        "timestamp": "2025-05-08T16:27:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:0af2b6bc-b2bb-4605-b807-2539a8335896",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0093-015",
+              "meta": {
+                "lastUpdated": "2025-05-08T16:27:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://austin-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Austin General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://austin-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0093"
+                },
+                {
+                  "reference": "Encounter/0093-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0093",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0093",
+              "meta": {
+                "lastUpdated": "2024-06-19T07:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0093"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "780-60-2981"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Martinez",
+                  "given": [
+                    "Jacob"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(788) 732-9900",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(626) 648-9721",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "jacob.martinez@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1966-02-07",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2011 Washington Place"
+                  ],
+                  "city": "Dallas",
+                  "state": "TX",
+                  "postalCode": "75201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Martinez",
+                    "given": [
+                      "Camila"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(824) 863-2842"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0093-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0093-03",
+              "meta": {
+                "lastUpdated": "2025-05-02T12:27:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0093-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V317250"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0093",
+                "display": "Jacob Martinez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-002",
+                    "display": "Dr. Michael Chen"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-05-02T12:27:48Z",
+                "end": "2025-05-08T16:27:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "386661006",
+                      "display": "Fever of unknown origin"
+                    }
+                  ],
+                  "text": "FUO workup"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "FUO workup"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0093-03-t03",
+                    "display": "Pediatric Unit - Room 116, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "born",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "snf",
+                      "display": "Skilled Nursing Facility"
+                    }
+                  ],
+                  "text": "Discharged to SNF"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0093-03-t03",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0093-03-t03",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-PEDS-116-B"
+                }
+              ],
+              "status": "active",
+              "name": "Pediatric Unit - Room 116, Bed B",
+              "description": "Bed B in Room 116 of Pediatric Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Pediatric Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-001",
+                "display": "Austin General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

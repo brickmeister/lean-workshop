@@ -1,0 +1,5629 @@
+{
+  "resourceType": "Bundle",
+  "id": "adt-patient-bundle-0038",
+  "type": "collection",
+  "timestamp": "2025-12-11T04:12:46Z",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bundle"
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:adt-msg-1",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0038-001",
+        "type": "message",
+        "timestamp": "2024-11-15T04:12:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:19ad9c75-c387-45d7-bd98-68f65d655c22",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0038-001",
+              "meta": {
+                "lastUpdated": "2024-11-15T04:12:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A04",
+                "display": "ADT/ACK - Register a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://nyu-langone-health.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "NYU Langone Health",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://nyu-langone-health.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "register",
+                    "display": "Register"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0038"
+                },
+                {
+                  "reference": "Encounter/0038-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0038",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0038",
+              "meta": {
+                "lastUpdated": "2025-06-21T09:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0038"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "590-86-2065"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Watson",
+                  "given": [
+                    "Abigail"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(536) 278-2266",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(549) 299-5790",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "abigail.watson@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1946-10-28",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "5142 First Street"
+                  ],
+                  "city": "Portland",
+                  "state": "OR",
+                  "postalCode": "97201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Watson",
+                    "given": [
+                      "Evelyn"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(752) 644-2205"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0038-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0038-01",
+              "meta": {
+                "lastUpdated": "2024-11-15T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0038-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V440086"
+                }
+              ],
+              "status": "planned",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "EMER",
+                "display": "emergency"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0038",
+                "display": "Abigail Watson"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-11-15T04:12:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "22298006",
+                      "display": "Myocardial infarction"
+                    }
+                  ],
+                  "text": "Acute MI"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Acute MI"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0038-01-reg",
+                    "display": "Emergency Department - Room 24, Bed D"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0038-01-reg",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0038-01-reg",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-24-D"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 24, Bed D",
+              "description": "Bed D in Room 24 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-2",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0038-002",
+        "type": "message",
+        "timestamp": "2024-11-15T06:06:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:7de36bed-578c-4b2f-b0e8-74c93bf9b1d7",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0038-002",
+              "meta": {
+                "lastUpdated": "2024-11-15T06:06:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://nyu-langone-health.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "NYU Langone Health",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://nyu-langone-health.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0038"
+                },
+                {
+                  "reference": "Encounter/0038-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0038",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0038",
+              "meta": {
+                "lastUpdated": "2025-06-21T09:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0038"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "590-86-2065"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Watson",
+                  "given": [
+                    "Abigail"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(536) 278-2266",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(549) 299-5790",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "abigail.watson@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1946-10-28",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "5142 First Street"
+                  ],
+                  "city": "Portland",
+                  "state": "OR",
+                  "postalCode": "97201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Watson",
+                    "given": [
+                      "Evelyn"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(752) 644-2205"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0038-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0038-01",
+              "meta": {
+                "lastUpdated": "2024-11-15T06:06:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0038-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V916638"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0038",
+                "display": "Abigail Watson"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-11-15T06:06:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "22298006",
+                      "display": "Myocardial infarction"
+                    }
+                  ],
+                  "text": "Acute MI"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Acute MI"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0038-01-01",
+                    "display": "Telemetry Unit - Room 367, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0038-01-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0038-01-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-TELE-367-C"
+                }
+              ],
+              "status": "active",
+              "name": "Telemetry Unit - Room 367, Bed C",
+              "description": "Bed C in Room 367 of Telemetry Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Telemetry Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-3",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0038-003",
+        "type": "message",
+        "timestamp": "2024-11-16T02:06:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:31bcd0da-607e-41f3-aa73-338734b3fa66",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0038-003",
+              "meta": {
+                "lastUpdated": "2024-11-16T02:06:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://nyu-langone-health.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "NYU Langone Health",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://nyu-langone-health.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0038"
+                },
+                {
+                  "reference": "Encounter/0038-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0038",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0038",
+              "meta": {
+                "lastUpdated": "2025-06-21T09:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0038"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "590-86-2065"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Watson",
+                  "given": [
+                    "Abigail"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(536) 278-2266",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(549) 299-5790",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "abigail.watson@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1946-10-28",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "5142 First Street"
+                  ],
+                  "city": "Portland",
+                  "state": "OR",
+                  "postalCode": "97201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Watson",
+                    "given": [
+                      "Evelyn"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(752) 644-2205"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0038-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0038-01",
+              "meta": {
+                "lastUpdated": "2024-11-15T06:06:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0038-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V866807"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0038",
+                "display": "Abigail Watson"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-11-15T06:06:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "22298006",
+                      "display": "Myocardial infarction"
+                    }
+                  ],
+                  "text": "Acute MI"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Acute MI"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0038-01-t01",
+                    "display": "Medical ICU - Room 472, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0038-01-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0038-01-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-MICU-472-A"
+                }
+              ],
+              "status": "active",
+              "name": "Medical ICU - Room 472, Bed A",
+              "description": "Bed A in Room 472 of Medical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Medical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-4",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0038-004",
+        "type": "message",
+        "timestamp": "2024-11-18T05:06:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:c5a27f07-cd4f-48a2-9743-e5d79db9787a",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0038-004",
+              "meta": {
+                "lastUpdated": "2024-11-18T05:06:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://nyu-langone-health.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "NYU Langone Health",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://nyu-langone-health.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0038"
+                },
+                {
+                  "reference": "Encounter/0038-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0038",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0038",
+              "meta": {
+                "lastUpdated": "2025-06-21T09:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0038"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "590-86-2065"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Watson",
+                  "given": [
+                    "Abigail"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(536) 278-2266",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(549) 299-5790",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "abigail.watson@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1946-10-28",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "5142 First Street"
+                  ],
+                  "city": "Portland",
+                  "state": "OR",
+                  "postalCode": "97201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Watson",
+                    "given": [
+                      "Evelyn"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(752) 644-2205"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0038-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0038-01",
+              "meta": {
+                "lastUpdated": "2024-11-15T06:06:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0038-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V485048"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0038",
+                "display": "Abigail Watson"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-003",
+                    "display": "Dr. Emily Rodriguez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-11-15T06:06:46Z",
+                "end": "2024-11-18T05:06:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "22298006",
+                      "display": "Myocardial infarction"
+                    }
+                  ],
+                  "text": "Acute MI"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Acute MI"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0038-01-t01",
+                    "display": "Medical ICU - Room 472, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "gp",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "home",
+                      "display": "Home"
+                    }
+                  ],
+                  "text": "Patient discharged to home"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0038-01-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0038-01-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-MICU-472-A"
+                }
+              ],
+              "status": "active",
+              "name": "Medical ICU - Room 472, Bed A",
+              "description": "Bed A in Room 472 of Medical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Medical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-5",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0038-005",
+        "type": "message",
+        "timestamp": "2025-06-16T05:06:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:4d6651c7-3a5a-4213-be55-70f5b22d2afb",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0038-005",
+              "meta": {
+                "lastUpdated": "2025-06-16T05:06:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A04",
+                "display": "ADT/ACK - Register a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://nyu-langone-health.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "NYU Langone Health",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://nyu-langone-health.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "register",
+                    "display": "Register"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0038"
+                },
+                {
+                  "reference": "Encounter/0038-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0038",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0038",
+              "meta": {
+                "lastUpdated": "2025-06-21T09:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0038"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "590-86-2065"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Watson",
+                  "given": [
+                    "Abigail"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(536) 278-2266",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(549) 299-5790",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "abigail.watson@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1946-10-28",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "5142 First Street"
+                  ],
+                  "city": "Portland",
+                  "state": "OR",
+                  "postalCode": "97201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Watson",
+                    "given": [
+                      "Evelyn"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(752) 644-2205"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0038-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0038-02",
+              "meta": {
+                "lastUpdated": "2025-06-16T05:06:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0038-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V671145"
+                }
+              ],
+              "status": "planned",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "EMER",
+                "display": "emergency"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0038",
+                "display": "Abigail Watson"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-004",
+                    "display": "Dr. James Thompson"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-004",
+                    "display": "Dr. James Thompson"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-06-16T05:06:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "44054006",
+                      "display": "Diabetic ketoacidosis"
+                    }
+                  ],
+                  "text": "DKA"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DKA"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0038-02-reg",
+                    "display": "Emergency Department - Room 22, Bed D"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0038-02-reg",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0038-02-reg",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-22-D"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 22, Bed D",
+              "description": "Bed D in Room 22 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-6",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0038-006",
+        "type": "message",
+        "timestamp": "2025-06-16T06:47:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:35f227a2-2c3f-422a-ad37-916351e897e2",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0038-006",
+              "meta": {
+                "lastUpdated": "2025-06-16T06:47:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://nyu-langone-health.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "NYU Langone Health",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://nyu-langone-health.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0038"
+                },
+                {
+                  "reference": "Encounter/0038-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0038",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0038",
+              "meta": {
+                "lastUpdated": "2025-06-21T09:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0038"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "590-86-2065"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Watson",
+                  "given": [
+                    "Abigail"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(536) 278-2266",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(549) 299-5790",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "abigail.watson@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1946-10-28",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "5142 First Street"
+                  ],
+                  "city": "Portland",
+                  "state": "OR",
+                  "postalCode": "97201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Watson",
+                    "given": [
+                      "Evelyn"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(752) 644-2205"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0038-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0038-02",
+              "meta": {
+                "lastUpdated": "2025-06-16T06:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0038-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V945529"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0038",
+                "display": "Abigail Watson"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-004",
+                    "display": "Dr. James Thompson"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-004",
+                    "display": "Dr. James Thompson"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-06-16T06:47:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "44054006",
+                      "display": "Diabetic ketoacidosis"
+                    }
+                  ],
+                  "text": "DKA"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DKA"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0038-02-01",
+                    "display": "Surgical ICU - Room 171, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0038-02-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0038-02-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SICU-171-B"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical ICU - Room 171, Bed B",
+              "description": "Bed B in Room 171 of Surgical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Surgical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-7",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0038-007",
+        "type": "message",
+        "timestamp": "2025-06-18T02:47:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:e7649049-5114-4459-848e-7587ba841be8",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0038-007",
+              "meta": {
+                "lastUpdated": "2025-06-18T02:47:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://nyu-langone-health.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "NYU Langone Health",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://nyu-langone-health.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0038"
+                },
+                {
+                  "reference": "Encounter/0038-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0038",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0038",
+              "meta": {
+                "lastUpdated": "2025-06-21T09:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0038"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "590-86-2065"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Watson",
+                  "given": [
+                    "Abigail"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(536) 278-2266",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(549) 299-5790",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "abigail.watson@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1946-10-28",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "5142 First Street"
+                  ],
+                  "city": "Portland",
+                  "state": "OR",
+                  "postalCode": "97201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Watson",
+                    "given": [
+                      "Evelyn"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(752) 644-2205"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0038-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0038-02",
+              "meta": {
+                "lastUpdated": "2025-06-16T06:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0038-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V534352"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0038",
+                "display": "Abigail Watson"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-004",
+                    "display": "Dr. James Thompson"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-004",
+                    "display": "Dr. James Thompson"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-06-16T06:47:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "44054006",
+                      "display": "Diabetic ketoacidosis"
+                    }
+                  ],
+                  "text": "DKA"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DKA"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0038-02-t01",
+                    "display": "Orthopedic Unit - Room 383, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0038-02-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0038-02-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ORTHO-383-B"
+                }
+              ],
+              "status": "active",
+              "name": "Orthopedic Unit - Room 383, Bed B",
+              "description": "Bed B in Room 383 of Orthopedic Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Orthopedic Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-8",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0038-008",
+        "type": "message",
+        "timestamp": "2025-06-18T17:47:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:8461ff1b-10a5-4c94-a93c-0e2e6b4bb3da",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0038-008",
+              "meta": {
+                "lastUpdated": "2025-06-18T17:47:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://nyu-langone-health.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "NYU Langone Health",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://nyu-langone-health.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0038"
+                },
+                {
+                  "reference": "Encounter/0038-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0038",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0038",
+              "meta": {
+                "lastUpdated": "2025-06-21T09:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0038"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "590-86-2065"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Watson",
+                  "given": [
+                    "Abigail"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(536) 278-2266",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(549) 299-5790",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "abigail.watson@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1946-10-28",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "5142 First Street"
+                  ],
+                  "city": "Portland",
+                  "state": "OR",
+                  "postalCode": "97201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Watson",
+                    "given": [
+                      "Evelyn"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(752) 644-2205"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0038-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0038-02",
+              "meta": {
+                "lastUpdated": "2025-06-16T06:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0038-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V908708"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0038",
+                "display": "Abigail Watson"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-004",
+                    "display": "Dr. James Thompson"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-004",
+                    "display": "Dr. James Thompson"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-06-16T06:47:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "44054006",
+                      "display": "Diabetic ketoacidosis"
+                    }
+                  ],
+                  "text": "DKA"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DKA"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0038-02-t02",
+                    "display": "Emergency Department - Room 110, Bed D"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0038-02-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0038-02-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-110-D"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 110, Bed D",
+              "description": "Bed D in Room 110 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-9",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0038-009",
+        "type": "message",
+        "timestamp": "2025-06-21T09:47:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:c7f44c3f-8fb3-46b4-a41b-c1c5c18efad4",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0038-009",
+              "meta": {
+                "lastUpdated": "2025-06-21T09:47:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A08",
+                "display": "ADT/ACK - Update Patient Information"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://nyu-langone-health.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "NYU Langone Health",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://nyu-langone-health.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "update",
+                    "display": "Update"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0038"
+                },
+                {
+                  "reference": "Encounter/0038-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0038",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0038",
+              "meta": {
+                "lastUpdated": "2025-06-21T09:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0038"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "590-86-2065"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Watson",
+                  "given": [
+                    "Abigail"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(536) 278-2266",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(549) 299-5790",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "abigail.watson@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1946-10-28",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "5142 First Street"
+                  ],
+                  "city": "Portland",
+                  "state": "OR",
+                  "postalCode": "97201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Watson",
+                    "given": [
+                      "Evelyn"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(752) 644-2205"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0038-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0038-02",
+              "meta": {
+                "lastUpdated": "2025-06-16T06:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0038-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V902889"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0038",
+                "display": "Abigail Watson"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-004",
+                    "display": "Dr. James Thompson"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-004",
+                    "display": "Dr. James Thompson"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-06-16T06:47:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "44054006",
+                      "display": "Diabetic ketoacidosis"
+                    }
+                  ],
+                  "text": "DKA"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DKA"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0038-02-t02",
+                    "display": "Emergency Department - Room 110, Bed D"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0038-02-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0038-02-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-110-D"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 110, Bed D",
+              "description": "Bed D in Room 110 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-10",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0038-010",
+        "type": "message",
+        "timestamp": "2025-06-21T18:47:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:1d40fed6-1d55-4217-8b1a-ec1240c9835b",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0038-010",
+              "meta": {
+                "lastUpdated": "2025-06-21T18:47:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://nyu-langone-health.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "NYU Langone Health",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://nyu-langone-health.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0038"
+                },
+                {
+                  "reference": "Encounter/0038-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0038",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0038",
+              "meta": {
+                "lastUpdated": "2025-06-21T09:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0038"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "590-86-2065"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Watson",
+                  "given": [
+                    "Abigail"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(536) 278-2266",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(549) 299-5790",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "abigail.watson@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1946-10-28",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "5142 First Street"
+                  ],
+                  "city": "Portland",
+                  "state": "OR",
+                  "postalCode": "97201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Watson",
+                    "given": [
+                      "Evelyn"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(752) 644-2205"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0038-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0038-02",
+              "meta": {
+                "lastUpdated": "2025-06-16T06:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0038-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V299620"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0038",
+                "display": "Abigail Watson"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-004",
+                    "display": "Dr. James Thompson"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-004",
+                    "display": "Dr. James Thompson"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-06-16T06:47:46Z",
+                "end": "2025-06-21T18:47:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "44054006",
+                      "display": "Diabetic ketoacidosis"
+                    }
+                  ],
+                  "text": "DKA"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DKA"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0038-02-t02",
+                    "display": "Emergency Department - Room 110, Bed D"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "gp",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "rehab",
+                      "display": "Rehabilitation Facility"
+                    }
+                  ],
+                  "text": "Discharged to rehab"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0038-02-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0038-02-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-110-D"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 110, Bed D",
+              "description": "Bed D in Room 110 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-11",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0038-011",
+        "type": "message",
+        "timestamp": "2026-04-23T18:47:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:fa29c8ce-489f-4940-8ccc-61bb87c8ec16",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0038-011",
+              "meta": {
+                "lastUpdated": "2026-04-23T18:47:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A04",
+                "display": "ADT/ACK - Register a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://nyu-langone-health.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "NYU Langone Health",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://nyu-langone-health.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "register",
+                    "display": "Register"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0038"
+                },
+                {
+                  "reference": "Encounter/0038-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0038",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0038",
+              "meta": {
+                "lastUpdated": "2025-06-21T09:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0038"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "590-86-2065"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Watson",
+                  "given": [
+                    "Abigail"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(536) 278-2266",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(549) 299-5790",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "abigail.watson@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1946-10-28",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "5142 First Street"
+                  ],
+                  "city": "Portland",
+                  "state": "OR",
+                  "postalCode": "97201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Watson",
+                    "given": [
+                      "Evelyn"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(752) 644-2205"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0038-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0038-03",
+              "meta": {
+                "lastUpdated": "2026-04-23T18:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0038-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V440683"
+                }
+              ],
+              "status": "planned",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "EMER",
+                "display": "emergency"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0038",
+                "display": "Abigail Watson"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2026-04-23T18:47:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "195967001",
+                      "display": "Asthma exacerbation"
+                    }
+                  ],
+                  "text": "Asthma attack"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Asthma attack"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0038-03-reg",
+                    "display": "Emergency Department - Room 11, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0038-03-reg",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0038-03-reg",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-11-C"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 11, Bed C",
+              "description": "Bed C in Room 11 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-12",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0038-012",
+        "type": "message",
+        "timestamp": "2026-04-23T19:55:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:08142f8f-0e27-4a7d-bc52-502c0349ecea",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0038-012",
+              "meta": {
+                "lastUpdated": "2026-04-23T19:55:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://nyu-langone-health.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "NYU Langone Health",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://nyu-langone-health.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0038"
+                },
+                {
+                  "reference": "Encounter/0038-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0038",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0038",
+              "meta": {
+                "lastUpdated": "2025-06-21T09:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0038"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "590-86-2065"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Watson",
+                  "given": [
+                    "Abigail"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(536) 278-2266",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(549) 299-5790",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "abigail.watson@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1946-10-28",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "5142 First Street"
+                  ],
+                  "city": "Portland",
+                  "state": "OR",
+                  "postalCode": "97201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Watson",
+                    "given": [
+                      "Evelyn"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(752) 644-2205"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0038-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0038-03",
+              "meta": {
+                "lastUpdated": "2026-04-23T19:55:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0038-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V988301"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0038",
+                "display": "Abigail Watson"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2026-04-23T19:55:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "195967001",
+                      "display": "Asthma exacerbation"
+                    }
+                  ],
+                  "text": "Asthma attack"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Asthma attack"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0038-03-01",
+                    "display": "Emergency Department - Room 157, Bed D"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0038-03-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0038-03-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-157-D"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 157, Bed D",
+              "description": "Bed D in Room 157 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-13",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0038-013",
+        "type": "message",
+        "timestamp": "2026-04-25T16:55:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:648debf1-5006-4035-a222-f502c27fb7a2",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0038-013",
+              "meta": {
+                "lastUpdated": "2026-04-25T16:55:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://nyu-langone-health.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "NYU Langone Health",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://nyu-langone-health.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0038"
+                },
+                {
+                  "reference": "Encounter/0038-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0038",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0038",
+              "meta": {
+                "lastUpdated": "2025-06-21T09:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0038"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "590-86-2065"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Watson",
+                  "given": [
+                    "Abigail"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(536) 278-2266",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(549) 299-5790",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "abigail.watson@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1946-10-28",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "5142 First Street"
+                  ],
+                  "city": "Portland",
+                  "state": "OR",
+                  "postalCode": "97201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Watson",
+                    "given": [
+                      "Evelyn"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(752) 644-2205"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0038-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0038-03",
+              "meta": {
+                "lastUpdated": "2026-04-23T19:55:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0038-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V906947"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0038",
+                "display": "Abigail Watson"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2026-04-23T19:55:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "195967001",
+                      "display": "Asthma exacerbation"
+                    }
+                  ],
+                  "text": "Asthma attack"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Asthma attack"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0038-03-t01",
+                    "display": "Pediatric Unit - Room 488, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0038-03-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0038-03-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-PEDS-488-B"
+                }
+              ],
+              "status": "active",
+              "name": "Pediatric Unit - Room 488, Bed B",
+              "description": "Bed B in Room 488 of Pediatric Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Pediatric Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-14",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0038-014",
+        "type": "message",
+        "timestamp": "2026-04-28T16:55:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:51c21205-dd93-40b3-9c6e-8c103e799ea9",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0038-014",
+              "meta": {
+                "lastUpdated": "2026-04-28T16:55:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://nyu-langone-health.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "NYU Langone Health",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://nyu-langone-health.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0038"
+                },
+                {
+                  "reference": "Encounter/0038-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0038",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0038",
+              "meta": {
+                "lastUpdated": "2025-06-21T09:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0038"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "590-86-2065"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Watson",
+                  "given": [
+                    "Abigail"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(536) 278-2266",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(549) 299-5790",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "abigail.watson@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1946-10-28",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "5142 First Street"
+                  ],
+                  "city": "Portland",
+                  "state": "OR",
+                  "postalCode": "97201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Watson",
+                    "given": [
+                      "Evelyn"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(752) 644-2205"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0038-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0038-03",
+              "meta": {
+                "lastUpdated": "2026-04-23T19:55:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0038-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V343928"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0038",
+                "display": "Abigail Watson"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2026-04-23T19:55:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "195967001",
+                      "display": "Asthma exacerbation"
+                    }
+                  ],
+                  "text": "Asthma attack"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Asthma attack"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0038-03-t02",
+                    "display": "Orthopedic Unit - Room 479, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0038-03-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0038-03-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ORTHO-479-A"
+                }
+              ],
+              "status": "active",
+              "name": "Orthopedic Unit - Room 479, Bed A",
+              "description": "Bed A in Room 479 of Orthopedic Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Orthopedic Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-15",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0038-015",
+        "type": "message",
+        "timestamp": "2026-05-01T01:55:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:6f617c76-63c1-476a-9483-ffdf991887f6",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0038-015",
+              "meta": {
+                "lastUpdated": "2026-05-01T01:55:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://nyu-langone-health.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "NYU Langone Health",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://nyu-langone-health.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0038"
+                },
+                {
+                  "reference": "Encounter/0038-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0038",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0038",
+              "meta": {
+                "lastUpdated": "2025-06-21T09:47:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0038"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "590-86-2065"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Watson",
+                  "given": [
+                    "Abigail"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(536) 278-2266",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(549) 299-5790",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "abigail.watson@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1946-10-28",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "5142 First Street"
+                  ],
+                  "city": "Portland",
+                  "state": "OR",
+                  "postalCode": "97201",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Watson",
+                    "given": [
+                      "Evelyn"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(752) 644-2205"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0038-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0038-03",
+              "meta": {
+                "lastUpdated": "2026-04-23T19:55:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0038-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V441333"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0038",
+                "display": "Abigail Watson"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2026-04-23T19:55:46Z",
+                "end": "2026-05-01T01:55:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "195967001",
+                      "display": "Asthma exacerbation"
+                    }
+                  ],
+                  "text": "Asthma attack"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Asthma attack"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0038-03-t02",
+                    "display": "Orthopedic Unit - Room 479, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "outp",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "snf",
+                      "display": "Skilled Nursing Facility"
+                    }
+                  ],
+                  "text": "Discharged to SNF"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0038-03-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0038-03-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ORTHO-479-A"
+                }
+              ],
+              "status": "active",
+              "name": "Orthopedic Unit - Room 479, Bed A",
+              "description": "Bed A in Room 479 of Orthopedic Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Orthopedic Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-007",
+                "display": "NYU Langone Health"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

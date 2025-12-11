@@ -1,0 +1,5651 @@
+{
+  "resourceType": "Bundle",
+  "id": "adt-patient-bundle-0083",
+  "type": "collection",
+  "timestamp": "2025-12-11T04:12:48Z",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bundle"
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:adt-msg-1",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0083-001",
+        "type": "message",
+        "timestamp": "2024-01-11T04:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:5d600032-83f8-4b81-b7dd-f223575c6be4",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0083-001",
+              "meta": {
+                "lastUpdated": "2024-01-11T04:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://denver-regional-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Denver Regional Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://denver-regional-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0083"
+                },
+                {
+                  "reference": "Encounter/0083-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0083",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0083",
+              "meta": {
+                "lastUpdated": "2027-06-03T07:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0083"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "520-11-2261"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Jimenez",
+                  "given": [
+                    "Aurora"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(346) 460-9079",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(712) 630-8197",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "aurora.jimenez@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1972-11-01",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2996 Birch Drive"
+                  ],
+                  "city": "Atlanta",
+                  "state": "GA",
+                  "postalCode": "30301",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "S"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Jimenez",
+                    "given": [
+                      "Anthony"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(251) 646-5165"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0083-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0083-01",
+              "meta": {
+                "lastUpdated": "2024-01-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0083-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V159854"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0083",
+                "display": "Aurora Jimenez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-01-11T04:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "25064002",
+                      "display": "Acute pancreatitis"
+                    }
+                  ],
+                  "text": "Pancreatitis"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Pancreatitis"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0083-01-01",
+                    "display": "Emergency Department - Room 417, Bed D"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0083-01-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0083-01-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-417-D"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 417, Bed D",
+              "description": "Bed D in Room 417 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-2",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0083-002",
+        "type": "message",
+        "timestamp": "2024-01-11T12:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:6ad4114e-4fdf-4a4c-a923-e6af7e3853dd",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0083-002",
+              "meta": {
+                "lastUpdated": "2024-01-11T12:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://denver-regional-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Denver Regional Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://denver-regional-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0083"
+                },
+                {
+                  "reference": "Encounter/0083-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0083",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0083",
+              "meta": {
+                "lastUpdated": "2027-06-03T07:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0083"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "520-11-2261"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Jimenez",
+                  "given": [
+                    "Aurora"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(346) 460-9079",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(712) 630-8197",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "aurora.jimenez@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1972-11-01",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2996 Birch Drive"
+                  ],
+                  "city": "Atlanta",
+                  "state": "GA",
+                  "postalCode": "30301",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "S"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Jimenez",
+                    "given": [
+                      "Anthony"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(251) 646-5165"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0083-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0083-01",
+              "meta": {
+                "lastUpdated": "2024-01-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0083-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V811297"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0083",
+                "display": "Aurora Jimenez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-01-11T04:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "25064002",
+                      "display": "Acute pancreatitis"
+                    }
+                  ],
+                  "text": "Pancreatitis"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Pancreatitis"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0083-01-t01",
+                    "display": "Observation Unit - Room 230, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0083-01-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0083-01-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-OBS-230-A"
+                }
+              ],
+              "status": "active",
+              "name": "Observation Unit - Room 230, Bed A",
+              "description": "Bed A in Room 230 of Observation Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Observation Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-3",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0083-003",
+        "type": "message",
+        "timestamp": "2024-01-13T14:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:33f41450-b604-4e25-a523-023af09b2c6e",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0083-003",
+              "meta": {
+                "lastUpdated": "2024-01-13T14:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://denver-regional-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Denver Regional Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://denver-regional-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0083"
+                },
+                {
+                  "reference": "Encounter/0083-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0083",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0083",
+              "meta": {
+                "lastUpdated": "2027-06-03T07:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0083"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "520-11-2261"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Jimenez",
+                  "given": [
+                    "Aurora"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(346) 460-9079",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(712) 630-8197",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "aurora.jimenez@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1972-11-01",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2996 Birch Drive"
+                  ],
+                  "city": "Atlanta",
+                  "state": "GA",
+                  "postalCode": "30301",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "S"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Jimenez",
+                    "given": [
+                      "Anthony"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(251) 646-5165"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0083-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0083-01",
+              "meta": {
+                "lastUpdated": "2024-01-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0083-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V904293"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0083",
+                "display": "Aurora Jimenez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-01-11T04:12:48Z",
+                "end": "2024-01-13T14:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "25064002",
+                      "display": "Acute pancreatitis"
+                    }
+                  ],
+                  "text": "Pancreatitis"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Pancreatitis"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0083-01-t01",
+                    "display": "Observation Unit - Room 230, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "emd",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "snf",
+                      "display": "Skilled Nursing Facility"
+                    }
+                  ],
+                  "text": "Discharged to SNF"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0083-01-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0083-01-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-OBS-230-A"
+                }
+              ],
+              "status": "active",
+              "name": "Observation Unit - Room 230, Bed A",
+              "description": "Bed A in Room 230 of Observation Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Observation Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-4",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0083-004",
+        "type": "message",
+        "timestamp": "2024-08-22T14:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:981bb935-f1e4-4a29-ad5d-67656f0ebc62",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0083-004",
+              "meta": {
+                "lastUpdated": "2024-08-22T14:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://denver-regional-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Denver Regional Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://denver-regional-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0083"
+                },
+                {
+                  "reference": "Encounter/0083-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0083",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0083",
+              "meta": {
+                "lastUpdated": "2027-06-03T07:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0083"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "520-11-2261"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Jimenez",
+                  "given": [
+                    "Aurora"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(346) 460-9079",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(712) 630-8197",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "aurora.jimenez@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1972-11-01",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2996 Birch Drive"
+                  ],
+                  "city": "Atlanta",
+                  "state": "GA",
+                  "postalCode": "30301",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "S"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Jimenez",
+                    "given": [
+                      "Anthony"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(251) 646-5165"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0083-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0083-02",
+              "meta": {
+                "lastUpdated": "2024-08-22T14:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0083-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V443659"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0083",
+                "display": "Aurora Jimenez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-08-22T14:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "35489007",
+                      "display": "Chest pain"
+                    }
+                  ],
+                  "text": "Rule out ACS"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Rule out ACS"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0083-02-01",
+                    "display": "Telemetry Unit - Room 475, Bed D"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0083-02-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0083-02-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-TELE-475-D"
+                }
+              ],
+              "status": "active",
+              "name": "Telemetry Unit - Room 475, Bed D",
+              "description": "Bed D in Room 475 of Telemetry Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Telemetry Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-5",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0083-005",
+        "type": "message",
+        "timestamp": "2024-08-23T23:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:ff7573c2-646a-43f5-99b4-cd1db53c7eb3",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0083-005",
+              "meta": {
+                "lastUpdated": "2024-08-23T23:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://denver-regional-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Denver Regional Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://denver-regional-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0083"
+                },
+                {
+                  "reference": "Encounter/0083-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0083",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0083",
+              "meta": {
+                "lastUpdated": "2027-06-03T07:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0083"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "520-11-2261"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Jimenez",
+                  "given": [
+                    "Aurora"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(346) 460-9079",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(712) 630-8197",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "aurora.jimenez@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1972-11-01",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2996 Birch Drive"
+                  ],
+                  "city": "Atlanta",
+                  "state": "GA",
+                  "postalCode": "30301",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "S"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Jimenez",
+                    "given": [
+                      "Anthony"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(251) 646-5165"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0083-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0083-02",
+              "meta": {
+                "lastUpdated": "2024-08-22T14:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0083-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V327309"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0083",
+                "display": "Aurora Jimenez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-08-22T14:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "35489007",
+                      "display": "Chest pain"
+                    }
+                  ],
+                  "text": "Rule out ACS"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Rule out ACS"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0083-02-t01",
+                    "display": "Observation Unit - Room 464, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0083-02-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0083-02-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-OBS-464-A"
+                }
+              ],
+              "status": "active",
+              "name": "Observation Unit - Room 464, Bed A",
+              "description": "Bed A in Room 464 of Observation Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Observation Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-6",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0083-006",
+        "type": "message",
+        "timestamp": "2024-08-25T14:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:cffdaf2f-092b-4c74-9950-0a7f15f20bb8",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0083-006",
+              "meta": {
+                "lastUpdated": "2024-08-25T14:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://denver-regional-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Denver Regional Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://denver-regional-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0083"
+                },
+                {
+                  "reference": "Encounter/0083-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0083",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0083",
+              "meta": {
+                "lastUpdated": "2027-06-03T07:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0083"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "520-11-2261"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Jimenez",
+                  "given": [
+                    "Aurora"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(346) 460-9079",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(712) 630-8197",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "aurora.jimenez@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1972-11-01",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2996 Birch Drive"
+                  ],
+                  "city": "Atlanta",
+                  "state": "GA",
+                  "postalCode": "30301",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "S"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Jimenez",
+                    "given": [
+                      "Anthony"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(251) 646-5165"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0083-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0083-02",
+              "meta": {
+                "lastUpdated": "2024-08-22T14:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0083-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V673616"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0083",
+                "display": "Aurora Jimenez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-08-22T14:12:48Z",
+                "end": "2024-08-25T14:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "35489007",
+                      "display": "Chest pain"
+                    }
+                  ],
+                  "text": "Rule out ACS"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Rule out ACS"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0083-02-t01",
+                    "display": "Observation Unit - Room 464, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "outp",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "rehab",
+                      "display": "Rehabilitation Facility"
+                    }
+                  ],
+                  "text": "Discharged to rehab"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0083-02-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0083-02-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-OBS-464-A"
+                }
+              ],
+              "status": "active",
+              "name": "Observation Unit - Room 464, Bed A",
+              "description": "Bed A in Room 464 of Observation Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Observation Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-7",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0083-007",
+        "type": "message",
+        "timestamp": "2025-09-15T14:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:4fbf6693-1a86-4f07-b8b8-da19605507dd",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0083-007",
+              "meta": {
+                "lastUpdated": "2025-09-15T14:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://denver-regional-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Denver Regional Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://denver-regional-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0083"
+                },
+                {
+                  "reference": "Encounter/0083-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0083",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0083",
+              "meta": {
+                "lastUpdated": "2027-06-03T07:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0083"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "520-11-2261"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Jimenez",
+                  "given": [
+                    "Aurora"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(346) 460-9079",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(712) 630-8197",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "aurora.jimenez@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1972-11-01",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2996 Birch Drive"
+                  ],
+                  "city": "Atlanta",
+                  "state": "GA",
+                  "postalCode": "30301",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "S"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Jimenez",
+                    "given": [
+                      "Anthony"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(251) 646-5165"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0083-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0083-03",
+              "meta": {
+                "lastUpdated": "2025-09-15T14:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0083-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V883075"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0083",
+                "display": "Aurora Jimenez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-09-15T14:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "25064002",
+                      "display": "Acute pancreatitis"
+                    }
+                  ],
+                  "text": "Pancreatitis"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Pancreatitis"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0083-03-01",
+                    "display": "Surgical ICU - Room 467, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0083-03-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0083-03-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SICU-467-B"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical ICU - Room 467, Bed B",
+              "description": "Bed B in Room 467 of Surgical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Surgical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-8",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0083-008",
+        "type": "message",
+        "timestamp": "2025-09-17T09:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:72957257-6393-4d4a-b69a-36659195bb02",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0083-008",
+              "meta": {
+                "lastUpdated": "2025-09-17T09:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://denver-regional-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Denver Regional Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://denver-regional-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0083"
+                },
+                {
+                  "reference": "Encounter/0083-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0083",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0083",
+              "meta": {
+                "lastUpdated": "2027-06-03T07:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0083"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "520-11-2261"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Jimenez",
+                  "given": [
+                    "Aurora"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(346) 460-9079",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(712) 630-8197",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "aurora.jimenez@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1972-11-01",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2996 Birch Drive"
+                  ],
+                  "city": "Atlanta",
+                  "state": "GA",
+                  "postalCode": "30301",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "S"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Jimenez",
+                    "given": [
+                      "Anthony"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(251) 646-5165"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0083-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0083-03",
+              "meta": {
+                "lastUpdated": "2025-09-15T14:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0083-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V415510"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0083",
+                "display": "Aurora Jimenez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-09-15T14:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "25064002",
+                      "display": "Acute pancreatitis"
+                    }
+                  ],
+                  "text": "Pancreatitis"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Pancreatitis"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0083-03-t01",
+                    "display": "Emergency Department - Room 401, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0083-03-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0083-03-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-401-B"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 401, Bed B",
+              "description": "Bed B in Room 401 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-9",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0083-009",
+        "type": "message",
+        "timestamp": "2025-09-19T20:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:93248d84-fba8-4cb5-b702-f0b2e0945cb8",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0083-009",
+              "meta": {
+                "lastUpdated": "2025-09-19T20:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://denver-regional-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Denver Regional Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://denver-regional-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0083"
+                },
+                {
+                  "reference": "Encounter/0083-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0083",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0083",
+              "meta": {
+                "lastUpdated": "2027-06-03T07:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0083"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "520-11-2261"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Jimenez",
+                  "given": [
+                    "Aurora"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(346) 460-9079",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(712) 630-8197",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "aurora.jimenez@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1972-11-01",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2996 Birch Drive"
+                  ],
+                  "city": "Atlanta",
+                  "state": "GA",
+                  "postalCode": "30301",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "S"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Jimenez",
+                    "given": [
+                      "Anthony"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(251) 646-5165"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0083-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0083-03",
+              "meta": {
+                "lastUpdated": "2025-09-15T14:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0083-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V545854"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0083",
+                "display": "Aurora Jimenez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-09-15T14:12:48Z",
+                "end": "2025-09-19T20:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "25064002",
+                      "display": "Acute pancreatitis"
+                    }
+                  ],
+                  "text": "Pancreatitis"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Pancreatitis"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0083-03-t01",
+                    "display": "Emergency Department - Room 401, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "gp",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "snf",
+                      "display": "Skilled Nursing Facility"
+                    }
+                  ],
+                  "text": "Discharged to SNF"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0083-03-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0083-03-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-401-B"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 401, Bed B",
+              "description": "Bed B in Room 401 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-10",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0083-010",
+        "type": "message",
+        "timestamp": "2027-05-27T20:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:7ece7425-0fc7-4651-9135-0d2c510d16c8",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0083-010",
+              "meta": {
+                "lastUpdated": "2027-05-27T20:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://denver-regional-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Denver Regional Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://denver-regional-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0083"
+                },
+                {
+                  "reference": "Encounter/0083-04"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0083",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0083",
+              "meta": {
+                "lastUpdated": "2027-06-03T07:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0083"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "520-11-2261"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Jimenez",
+                  "given": [
+                    "Aurora"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(346) 460-9079",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(712) 630-8197",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "aurora.jimenez@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1972-11-01",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2996 Birch Drive"
+                  ],
+                  "city": "Atlanta",
+                  "state": "GA",
+                  "postalCode": "30301",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "S"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Jimenez",
+                    "given": [
+                      "Anthony"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(251) 646-5165"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0083-04",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0083-04",
+              "meta": {
+                "lastUpdated": "2027-05-27T20:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0083-04"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V420315"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0083",
+                "display": "Aurora Jimenez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-001",
+                    "display": "Dr. Sarah Williams"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-001",
+                    "display": "Dr. Sarah Williams"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2027-05-27T20:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "128053003",
+                      "display": "Deep vein thrombosis"
+                    }
+                  ],
+                  "text": "DVT"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DVT"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0083-04-01",
+                    "display": "Orthopedic Unit - Room 393, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0083-04-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0083-04-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ORTHO-393-B"
+                }
+              ],
+              "status": "active",
+              "name": "Orthopedic Unit - Room 393, Bed B",
+              "description": "Bed B in Room 393 of Orthopedic Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Orthopedic Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-11",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0083-011",
+        "type": "message",
+        "timestamp": "2027-05-29T11:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:d6851dea-5c4b-4eef-9c6b-354d3c339920",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0083-011",
+              "meta": {
+                "lastUpdated": "2027-05-29T11:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://denver-regional-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Denver Regional Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://denver-regional-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0083"
+                },
+                {
+                  "reference": "Encounter/0083-04"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0083",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0083",
+              "meta": {
+                "lastUpdated": "2027-06-03T07:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0083"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "520-11-2261"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Jimenez",
+                  "given": [
+                    "Aurora"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(346) 460-9079",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(712) 630-8197",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "aurora.jimenez@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1972-11-01",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2996 Birch Drive"
+                  ],
+                  "city": "Atlanta",
+                  "state": "GA",
+                  "postalCode": "30301",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "S"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Jimenez",
+                    "given": [
+                      "Anthony"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(251) 646-5165"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0083-04",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0083-04",
+              "meta": {
+                "lastUpdated": "2027-05-27T20:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0083-04"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V201956"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0083",
+                "display": "Aurora Jimenez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-001",
+                    "display": "Dr. Sarah Williams"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-001",
+                    "display": "Dr. Sarah Williams"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2027-05-27T20:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "128053003",
+                      "display": "Deep vein thrombosis"
+                    }
+                  ],
+                  "text": "DVT"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DVT"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0083-04-t01",
+                    "display": "Telemetry Unit - Room 422, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0083-04-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0083-04-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-TELE-422-B"
+                }
+              ],
+              "status": "active",
+              "name": "Telemetry Unit - Room 422, Bed B",
+              "description": "Bed B in Room 422 of Telemetry Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Telemetry Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-12",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0083-012",
+        "type": "message",
+        "timestamp": "2027-05-30T13:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:cd36c14b-83d0-4168-86c9-5a28897eaeb8",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0083-012",
+              "meta": {
+                "lastUpdated": "2027-05-30T13:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://denver-regional-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Denver Regional Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://denver-regional-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0083"
+                },
+                {
+                  "reference": "Encounter/0083-04"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0083",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0083",
+              "meta": {
+                "lastUpdated": "2027-06-03T07:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0083"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "520-11-2261"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Jimenez",
+                  "given": [
+                    "Aurora"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(346) 460-9079",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(712) 630-8197",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "aurora.jimenez@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1972-11-01",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2996 Birch Drive"
+                  ],
+                  "city": "Atlanta",
+                  "state": "GA",
+                  "postalCode": "30301",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "S"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Jimenez",
+                    "given": [
+                      "Anthony"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(251) 646-5165"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0083-04",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0083-04",
+              "meta": {
+                "lastUpdated": "2027-05-27T20:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0083-04"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V762505"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0083",
+                "display": "Aurora Jimenez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-001",
+                    "display": "Dr. Sarah Williams"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-001",
+                    "display": "Dr. Sarah Williams"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2027-05-27T20:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "128053003",
+                      "display": "Deep vein thrombosis"
+                    }
+                  ],
+                  "text": "DVT"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DVT"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0083-04-t02",
+                    "display": "Cardiac Care Unit - Room 354, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0083-04-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0083-04-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-CCU-354-B"
+                }
+              ],
+              "status": "active",
+              "name": "Cardiac Care Unit - Room 354, Bed B",
+              "description": "Bed B in Room 354 of Cardiac Care Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Cardiac Care Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-13",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0083-013",
+        "type": "message",
+        "timestamp": "2027-06-02T11:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:67559165-03e3-4e0b-80fa-5de02ec22832",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0083-013",
+              "meta": {
+                "lastUpdated": "2027-06-02T11:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://denver-regional-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Denver Regional Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://denver-regional-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0083"
+                },
+                {
+                  "reference": "Encounter/0083-04"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0083",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0083",
+              "meta": {
+                "lastUpdated": "2027-06-03T07:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0083"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "520-11-2261"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Jimenez",
+                  "given": [
+                    "Aurora"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(346) 460-9079",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(712) 630-8197",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "aurora.jimenez@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1972-11-01",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2996 Birch Drive"
+                  ],
+                  "city": "Atlanta",
+                  "state": "GA",
+                  "postalCode": "30301",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "S"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Jimenez",
+                    "given": [
+                      "Anthony"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(251) 646-5165"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0083-04",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0083-04",
+              "meta": {
+                "lastUpdated": "2027-05-27T20:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0083-04"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V835783"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0083",
+                "display": "Aurora Jimenez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-001",
+                    "display": "Dr. Sarah Williams"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-001",
+                    "display": "Dr. Sarah Williams"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2027-05-27T20:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "128053003",
+                      "display": "Deep vein thrombosis"
+                    }
+                  ],
+                  "text": "DVT"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DVT"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0083-04-t03",
+                    "display": "Surgical Floor - Room 152, Bed D"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0083-04-t03",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0083-04-t03",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SURG-152-D"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical Floor - Room 152, Bed D",
+              "description": "Bed D in Room 152 of Surgical Floor",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Surgical Floor"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-14",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0083-014",
+        "type": "message",
+        "timestamp": "2027-06-03T07:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:1128f088-d029-44f2-885e-8f5424ec3dc1",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0083-014",
+              "meta": {
+                "lastUpdated": "2027-06-03T07:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A08",
+                "display": "ADT/ACK - Update Patient Information"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://denver-regional-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Denver Regional Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://denver-regional-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "update",
+                    "display": "Update"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0083"
+                },
+                {
+                  "reference": "Encounter/0083-04"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0083",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0083",
+              "meta": {
+                "lastUpdated": "2027-06-03T07:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0083"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "520-11-2261"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Jimenez",
+                  "given": [
+                    "Aurora"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(346) 460-9079",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(712) 630-8197",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "aurora.jimenez@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1972-11-01",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2996 Birch Drive"
+                  ],
+                  "city": "Atlanta",
+                  "state": "GA",
+                  "postalCode": "30301",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "S"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Jimenez",
+                    "given": [
+                      "Anthony"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(251) 646-5165"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0083-04",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0083-04",
+              "meta": {
+                "lastUpdated": "2027-05-27T20:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0083-04"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V736799"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0083",
+                "display": "Aurora Jimenez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-001",
+                    "display": "Dr. Sarah Williams"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-001",
+                    "display": "Dr. Sarah Williams"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2027-05-27T20:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "128053003",
+                      "display": "Deep vein thrombosis"
+                    }
+                  ],
+                  "text": "DVT"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DVT"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0083-04-t03",
+                    "display": "Surgical Floor - Room 152, Bed D"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0083-04-t03",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0083-04-t03",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SURG-152-D"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical Floor - Room 152, Bed D",
+              "description": "Bed D in Room 152 of Surgical Floor",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Surgical Floor"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-15",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0083-015",
+        "type": "message",
+        "timestamp": "2027-06-03T16:12:48Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:d2fbda24-b12f-430d-a6e9-dc37b2678468",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0083-015",
+              "meta": {
+                "lastUpdated": "2027-06-03T16:12:48Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://denver-regional-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Denver Regional Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://denver-regional-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0083"
+                },
+                {
+                  "reference": "Encounter/0083-04"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0083",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0083",
+              "meta": {
+                "lastUpdated": "2027-06-03T07:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0083"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "520-11-2261"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Jimenez",
+                  "given": [
+                    "Aurora"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(346) 460-9079",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(712) 630-8197",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "aurora.jimenez@email.com"
+                }
+              ],
+              "gender": "female",
+              "birthDate": "1972-11-01",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "2996 Birch Drive"
+                  ],
+                  "city": "Atlanta",
+                  "state": "GA",
+                  "postalCode": "30301",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "S"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Jimenez",
+                    "given": [
+                      "Anthony"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(251) 646-5165"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0083-04",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0083-04",
+              "meta": {
+                "lastUpdated": "2027-05-27T20:12:48Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0083-04"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V606467"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0083",
+                "display": "Aurora Jimenez"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-001",
+                    "display": "Dr. Sarah Williams"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-001",
+                    "display": "Dr. Sarah Williams"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2027-05-27T20:12:48Z",
+                "end": "2027-06-03T16:12:48Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "128053003",
+                      "display": "Deep vein thrombosis"
+                    }
+                  ],
+                  "text": "DVT"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DVT"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0083-04-t03",
+                    "display": "Surgical Floor - Room 152, Bed D"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "gp",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "snf",
+                      "display": "Skilled Nursing Facility"
+                    }
+                  ],
+                  "text": "Discharged to SNF"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0083-04-t03",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0083-04-t03",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:48Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SURG-152-D"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical Floor - Room 152, Bed D",
+              "description": "Bed D in Room 152 of Surgical Floor",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Surgical Floor"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-003",
+                "display": "Denver Regional Hospital"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

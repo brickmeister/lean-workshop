@@ -1,0 +1,5629 @@
+{
+  "resourceType": "Bundle",
+  "id": "adt-patient-bundle-0098",
+  "type": "collection",
+  "timestamp": "2025-12-11T04:12:49Z",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bundle"
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:adt-msg-1",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0098-001",
+        "type": "message",
+        "timestamp": "2024-06-12T04:12:49Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:e2456551-ab10-478a-8812-9976c3863a04",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0098-001",
+              "meta": {
+                "lastUpdated": "2024-06-12T04:12:49Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://northwestern-memorial.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Northwestern Memorial",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://northwestern-memorial.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0098"
+                },
+                {
+                  "reference": "Encounter/0098-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0098",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0098",
+              "meta": {
+                "lastUpdated": "2025-10-29T11:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0098"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "621-17-2290"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Hall",
+                  "given": [
+                    "Lucas"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(240) 427-8335",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(524) 548-8763",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "lucas.hall@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1957-01-19",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "7920 Magnolia Drive"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Hall",
+                    "given": [
+                      "Chloe"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(429) 755-6402"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0098-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0098-01",
+              "meta": {
+                "lastUpdated": "2024-06-12T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0098-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V580819"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0098",
+                "display": "Lucas Hall"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-008",
+                    "display": "Dr. David Wilson"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-008",
+                    "display": "Dr. David Wilson"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-06-12T04:12:49Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "84114007",
+                      "display": "Sepsis"
+                    }
+                  ],
+                  "text": "Septicemia"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Septicemia"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0098-01-01",
+                    "display": "Surgical ICU - Room 387, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0098-01-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0098-01-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SICU-387-C"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical ICU - Room 387, Bed C",
+              "description": "Bed C in Room 387 of Surgical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Surgical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-2",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0098-002",
+        "type": "message",
+        "timestamp": "2024-06-12T08:12:49Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:9e8d0583-6f9c-4105-a15a-3a395a7b53cd",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0098-002",
+              "meta": {
+                "lastUpdated": "2024-06-12T08:12:49Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://northwestern-memorial.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Northwestern Memorial",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://northwestern-memorial.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0098"
+                },
+                {
+                  "reference": "Encounter/0098-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0098",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0098",
+              "meta": {
+                "lastUpdated": "2025-10-29T11:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0098"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "621-17-2290"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Hall",
+                  "given": [
+                    "Lucas"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(240) 427-8335",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(524) 548-8763",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "lucas.hall@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1957-01-19",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "7920 Magnolia Drive"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Hall",
+                    "given": [
+                      "Chloe"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(429) 755-6402"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0098-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0098-01",
+              "meta": {
+                "lastUpdated": "2024-06-12T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0098-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V638239"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0098",
+                "display": "Lucas Hall"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-008",
+                    "display": "Dr. David Wilson"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-008",
+                    "display": "Dr. David Wilson"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-06-12T04:12:49Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "84114007",
+                      "display": "Sepsis"
+                    }
+                  ],
+                  "text": "Septicemia"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Septicemia"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0098-01-t01",
+                    "display": "Emergency Department - Room 346, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0098-01-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0098-01-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-346-C"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 346, Bed C",
+              "description": "Bed C in Room 346 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-3",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0098-003",
+        "type": "message",
+        "timestamp": "2024-06-13T15:12:49Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:656d50c8-4c44-498f-a51a-da2a49af02d6",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0098-003",
+              "meta": {
+                "lastUpdated": "2024-06-13T15:12:49Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://northwestern-memorial.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Northwestern Memorial",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://northwestern-memorial.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0098"
+                },
+                {
+                  "reference": "Encounter/0098-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0098",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0098",
+              "meta": {
+                "lastUpdated": "2025-10-29T11:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0098"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "621-17-2290"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Hall",
+                  "given": [
+                    "Lucas"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(240) 427-8335",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(524) 548-8763",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "lucas.hall@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1957-01-19",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "7920 Magnolia Drive"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Hall",
+                    "given": [
+                      "Chloe"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(429) 755-6402"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0098-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0098-01",
+              "meta": {
+                "lastUpdated": "2024-06-12T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0098-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V368315"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0098",
+                "display": "Lucas Hall"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-008",
+                    "display": "Dr. David Wilson"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-008",
+                    "display": "Dr. David Wilson"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-06-12T04:12:49Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "84114007",
+                      "display": "Sepsis"
+                    }
+                  ],
+                  "text": "Septicemia"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Septicemia"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0098-01-t02",
+                    "display": "Neurology Unit - Room 164, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0098-01-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0098-01-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-NEURO-164-B"
+                }
+              ],
+              "status": "active",
+              "name": "Neurology Unit - Room 164, Bed B",
+              "description": "Bed B in Room 164 of Neurology Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Neurology Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-4",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0098-004",
+        "type": "message",
+        "timestamp": "2024-06-16T02:12:49Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:12969ff6-b03d-4c32-ba11-ab9f0b1a4770",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0098-004",
+              "meta": {
+                "lastUpdated": "2024-06-16T02:12:49Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://northwestern-memorial.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Northwestern Memorial",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://northwestern-memorial.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0098"
+                },
+                {
+                  "reference": "Encounter/0098-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0098",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0098",
+              "meta": {
+                "lastUpdated": "2025-10-29T11:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0098"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "621-17-2290"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Hall",
+                  "given": [
+                    "Lucas"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(240) 427-8335",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(524) 548-8763",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "lucas.hall@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1957-01-19",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "7920 Magnolia Drive"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Hall",
+                    "given": [
+                      "Chloe"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(429) 755-6402"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0098-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0098-01",
+              "meta": {
+                "lastUpdated": "2024-06-12T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0098-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V969660"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0098",
+                "display": "Lucas Hall"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-008",
+                    "display": "Dr. David Wilson"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-008",
+                    "display": "Dr. David Wilson"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-06-12T04:12:49Z",
+                "end": "2024-06-16T02:12:49Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "84114007",
+                      "display": "Sepsis"
+                    }
+                  ],
+                  "text": "Septicemia"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Septicemia"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0098-01-t02",
+                    "display": "Neurology Unit - Room 164, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "gp",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "rehab",
+                      "display": "Rehabilitation Facility"
+                    }
+                  ],
+                  "text": "Discharged to rehab"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0098-01-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0098-01-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-NEURO-164-B"
+                }
+              ],
+              "status": "active",
+              "name": "Neurology Unit - Room 164, Bed B",
+              "description": "Bed B in Room 164 of Neurology Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Neurology Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-5",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0098-005",
+        "type": "message",
+        "timestamp": "2025-01-15T02:12:49Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:ca6e30dd-95e9-4a78-ad35-62048003490e",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0098-005",
+              "meta": {
+                "lastUpdated": "2025-01-15T02:12:49Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://northwestern-memorial.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Northwestern Memorial",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://northwestern-memorial.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0098"
+                },
+                {
+                  "reference": "Encounter/0098-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0098",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0098",
+              "meta": {
+                "lastUpdated": "2025-10-29T11:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0098"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "621-17-2290"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Hall",
+                  "given": [
+                    "Lucas"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(240) 427-8335",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(524) 548-8763",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "lucas.hall@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1957-01-19",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "7920 Magnolia Drive"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Hall",
+                    "given": [
+                      "Chloe"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(429) 755-6402"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0098-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0098-02",
+              "meta": {
+                "lastUpdated": "2025-01-15T02:12:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0098-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V849324"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0098",
+                "display": "Lucas Hall"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-009",
+                    "display": "Dr. Amanda Foster"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-009",
+                    "display": "Dr. Amanda Foster"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-01-15T02:12:49Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "44054006",
+                      "display": "Diabetic ketoacidosis"
+                    }
+                  ],
+                  "text": "DKA"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DKA"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0098-02-01",
+                    "display": "Surgical Floor - Room 198, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0098-02-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0098-02-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SURG-198-A"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical Floor - Room 198, Bed A",
+              "description": "Bed A in Room 198 of Surgical Floor",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Surgical Floor"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-6",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0098-006",
+        "type": "message",
+        "timestamp": "2025-01-16T10:12:49Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:3f5edfac-90da-4cc0-8fb7-90fe7a7b0a27",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0098-006",
+              "meta": {
+                "lastUpdated": "2025-01-16T10:12:49Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://northwestern-memorial.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Northwestern Memorial",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://northwestern-memorial.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0098"
+                },
+                {
+                  "reference": "Encounter/0098-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0098",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0098",
+              "meta": {
+                "lastUpdated": "2025-10-29T11:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0098"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "621-17-2290"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Hall",
+                  "given": [
+                    "Lucas"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(240) 427-8335",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(524) 548-8763",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "lucas.hall@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1957-01-19",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "7920 Magnolia Drive"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Hall",
+                    "given": [
+                      "Chloe"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(429) 755-6402"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0098-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0098-02",
+              "meta": {
+                "lastUpdated": "2025-01-15T02:12:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0098-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V398372"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0098",
+                "display": "Lucas Hall"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-009",
+                    "display": "Dr. Amanda Foster"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-009",
+                    "display": "Dr. Amanda Foster"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-01-15T02:12:49Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "44054006",
+                      "display": "Diabetic ketoacidosis"
+                    }
+                  ],
+                  "text": "DKA"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DKA"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0098-02-t01",
+                    "display": "Intensive Care Unit - Room 311, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0098-02-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0098-02-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ICU-311-B"
+                }
+              ],
+              "status": "active",
+              "name": "Intensive Care Unit - Room 311, Bed B",
+              "description": "Bed B in Room 311 of Intensive Care Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Intensive Care Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-7",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0098-007",
+        "type": "message",
+        "timestamp": "2025-01-18T07:12:49Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:3523fe30-09e3-4cc1-8f46-118180850663",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0098-007",
+              "meta": {
+                "lastUpdated": "2025-01-18T07:12:49Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://northwestern-memorial.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Northwestern Memorial",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://northwestern-memorial.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0098"
+                },
+                {
+                  "reference": "Encounter/0098-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0098",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0098",
+              "meta": {
+                "lastUpdated": "2025-10-29T11:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0098"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "621-17-2290"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Hall",
+                  "given": [
+                    "Lucas"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(240) 427-8335",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(524) 548-8763",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "lucas.hall@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1957-01-19",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "7920 Magnolia Drive"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Hall",
+                    "given": [
+                      "Chloe"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(429) 755-6402"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0098-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0098-02",
+              "meta": {
+                "lastUpdated": "2025-01-15T02:12:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0098-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V115140"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0098",
+                "display": "Lucas Hall"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-009",
+                    "display": "Dr. Amanda Foster"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-009",
+                    "display": "Dr. Amanda Foster"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-01-15T02:12:49Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "44054006",
+                      "display": "Diabetic ketoacidosis"
+                    }
+                  ],
+                  "text": "DKA"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DKA"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0098-02-t02",
+                    "display": "Observation Unit - Room 218, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0098-02-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0098-02-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-OBS-218-C"
+                }
+              ],
+              "status": "active",
+              "name": "Observation Unit - Room 218, Bed C",
+              "description": "Bed C in Room 218 of Observation Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Observation Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-8",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0098-008",
+        "type": "message",
+        "timestamp": "2025-01-19T12:12:49Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:965f4e94-8fa0-4a68-a285-8cf4195c7e80",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0098-008",
+              "meta": {
+                "lastUpdated": "2025-01-19T12:12:49Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A08",
+                "display": "ADT/ACK - Update Patient Information"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://northwestern-memorial.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Northwestern Memorial",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://northwestern-memorial.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "update",
+                    "display": "Update"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0098"
+                },
+                {
+                  "reference": "Encounter/0098-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0098",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0098",
+              "meta": {
+                "lastUpdated": "2025-10-29T11:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0098"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "621-17-2290"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Hall",
+                  "given": [
+                    "Lucas"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(240) 427-8335",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(524) 548-8763",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "lucas.hall@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1957-01-19",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "7920 Magnolia Drive"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Hall",
+                    "given": [
+                      "Chloe"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(429) 755-6402"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0098-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0098-02",
+              "meta": {
+                "lastUpdated": "2025-01-15T02:12:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0098-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V374269"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0098",
+                "display": "Lucas Hall"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-009",
+                    "display": "Dr. Amanda Foster"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-009",
+                    "display": "Dr. Amanda Foster"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-01-15T02:12:49Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "44054006",
+                      "display": "Diabetic ketoacidosis"
+                    }
+                  ],
+                  "text": "DKA"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DKA"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0098-02-t02",
+                    "display": "Observation Unit - Room 218, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0098-02-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0098-02-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-OBS-218-C"
+                }
+              ],
+              "status": "active",
+              "name": "Observation Unit - Room 218, Bed C",
+              "description": "Bed C in Room 218 of Observation Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Observation Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-9",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0098-009",
+        "type": "message",
+        "timestamp": "2025-01-19T22:12:49Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:059d5c75-d92d-4f98-9f5f-e9228b93ce22",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0098-009",
+              "meta": {
+                "lastUpdated": "2025-01-19T22:12:49Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://northwestern-memorial.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Northwestern Memorial",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://northwestern-memorial.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0098"
+                },
+                {
+                  "reference": "Encounter/0098-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0098",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0098",
+              "meta": {
+                "lastUpdated": "2025-10-29T11:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0098"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "621-17-2290"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Hall",
+                  "given": [
+                    "Lucas"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(240) 427-8335",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(524) 548-8763",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "lucas.hall@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1957-01-19",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "7920 Magnolia Drive"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Hall",
+                    "given": [
+                      "Chloe"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(429) 755-6402"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0098-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0098-02",
+              "meta": {
+                "lastUpdated": "2025-01-15T02:12:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0098-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V782800"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0098",
+                "display": "Lucas Hall"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-009",
+                    "display": "Dr. Amanda Foster"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-009",
+                    "display": "Dr. Amanda Foster"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-01-15T02:12:49Z",
+                "end": "2025-01-19T22:12:49Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "44054006",
+                      "display": "Diabetic ketoacidosis"
+                    }
+                  ],
+                  "text": "DKA"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "DKA"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0098-02-t02",
+                    "display": "Observation Unit - Room 218, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "born",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "snf",
+                      "display": "Skilled Nursing Facility"
+                    }
+                  ],
+                  "text": "Discharged to SNF"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0098-02-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0098-02-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-OBS-218-C"
+                }
+              ],
+              "status": "active",
+              "name": "Observation Unit - Room 218, Bed C",
+              "description": "Bed C in Room 218 of Observation Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Observation Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-10",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0098-010",
+        "type": "message",
+        "timestamp": "2025-10-24T22:12:49Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:d412f810-ac52-40fe-b1de-1bb998a0a935",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0098-010",
+              "meta": {
+                "lastUpdated": "2025-10-24T22:12:49Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A04",
+                "display": "ADT/ACK - Register a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://northwestern-memorial.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Northwestern Memorial",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://northwestern-memorial.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "register",
+                    "display": "Register"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0098"
+                },
+                {
+                  "reference": "Encounter/0098-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0098",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0098",
+              "meta": {
+                "lastUpdated": "2025-10-29T11:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0098"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "621-17-2290"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Hall",
+                  "given": [
+                    "Lucas"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(240) 427-8335",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(524) 548-8763",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "lucas.hall@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1957-01-19",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "7920 Magnolia Drive"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Hall",
+                    "given": [
+                      "Chloe"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(429) 755-6402"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0098-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0098-03",
+              "meta": {
+                "lastUpdated": "2025-10-24T22:12:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0098-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V982090"
+                }
+              ],
+              "status": "planned",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "EMER",
+                "display": "emergency"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0098",
+                "display": "Lucas Hall"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-10-24T22:12:49Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "56265001",
+                      "display": "Atrial fibrillation"
+                    }
+                  ],
+                  "text": "New onset AFib"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "New onset AFib"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0098-03-reg",
+                    "display": "Emergency Department - Room 10, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0098-03-reg",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0098-03-reg",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-10-B"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 10, Bed B",
+              "description": "Bed B in Room 10 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-11",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0098-011",
+        "type": "message",
+        "timestamp": "2025-10-24T23:35:49Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:b895d134-16e6-40d4-9b62-1bed43e67203",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0098-011",
+              "meta": {
+                "lastUpdated": "2025-10-24T23:35:49Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://northwestern-memorial.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Northwestern Memorial",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://northwestern-memorial.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0098"
+                },
+                {
+                  "reference": "Encounter/0098-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0098",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0098",
+              "meta": {
+                "lastUpdated": "2025-10-29T11:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0098"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "621-17-2290"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Hall",
+                  "given": [
+                    "Lucas"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(240) 427-8335",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(524) 548-8763",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "lucas.hall@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1957-01-19",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "7920 Magnolia Drive"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Hall",
+                    "given": [
+                      "Chloe"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(429) 755-6402"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0098-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0098-03",
+              "meta": {
+                "lastUpdated": "2025-10-24T23:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0098-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V607404"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0098",
+                "display": "Lucas Hall"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-10-24T23:35:49Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "56265001",
+                      "display": "Atrial fibrillation"
+                    }
+                  ],
+                  "text": "New onset AFib"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "New onset AFib"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0098-03-01",
+                    "display": "Medical ICU - Room 232, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0098-03-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0098-03-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-MICU-232-B"
+                }
+              ],
+              "status": "active",
+              "name": "Medical ICU - Room 232, Bed B",
+              "description": "Bed B in Room 232 of Medical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Medical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-12",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0098-012",
+        "type": "message",
+        "timestamp": "2025-10-26T13:35:49Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:2c2fcbe9-cb6e-4028-84e6-8c077ff4725e",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0098-012",
+              "meta": {
+                "lastUpdated": "2025-10-26T13:35:49Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://northwestern-memorial.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Northwestern Memorial",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://northwestern-memorial.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0098"
+                },
+                {
+                  "reference": "Encounter/0098-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0098",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0098",
+              "meta": {
+                "lastUpdated": "2025-10-29T11:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0098"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "621-17-2290"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Hall",
+                  "given": [
+                    "Lucas"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(240) 427-8335",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(524) 548-8763",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "lucas.hall@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1957-01-19",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "7920 Magnolia Drive"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Hall",
+                    "given": [
+                      "Chloe"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(429) 755-6402"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0098-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0098-03",
+              "meta": {
+                "lastUpdated": "2025-10-24T23:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0098-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V388326"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0098",
+                "display": "Lucas Hall"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-10-24T23:35:49Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "56265001",
+                      "display": "Atrial fibrillation"
+                    }
+                  ],
+                  "text": "New onset AFib"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "New onset AFib"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0098-03-t01",
+                    "display": "Cardiac Care Unit - Room 391, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0098-03-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0098-03-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-CCU-391-A"
+                }
+              ],
+              "status": "active",
+              "name": "Cardiac Care Unit - Room 391, Bed A",
+              "description": "Bed A in Room 391 of Cardiac Care Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Cardiac Care Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-13",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0098-013",
+        "type": "message",
+        "timestamp": "2025-10-28T00:35:49Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:9720cdd3-86cf-407b-b8c5-0e930302b373",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0098-013",
+              "meta": {
+                "lastUpdated": "2025-10-28T00:35:49Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://northwestern-memorial.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Northwestern Memorial",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://northwestern-memorial.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0098"
+                },
+                {
+                  "reference": "Encounter/0098-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0098",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0098",
+              "meta": {
+                "lastUpdated": "2025-10-29T11:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0098"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "621-17-2290"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Hall",
+                  "given": [
+                    "Lucas"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(240) 427-8335",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(524) 548-8763",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "lucas.hall@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1957-01-19",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "7920 Magnolia Drive"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Hall",
+                    "given": [
+                      "Chloe"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(429) 755-6402"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0098-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0098-03",
+              "meta": {
+                "lastUpdated": "2025-10-24T23:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0098-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V758950"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0098",
+                "display": "Lucas Hall"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-10-24T23:35:49Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "56265001",
+                      "display": "Atrial fibrillation"
+                    }
+                  ],
+                  "text": "New onset AFib"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "New onset AFib"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0098-03-t02",
+                    "display": "Telemetry Unit - Room 228, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0098-03-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0098-03-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-TELE-228-B"
+                }
+              ],
+              "status": "active",
+              "name": "Telemetry Unit - Room 228, Bed B",
+              "description": "Bed B in Room 228 of Telemetry Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Telemetry Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-14",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0098-014",
+        "type": "message",
+        "timestamp": "2025-10-29T11:35:49Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:bd3a8a14-4f6c-4040-83e5-49298fdfd6ce",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0098-014",
+              "meta": {
+                "lastUpdated": "2025-10-29T11:35:49Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A08",
+                "display": "ADT/ACK - Update Patient Information"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://northwestern-memorial.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Northwestern Memorial",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://northwestern-memorial.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "update",
+                    "display": "Update"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0098"
+                },
+                {
+                  "reference": "Encounter/0098-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0098",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0098",
+              "meta": {
+                "lastUpdated": "2025-10-29T11:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0098"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "621-17-2290"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Hall",
+                  "given": [
+                    "Lucas"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(240) 427-8335",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(524) 548-8763",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "lucas.hall@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1957-01-19",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "7920 Magnolia Drive"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Hall",
+                    "given": [
+                      "Chloe"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(429) 755-6402"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0098-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0098-03",
+              "meta": {
+                "lastUpdated": "2025-10-24T23:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0098-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V821271"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0098",
+                "display": "Lucas Hall"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-10-24T23:35:49Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "56265001",
+                      "display": "Atrial fibrillation"
+                    }
+                  ],
+                  "text": "New onset AFib"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "New onset AFib"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0098-03-t02",
+                    "display": "Telemetry Unit - Room 228, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0098-03-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0098-03-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-TELE-228-B"
+                }
+              ],
+              "status": "active",
+              "name": "Telemetry Unit - Room 228, Bed B",
+              "description": "Bed B in Room 228 of Telemetry Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Telemetry Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-15",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0098-015",
+        "type": "message",
+        "timestamp": "2025-10-29T20:35:49Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:de85bc6a-6dfe-4692-9de1-8c2e4737ad38",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0098-015",
+              "meta": {
+                "lastUpdated": "2025-10-29T20:35:49Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://northwestern-memorial.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Northwestern Memorial",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://northwestern-memorial.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0098"
+                },
+                {
+                  "reference": "Encounter/0098-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0098",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0098",
+              "meta": {
+                "lastUpdated": "2025-10-29T11:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0098"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "621-17-2290"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Hall",
+                  "given": [
+                    "Lucas"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(240) 427-8335",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(524) 548-8763",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "lucas.hall@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1957-01-19",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "7920 Magnolia Drive"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "M"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Hall",
+                    "given": [
+                      "Chloe"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(429) 755-6402"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0098-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0098-03",
+              "meta": {
+                "lastUpdated": "2025-10-24T23:35:49Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0098-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V612899"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0098",
+                "display": "Lucas Hall"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-10-24T23:35:49Z",
+                "end": "2025-10-29T20:35:49Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "56265001",
+                      "display": "Atrial fibrillation"
+                    }
+                  ],
+                  "text": "New onset AFib"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "New onset AFib"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0098-03-t02",
+                    "display": "Telemetry Unit - Room 228, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "born",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "rehab",
+                      "display": "Rehabilitation Facility"
+                    }
+                  ],
+                  "text": "Discharged to rehab"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0098-03-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0098-03-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:49Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-TELE-228-B"
+                }
+              ],
+              "status": "active",
+              "name": "Telemetry Unit - Room 228, Bed B",
+              "description": "Bed B in Room 228 of Telemetry Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Telemetry Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-005",
+                "display": "Northwestern Memorial"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

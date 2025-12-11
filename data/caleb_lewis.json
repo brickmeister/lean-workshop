@@ -1,8 +1,8 @@
 {
   "resourceType": "Bundle",
-  "id": "adt-patient-bundle-0056",
+  "id": "adt-patient-bundle-0034",
   "type": "collection",
-  "timestamp": "2025-12-11T04:12:47Z",
+  "timestamp": "2025-12-11T04:12:46Z",
   "meta": {
     "profile": [
       "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bundle"
@@ -13,17 +13,17 @@
       "fullUrl": "urn:uuid:adt-msg-1",
       "resource": {
         "resourceType": "Bundle",
-        "id": "adt-msg-0056-001",
+        "id": "adt-msg-0034-001",
         "type": "message",
-        "timestamp": "2024-08-24T04:12:47Z",
+        "timestamp": "2024-08-20T04:12:46Z",
         "entry": [
           {
-            "fullUrl": "urn:uuid:55b49dfe-a217-4fc7-bada-db7dc4ace9ae",
+            "fullUrl": "urn:uuid:b7fd7353-1d1f-4de6-92ac-fc763df7d951",
             "resource": {
               "resourceType": "MessageHeader",
-              "id": "msg-0056-001",
+              "id": "msg-0034-001",
               "meta": {
-                "lastUpdated": "2024-08-24T04:12:47Z"
+                "lastUpdated": "2024-08-20T04:12:46Z"
               },
               "eventCoding": {
                 "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
@@ -33,14 +33,14 @@
               "destination": [
                 {
                   "name": "Hospital ADT System",
-                  "endpoint": "http://mayo-clinic-hospital.example.org/fhir/adt"
+                  "endpoint": "http://mass-general-hospital.example.org/fhir/adt"
                 }
               ],
               "source": {
-                "name": "Mayo Clinic Hospital",
+                "name": "Mass General Hospital",
                 "software": "Hospital Information System",
                 "version": "5.2.1",
-                "endpoint": "http://mayo-clinic-hospital.example.org/fhir"
+                "endpoint": "http://mass-general-hospital.example.org/fhir"
               },
               "reason": {
                 "coding": [
@@ -53,21 +53,21 @@
               },
               "focus": [
                 {
-                  "reference": "Patient/0056"
+                  "reference": "Patient/0034"
                 },
                 {
-                  "reference": "Encounter/0056-01"
+                  "reference": "Encounter/0034-01"
                 }
               ]
             }
           },
           {
-            "fullUrl": "urn:uuid:patient-0056",
+            "fullUrl": "urn:uuid:patient-0034",
             "resource": {
               "resourceType": "Patient",
-              "id": "0056",
+              "id": "0034",
               "meta": {
-                "lastUpdated": "2024-12-18T23:12:47Z"
+                "lastUpdated": "2024-08-21T16:12:46Z"
               },
               "identifier": [
                 {
@@ -82,7 +82,7 @@
                     ]
                   },
                   "system": "http://hospital.example.org/mrn",
-                  "value": "MRN-0056"
+                  "value": "MRN-0034"
                 },
                 {
                   "use": "official",
@@ -96,47 +96,47 @@
                     ]
                   },
                   "system": "http://hl7.org/fhir/sid/us-ssn",
-                  "value": "803-15-7882"
+                  "value": "819-80-1922"
                 }
               ],
               "active": true,
               "name": [
                 {
                   "use": "official",
-                  "family": "Brown",
+                  "family": "Lewis",
                   "given": [
-                    "Avery"
+                    "Caleb"
                   ]
                 }
               ],
               "telecom": [
                 {
                   "system": "phone",
-                  "value": "(812) 680-8428",
+                  "value": "(479) 682-8862",
                   "use": "home"
                 },
                 {
                   "system": "phone",
-                  "value": "(503) 973-6447",
+                  "value": "(867) 294-2638",
                   "use": "mobile"
                 },
                 {
                   "system": "email",
-                  "value": "avery.brown@email.com"
+                  "value": "caleb.lewis@email.com"
                 }
               ],
-              "gender": "female",
-              "birthDate": "1992-12-15",
+              "gender": "male",
+              "birthDate": "1990-10-10",
               "address": [
                 {
                   "use": "home",
                   "type": "physical",
                   "line": [
-                    "9105 Oak Boulevard"
+                    "9349 Cedar Avenue"
                   ],
-                  "city": "Minneapolis",
-                  "state": "MN",
-                  "postalCode": "55401",
+                  "city": "Austin",
+                  "state": "TX",
+                  "postalCode": "78701",
                   "country": "USA"
                 }
               ],
@@ -144,7 +144,7 @@
                 "coding": [
                   {
                     "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-                    "code": "D"
+                    "code": "W"
                   }
                 ]
               },
@@ -162,15 +162,15 @@
                     }
                   ],
                   "name": {
-                    "family": "Brown",
+                    "family": "Lewis",
                     "given": [
-                      "Jacob"
+                      "Liam"
                     ]
                   },
                   "telecom": [
                     {
                       "system": "phone",
-                      "value": "(494) 660-7522"
+                      "value": "(721) 506-2407"
                     }
                   ]
                 }
@@ -178,18 +178,18 @@
             }
           },
           {
-            "fullUrl": "urn:uuid:encounter-0056-01",
+            "fullUrl": "urn:uuid:encounter-0034-01",
             "resource": {
               "resourceType": "Encounter",
-              "id": "0056-01",
+              "id": "0034-01",
               "meta": {
-                "lastUpdated": "2024-08-24T04:12:47Z"
+                "lastUpdated": "2024-08-20T04:12:46Z"
               },
               "identifier": [
                 {
                   "use": "official",
                   "system": "http://hospital.example.org/encounter-id",
-                  "value": "ENC-0056-01"
+                  "value": "ENC-0034-01"
                 },
                 {
                   "use": "usual",
@@ -203,7 +203,1509 @@
                     ]
                   },
                   "system": "http://hospital.example.org/visit-number",
-                  "value": "V158619"
+                  "value": "V907511"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0034",
+                "display": "Caleb Lewis"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-08-20T04:12:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "386661006",
+                      "display": "Fever of unknown origin"
+                    }
+                  ],
+                  "text": "FUO workup"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "FUO workup"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0034-01-01",
+                    "display": "Observation Unit - Room 351, Bed D"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0034-01-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0034-01-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-OBS-351-D"
+                }
+              ],
+              "status": "active",
+              "name": "Observation Unit - Room 351, Bed D",
+              "description": "Bed D in Room 351 of Observation Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Observation Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-2",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0034-002",
+        "type": "message",
+        "timestamp": "2024-08-20T11:12:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:3e219939-1c20-471c-acdf-f776a2723792",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0034-002",
+              "meta": {
+                "lastUpdated": "2024-08-20T11:12:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://mass-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Mass General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://mass-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0034"
+                },
+                {
+                  "reference": "Encounter/0034-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0034",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0034",
+              "meta": {
+                "lastUpdated": "2024-08-21T16:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0034"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "819-80-1922"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Lewis",
+                  "given": [
+                    "Caleb"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 682-8862",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(867) 294-2638",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "caleb.lewis@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1990-10-10",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "9349 Cedar Avenue"
+                  ],
+                  "city": "Austin",
+                  "state": "TX",
+                  "postalCode": "78701",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Lewis",
+                    "given": [
+                      "Liam"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(721) 506-2407"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0034-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0034-01",
+              "meta": {
+                "lastUpdated": "2024-08-20T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0034-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V176825"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0034",
+                "display": "Caleb Lewis"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-08-20T04:12:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "386661006",
+                      "display": "Fever of unknown origin"
+                    }
+                  ],
+                  "text": "FUO workup"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "FUO workup"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0034-01-t01",
+                    "display": "Surgical ICU - Room 387, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0034-01-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0034-01-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SICU-387-C"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical ICU - Room 387, Bed C",
+              "description": "Bed C in Room 387 of Surgical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Surgical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-3",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0034-003",
+        "type": "message",
+        "timestamp": "2024-08-21T16:12:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:251aee4b-534e-4242-84ac-f2063c1c5dd6",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0034-003",
+              "meta": {
+                "lastUpdated": "2024-08-21T16:12:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A08",
+                "display": "ADT/ACK - Update Patient Information"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://mass-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Mass General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://mass-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "update",
+                    "display": "Update"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0034"
+                },
+                {
+                  "reference": "Encounter/0034-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0034",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0034",
+              "meta": {
+                "lastUpdated": "2024-08-21T16:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0034"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "819-80-1922"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Lewis",
+                  "given": [
+                    "Caleb"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 682-8862",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(867) 294-2638",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "caleb.lewis@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1990-10-10",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "9349 Cedar Avenue"
+                  ],
+                  "city": "Austin",
+                  "state": "TX",
+                  "postalCode": "78701",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Lewis",
+                    "given": [
+                      "Liam"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(721) 506-2407"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0034-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0034-01",
+              "meta": {
+                "lastUpdated": "2024-08-20T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0034-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V767509"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0034",
+                "display": "Caleb Lewis"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-08-20T04:12:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "386661006",
+                      "display": "Fever of unknown origin"
+                    }
+                  ],
+                  "text": "FUO workup"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "FUO workup"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0034-01-t01",
+                    "display": "Surgical ICU - Room 387, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0034-01-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0034-01-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SICU-387-C"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical ICU - Room 387, Bed C",
+              "description": "Bed C in Room 387 of Surgical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Surgical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-4",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0034-004",
+        "type": "message",
+        "timestamp": "2024-08-21T22:12:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:016a7083-5ee8-4d51-b787-c53f016ca484",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0034-004",
+              "meta": {
+                "lastUpdated": "2024-08-21T22:12:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://mass-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Mass General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://mass-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0034"
+                },
+                {
+                  "reference": "Encounter/0034-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0034",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0034",
+              "meta": {
+                "lastUpdated": "2024-08-21T16:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0034"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "819-80-1922"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Lewis",
+                  "given": [
+                    "Caleb"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 682-8862",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(867) 294-2638",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "caleb.lewis@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1990-10-10",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "9349 Cedar Avenue"
+                  ],
+                  "city": "Austin",
+                  "state": "TX",
+                  "postalCode": "78701",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Lewis",
+                    "given": [
+                      "Liam"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(721) 506-2407"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0034-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0034-01",
+              "meta": {
+                "lastUpdated": "2024-08-20T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0034-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V276428"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0034",
+                "display": "Caleb Lewis"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-006",
+                    "display": "Dr. Robert Kim"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-08-20T04:12:46Z",
+                "end": "2024-08-21T22:12:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "386661006",
+                      "display": "Fever of unknown origin"
+                    }
+                  ],
+                  "text": "FUO workup"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "FUO workup"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0034-01-t01",
+                    "display": "Surgical ICU - Room 387, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "born",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "home",
+                      "display": "Home"
+                    }
+                  ],
+                  "text": "Patient discharged to home"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0034-01-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0034-01-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SICU-387-C"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical ICU - Room 387, Bed C",
+              "description": "Bed C in Room 387 of Surgical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Surgical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-5",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0034-005",
+        "type": "message",
+        "timestamp": "2024-12-24T22:12:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:82997df0-bb79-4e98-84a0-d2caeb796995",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0034-005",
+              "meta": {
+                "lastUpdated": "2024-12-24T22:12:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://mass-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Mass General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://mass-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0034"
+                },
+                {
+                  "reference": "Encounter/0034-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0034",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0034",
+              "meta": {
+                "lastUpdated": "2024-08-21T16:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0034"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "819-80-1922"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Lewis",
+                  "given": [
+                    "Caleb"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 682-8862",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(867) 294-2638",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "caleb.lewis@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1990-10-10",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "9349 Cedar Avenue"
+                  ],
+                  "city": "Austin",
+                  "state": "TX",
+                  "postalCode": "78701",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Lewis",
+                    "given": [
+                      "Liam"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(721) 506-2407"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0034-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0034-02",
+              "meta": {
+                "lastUpdated": "2024-12-24T22:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0034-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V946583"
                 }
               ],
               "status": "in-progress",
@@ -228,13 +1730,13 @@
                   {
                     "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
                     "code": "UR",
-                    "display": "emergency"
+                    "display": "routine"
                   }
                 ]
               },
               "subject": {
-                "reference": "Patient/0056",
-                "display": "Avery Brown"
+                "reference": "Patient/0034",
+                "display": "Caleb Lewis"
               },
               "participant": [
                 {
@@ -250,8 +1752,8 @@
                     }
                   ],
                   "individual": {
-                    "reference": "Practitioner/dr-010",
-                    "display": "Dr. Christopher Lee"
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
                   }
                 },
                 {
@@ -267,30 +1769,30 @@
                     }
                   ],
                   "individual": {
-                    "reference": "Practitioner/dr-010",
-                    "display": "Dr. Christopher Lee"
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
                   }
                 }
               ],
               "period": {
-                "start": "2024-08-24T04:12:47Z"
+                "start": "2024-12-24T22:12:46Z"
               },
               "reasonCode": [
                 {
                   "coding": [
                     {
                       "system": "http://snomed.info/sct",
-                      "code": "56265001",
-                      "display": "Atrial fibrillation"
+                      "code": "40055000",
+                      "display": "GI bleeding"
                     }
                   ],
-                  "text": "New onset AFib"
+                  "text": "Upper GI hemorrhage"
                 }
               ],
               "diagnosis": [
                 {
                   "condition": {
-                    "display": "New onset AFib"
+                    "display": "Upper GI hemorrhage"
                   },
                   "use": {
                     "coding": [
@@ -307,8 +1809,8 @@
               "location": [
                 {
                   "location": {
-                    "reference": "Location/loc-0056-01-01",
-                    "display": "Surgical Floor - Room 352, Bed A"
+                    "reference": "Location/loc-0034-02-01",
+                    "display": "Observation Unit - Room 194, Bed C"
                   },
                   "status": "active",
                   "physicalType": {
@@ -323,28 +1825,398 @@
                 }
               ],
               "serviceProvider": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               }
             }
           },
           {
-            "fullUrl": "urn:uuid:location-loc-0056-01-01",
+            "fullUrl": "urn:uuid:location-loc-0034-02-01",
             "resource": {
               "resourceType": "Location",
-              "id": "loc-0056-01-01",
+              "id": "loc-0034-02-01",
               "meta": {
-                "lastUpdated": "2025-12-11T04:12:47Z"
+                "lastUpdated": "2025-12-11T04:12:46Z"
               },
               "identifier": [
                 {
                   "system": "http://hospital.example.org/location-id",
-                  "value": "LOC-SURG-352-A"
+                  "value": "LOC-OBS-194-C"
                 }
               ],
               "status": "active",
-              "name": "Surgical Floor - Room 352, Bed A",
-              "description": "Bed A in Room 352 of Surgical Floor",
+              "name": "Observation Unit - Room 194, Bed C",
+              "description": "Bed C in Room 194 of Observation Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Observation Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-6",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0034-006",
+        "type": "message",
+        "timestamp": "2024-12-25T22:12:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:42af2914-8399-4b9d-ad82-2ed230704f22",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0034-006",
+              "meta": {
+                "lastUpdated": "2024-12-25T22:12:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://mass-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Mass General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://mass-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0034"
+                },
+                {
+                  "reference": "Encounter/0034-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0034",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0034",
+              "meta": {
+                "lastUpdated": "2024-08-21T16:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0034"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "819-80-1922"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Lewis",
+                  "given": [
+                    "Caleb"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 682-8862",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(867) 294-2638",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "caleb.lewis@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1990-10-10",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "9349 Cedar Avenue"
+                  ],
+                  "city": "Austin",
+                  "state": "TX",
+                  "postalCode": "78701",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Lewis",
+                    "given": [
+                      "Liam"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(721) 506-2407"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0034-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0034-02",
+              "meta": {
+                "lastUpdated": "2024-12-24T22:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0034-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V578110"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0034",
+                "display": "Caleb Lewis"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-12-24T22:12:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "40055000",
+                      "display": "GI bleeding"
+                    }
+                  ],
+                  "text": "Upper GI hemorrhage"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Upper GI hemorrhage"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0034-02-t01",
+                    "display": "Surgical Floor - Room 124, Bed D"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0034-02-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0034-02-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-SURG-124-D"
+                }
+              ],
+              "status": "active",
+              "name": "Surgical Floor - Room 124, Bed D",
+              "description": "Bed D in Room 124 of Surgical Floor",
               "mode": "instance",
               "type": [
                 {
@@ -367,12 +2239,12 @@
                 ]
               },
               "partOf": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               },
               "managingOrganization": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               }
             }
           }
@@ -380,20 +2252,20 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:adt-msg-2",
+      "fullUrl": "urn:uuid:adt-msg-7",
       "resource": {
         "resourceType": "Bundle",
-        "id": "adt-msg-0056-002",
+        "id": "adt-msg-0034-007",
         "type": "message",
-        "timestamp": "2024-08-25T08:12:47Z",
+        "timestamp": "2024-12-28T09:12:46Z",
         "entry": [
           {
-            "fullUrl": "urn:uuid:a5c2b59c-8c19-4c11-8b38-fb106e48b438",
+            "fullUrl": "urn:uuid:379939f8-aa3f-4be2-afa7-c8ee62aa7935",
             "resource": {
               "resourceType": "MessageHeader",
-              "id": "msg-0056-002",
+              "id": "msg-0034-007",
               "meta": {
-                "lastUpdated": "2024-08-25T08:12:47Z"
+                "lastUpdated": "2024-12-28T09:12:46Z"
               },
               "eventCoding": {
                 "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
@@ -403,14 +2275,14 @@
               "destination": [
                 {
                   "name": "Hospital ADT System",
-                  "endpoint": "http://mayo-clinic-hospital.example.org/fhir/adt"
+                  "endpoint": "http://mass-general-hospital.example.org/fhir/adt"
                 }
               ],
               "source": {
-                "name": "Mayo Clinic Hospital",
+                "name": "Mass General Hospital",
                 "software": "Hospital Information System",
                 "version": "5.2.1",
-                "endpoint": "http://mayo-clinic-hospital.example.org/fhir"
+                "endpoint": "http://mass-general-hospital.example.org/fhir"
               },
               "reason": {
                 "coding": [
@@ -423,21 +2295,21 @@
               },
               "focus": [
                 {
-                  "reference": "Patient/0056"
+                  "reference": "Patient/0034"
                 },
                 {
-                  "reference": "Encounter/0056-01"
+                  "reference": "Encounter/0034-02"
                 }
               ]
             }
           },
           {
-            "fullUrl": "urn:uuid:patient-0056",
+            "fullUrl": "urn:uuid:patient-0034",
             "resource": {
               "resourceType": "Patient",
-              "id": "0056",
+              "id": "0034",
               "meta": {
-                "lastUpdated": "2024-12-18T23:12:47Z"
+                "lastUpdated": "2024-08-21T16:12:46Z"
               },
               "identifier": [
                 {
@@ -452,7 +2324,7 @@
                     ]
                   },
                   "system": "http://hospital.example.org/mrn",
-                  "value": "MRN-0056"
+                  "value": "MRN-0034"
                 },
                 {
                   "use": "official",
@@ -466,47 +2338,47 @@
                     ]
                   },
                   "system": "http://hl7.org/fhir/sid/us-ssn",
-                  "value": "803-15-7882"
+                  "value": "819-80-1922"
                 }
               ],
               "active": true,
               "name": [
                 {
                   "use": "official",
-                  "family": "Brown",
+                  "family": "Lewis",
                   "given": [
-                    "Avery"
+                    "Caleb"
                   ]
                 }
               ],
               "telecom": [
                 {
                   "system": "phone",
-                  "value": "(812) 680-8428",
+                  "value": "(479) 682-8862",
                   "use": "home"
                 },
                 {
                   "system": "phone",
-                  "value": "(503) 973-6447",
+                  "value": "(867) 294-2638",
                   "use": "mobile"
                 },
                 {
                   "system": "email",
-                  "value": "avery.brown@email.com"
+                  "value": "caleb.lewis@email.com"
                 }
               ],
-              "gender": "female",
-              "birthDate": "1992-12-15",
+              "gender": "male",
+              "birthDate": "1990-10-10",
               "address": [
                 {
                   "use": "home",
                   "type": "physical",
                   "line": [
-                    "9105 Oak Boulevard"
+                    "9349 Cedar Avenue"
                   ],
-                  "city": "Minneapolis",
-                  "state": "MN",
-                  "postalCode": "55401",
+                  "city": "Austin",
+                  "state": "TX",
+                  "postalCode": "78701",
                   "country": "USA"
                 }
               ],
@@ -514,7 +2386,7 @@
                 "coding": [
                   {
                     "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-                    "code": "D"
+                    "code": "W"
                   }
                 ]
               },
@@ -532,15 +2404,15 @@
                     }
                   ],
                   "name": {
-                    "family": "Brown",
+                    "family": "Lewis",
                     "given": [
-                      "Jacob"
+                      "Liam"
                     ]
                   },
                   "telecom": [
                     {
                       "system": "phone",
-                      "value": "(494) 660-7522"
+                      "value": "(721) 506-2407"
                     }
                   ]
                 }
@@ -548,18 +2420,18 @@
             }
           },
           {
-            "fullUrl": "urn:uuid:encounter-0056-01",
+            "fullUrl": "urn:uuid:encounter-0034-02",
             "resource": {
               "resourceType": "Encounter",
-              "id": "0056-01",
+              "id": "0034-02",
               "meta": {
-                "lastUpdated": "2024-08-24T04:12:47Z"
+                "lastUpdated": "2024-12-24T22:12:46Z"
               },
               "identifier": [
                 {
                   "use": "official",
                   "system": "http://hospital.example.org/encounter-id",
-                  "value": "ENC-0056-01"
+                  "value": "ENC-0034-02"
                 },
                 {
                   "use": "usual",
@@ -573,7 +2445,7 @@
                     ]
                   },
                   "system": "http://hospital.example.org/visit-number",
-                  "value": "V138395"
+                  "value": "V879157"
                 }
               ],
               "status": "in-progress",
@@ -597,384 +2469,14 @@
                 "coding": [
                   {
                     "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
-                    "code": "UR",
-                    "display": "emergency"
-                  }
-                ]
-              },
-              "subject": {
-                "reference": "Patient/0056",
-                "display": "Avery Brown"
-              },
-              "participant": [
-                {
-                  "type": [
-                    {
-                      "coding": [
-                        {
-                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
-                          "code": "ATND",
-                          "display": "attender"
-                        }
-                      ]
-                    }
-                  ],
-                  "individual": {
-                    "reference": "Practitioner/dr-010",
-                    "display": "Dr. Christopher Lee"
-                  }
-                },
-                {
-                  "type": [
-                    {
-                      "coding": [
-                        {
-                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
-                          "code": "ADM",
-                          "display": "admitter"
-                        }
-                      ]
-                    }
-                  ],
-                  "individual": {
-                    "reference": "Practitioner/dr-010",
-                    "display": "Dr. Christopher Lee"
-                  }
-                }
-              ],
-              "period": {
-                "start": "2024-08-24T04:12:47Z"
-              },
-              "reasonCode": [
-                {
-                  "coding": [
-                    {
-                      "system": "http://snomed.info/sct",
-                      "code": "56265001",
-                      "display": "Atrial fibrillation"
-                    }
-                  ],
-                  "text": "New onset AFib"
-                }
-              ],
-              "diagnosis": [
-                {
-                  "condition": {
-                    "display": "New onset AFib"
-                  },
-                  "use": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
-                        "code": "AD",
-                        "display": "Admission diagnosis"
-                      }
-                    ]
-                  },
-                  "rank": 1
-                }
-              ],
-              "location": [
-                {
-                  "location": {
-                    "reference": "Location/loc-0056-01-t01",
-                    "display": "Operating Room - Room 264, Bed B"
-                  },
-                  "status": "active",
-                  "physicalType": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
-                        "code": "bd",
-                        "display": "Bed"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "serviceProvider": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
-              }
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:location-loc-0056-01-t01",
-            "resource": {
-              "resourceType": "Location",
-              "id": "loc-0056-01-t01",
-              "meta": {
-                "lastUpdated": "2025-12-11T04:12:47Z"
-              },
-              "identifier": [
-                {
-                  "system": "http://hospital.example.org/location-id",
-                  "value": "LOC-OR-264-B"
-                }
-              ],
-              "status": "active",
-              "name": "Operating Room - Room 264, Bed B",
-              "description": "Bed B in Room 264 of Operating Room",
-              "mode": "instance",
-              "type": [
-                {
-                  "coding": [
-                    {
-                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-                      "code": "OR",
-                      "display": "Operating Room"
-                    }
-                  ]
-                }
-              ],
-              "physicalType": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
-                    "code": "bd",
-                    "display": "Bed"
-                  }
-                ]
-              },
-              "partOf": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
-              },
-              "managingOrganization": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
-              }
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:adt-msg-3",
-      "resource": {
-        "resourceType": "Bundle",
-        "id": "adt-msg-0056-003",
-        "type": "message",
-        "timestamp": "2024-08-26T13:12:47Z",
-        "entry": [
-          {
-            "fullUrl": "urn:uuid:13e8109b-8cb6-4293-9409-a815cae70689",
-            "resource": {
-              "resourceType": "MessageHeader",
-              "id": "msg-0056-003",
-              "meta": {
-                "lastUpdated": "2024-08-26T13:12:47Z"
-              },
-              "eventCoding": {
-                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
-                "code": "A02",
-                "display": "ADT/ACK - Transfer a Patient"
-              },
-              "destination": [
-                {
-                  "name": "Hospital ADT System",
-                  "endpoint": "http://mayo-clinic-hospital.example.org/fhir/adt"
-                }
-              ],
-              "source": {
-                "name": "Mayo Clinic Hospital",
-                "software": "Hospital Information System",
-                "version": "5.2.1",
-                "endpoint": "http://mayo-clinic-hospital.example.org/fhir"
-              },
-              "reason": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
-                    "code": "transfer",
-                    "display": "Transfer"
-                  }
-                ]
-              },
-              "focus": [
-                {
-                  "reference": "Patient/0056"
-                },
-                {
-                  "reference": "Encounter/0056-01"
-                }
-              ]
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:patient-0056",
-            "resource": {
-              "resourceType": "Patient",
-              "id": "0056",
-              "meta": {
-                "lastUpdated": "2024-12-18T23:12:47Z"
-              },
-              "identifier": [
-                {
-                  "use": "usual",
-                  "type": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                        "code": "MR",
-                        "display": "Medical Record Number"
-                      }
-                    ]
-                  },
-                  "system": "http://hospital.example.org/mrn",
-                  "value": "MRN-0056"
-                },
-                {
-                  "use": "official",
-                  "type": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                        "code": "SS",
-                        "display": "Social Security Number"
-                      }
-                    ]
-                  },
-                  "system": "http://hl7.org/fhir/sid/us-ssn",
-                  "value": "803-15-7882"
-                }
-              ],
-              "active": true,
-              "name": [
-                {
-                  "use": "official",
-                  "family": "Brown",
-                  "given": [
-                    "Avery"
-                  ]
-                }
-              ],
-              "telecom": [
-                {
-                  "system": "phone",
-                  "value": "(812) 680-8428",
-                  "use": "home"
-                },
-                {
-                  "system": "phone",
-                  "value": "(503) 973-6447",
-                  "use": "mobile"
-                },
-                {
-                  "system": "email",
-                  "value": "avery.brown@email.com"
-                }
-              ],
-              "gender": "female",
-              "birthDate": "1992-12-15",
-              "address": [
-                {
-                  "use": "home",
-                  "type": "physical",
-                  "line": [
-                    "9105 Oak Boulevard"
-                  ],
-                  "city": "Minneapolis",
-                  "state": "MN",
-                  "postalCode": "55401",
-                  "country": "USA"
-                }
-              ],
-              "maritalStatus": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-                    "code": "D"
-                  }
-                ]
-              },
-              "contact": [
-                {
-                  "relationship": [
-                    {
-                      "coding": [
-                        {
-                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
-                          "code": "N",
-                          "display": "Next-of-Kin"
-                        }
-                      ]
-                    }
-                  ],
-                  "name": {
-                    "family": "Brown",
-                    "given": [
-                      "Jacob"
-                    ]
-                  },
-                  "telecom": [
-                    {
-                      "system": "phone",
-                      "value": "(494) 660-7522"
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:encounter-0056-01",
-            "resource": {
-              "resourceType": "Encounter",
-              "id": "0056-01",
-              "meta": {
-                "lastUpdated": "2024-08-24T04:12:47Z"
-              },
-              "identifier": [
-                {
-                  "use": "official",
-                  "system": "http://hospital.example.org/encounter-id",
-                  "value": "ENC-0056-01"
-                },
-                {
-                  "use": "usual",
-                  "type": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                        "code": "VN",
-                        "display": "Visit Number"
-                      }
-                    ]
-                  },
-                  "system": "http://hospital.example.org/visit-number",
-                  "value": "V336003"
-                }
-              ],
-              "status": "in-progress",
-              "class": {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-                "code": "IMP",
-                "display": "inpatient encounter"
-              },
-              "type": [
-                {
-                  "coding": [
-                    {
-                      "system": "http://snomed.info/sct",
-                      "code": "32485007",
-                      "display": "Hospital admission"
-                    }
-                  ]
-                }
-              ],
-              "priority": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
-                    "code": "EM",
+                    "code": "R",
                     "display": "routine"
                   }
                 ]
               },
               "subject": {
-                "reference": "Patient/0056",
-                "display": "Avery Brown"
+                "reference": "Patient/0034",
+                "display": "Caleb Lewis"
               },
               "participant": [
                 {
@@ -990,8 +2492,8 @@
                     }
                   ],
                   "individual": {
-                    "reference": "Practitioner/dr-010",
-                    "display": "Dr. Christopher Lee"
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
                   }
                 },
                 {
@@ -1007,30 +2509,30 @@
                     }
                   ],
                   "individual": {
-                    "reference": "Practitioner/dr-010",
-                    "display": "Dr. Christopher Lee"
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
                   }
                 }
               ],
               "period": {
-                "start": "2024-08-24T04:12:47Z"
+                "start": "2024-12-24T22:12:46Z"
               },
               "reasonCode": [
                 {
                   "coding": [
                     {
                       "system": "http://snomed.info/sct",
-                      "code": "56265001",
-                      "display": "Atrial fibrillation"
+                      "code": "40055000",
+                      "display": "GI bleeding"
                     }
                   ],
-                  "text": "New onset AFib"
+                  "text": "Upper GI hemorrhage"
                 }
               ],
               "diagnosis": [
                 {
                   "condition": {
-                    "display": "New onset AFib"
+                    "display": "Upper GI hemorrhage"
                   },
                   "use": {
                     "coding": [
@@ -1047,8 +2549,8 @@
               "location": [
                 {
                   "location": {
-                    "reference": "Location/loc-0056-01-t02",
-                    "display": "Telemetry Unit - Room 347, Bed C"
+                    "reference": "Location/loc-0034-02-t02",
+                    "display": "Telemetry Unit - Room 470, Bed B"
                   },
                   "status": "active",
                   "physicalType": {
@@ -1063,28 +2565,28 @@
                 }
               ],
               "serviceProvider": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               }
             }
           },
           {
-            "fullUrl": "urn:uuid:location-loc-0056-01-t02",
+            "fullUrl": "urn:uuid:location-loc-0034-02-t02",
             "resource": {
               "resourceType": "Location",
-              "id": "loc-0056-01-t02",
+              "id": "loc-0034-02-t02",
               "meta": {
-                "lastUpdated": "2025-12-11T04:12:47Z"
+                "lastUpdated": "2025-12-11T04:12:46Z"
               },
               "identifier": [
                 {
                   "system": "http://hospital.example.org/location-id",
-                  "value": "LOC-TELE-347-C"
+                  "value": "LOC-TELE-470-B"
                 }
               ],
               "status": "active",
-              "name": "Telemetry Unit - Room 347, Bed C",
-              "description": "Bed C in Room 347 of Telemetry Unit",
+              "name": "Telemetry Unit - Room 470, Bed B",
+              "description": "Bed B in Room 470 of Telemetry Unit",
               "mode": "instance",
               "type": [
                 {
@@ -1107,12 +2609,12 @@
                 ]
               },
               "partOf": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               },
               "managingOrganization": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               }
             }
           }
@@ -1120,390 +2622,20 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:adt-msg-4",
+      "fullUrl": "urn:uuid:adt-msg-8",
       "resource": {
         "resourceType": "Bundle",
-        "id": "adt-msg-0056-004",
+        "id": "adt-msg-0034-008",
         "type": "message",
-        "timestamp": "2024-08-28T21:12:47Z",
+        "timestamp": "2024-12-30T05:12:46Z",
         "entry": [
           {
-            "fullUrl": "urn:uuid:ce184535-3334-4267-aab4-b86bd4b17337",
+            "fullUrl": "urn:uuid:dec918dd-b78f-4f79-8864-b7f50da2912f",
             "resource": {
               "resourceType": "MessageHeader",
-              "id": "msg-0056-004",
+              "id": "msg-0034-008",
               "meta": {
-                "lastUpdated": "2024-08-28T21:12:47Z"
-              },
-              "eventCoding": {
-                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
-                "code": "A08",
-                "display": "ADT/ACK - Update Patient Information"
-              },
-              "destination": [
-                {
-                  "name": "Hospital ADT System",
-                  "endpoint": "http://mayo-clinic-hospital.example.org/fhir/adt"
-                }
-              ],
-              "source": {
-                "name": "Mayo Clinic Hospital",
-                "software": "Hospital Information System",
-                "version": "5.2.1",
-                "endpoint": "http://mayo-clinic-hospital.example.org/fhir"
-              },
-              "reason": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
-                    "code": "update",
-                    "display": "Update"
-                  }
-                ]
-              },
-              "focus": [
-                {
-                  "reference": "Patient/0056"
-                },
-                {
-                  "reference": "Encounter/0056-01"
-                }
-              ]
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:patient-0056",
-            "resource": {
-              "resourceType": "Patient",
-              "id": "0056",
-              "meta": {
-                "lastUpdated": "2024-12-18T23:12:47Z"
-              },
-              "identifier": [
-                {
-                  "use": "usual",
-                  "type": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                        "code": "MR",
-                        "display": "Medical Record Number"
-                      }
-                    ]
-                  },
-                  "system": "http://hospital.example.org/mrn",
-                  "value": "MRN-0056"
-                },
-                {
-                  "use": "official",
-                  "type": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                        "code": "SS",
-                        "display": "Social Security Number"
-                      }
-                    ]
-                  },
-                  "system": "http://hl7.org/fhir/sid/us-ssn",
-                  "value": "803-15-7882"
-                }
-              ],
-              "active": true,
-              "name": [
-                {
-                  "use": "official",
-                  "family": "Brown",
-                  "given": [
-                    "Avery"
-                  ]
-                }
-              ],
-              "telecom": [
-                {
-                  "system": "phone",
-                  "value": "(812) 680-8428",
-                  "use": "home"
-                },
-                {
-                  "system": "phone",
-                  "value": "(503) 973-6447",
-                  "use": "mobile"
-                },
-                {
-                  "system": "email",
-                  "value": "avery.brown@email.com"
-                }
-              ],
-              "gender": "female",
-              "birthDate": "1992-12-15",
-              "address": [
-                {
-                  "use": "home",
-                  "type": "physical",
-                  "line": [
-                    "9105 Oak Boulevard"
-                  ],
-                  "city": "Minneapolis",
-                  "state": "MN",
-                  "postalCode": "55401",
-                  "country": "USA"
-                }
-              ],
-              "maritalStatus": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-                    "code": "D"
-                  }
-                ]
-              },
-              "contact": [
-                {
-                  "relationship": [
-                    {
-                      "coding": [
-                        {
-                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
-                          "code": "N",
-                          "display": "Next-of-Kin"
-                        }
-                      ]
-                    }
-                  ],
-                  "name": {
-                    "family": "Brown",
-                    "given": [
-                      "Jacob"
-                    ]
-                  },
-                  "telecom": [
-                    {
-                      "system": "phone",
-                      "value": "(494) 660-7522"
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:encounter-0056-01",
-            "resource": {
-              "resourceType": "Encounter",
-              "id": "0056-01",
-              "meta": {
-                "lastUpdated": "2024-08-24T04:12:47Z"
-              },
-              "identifier": [
-                {
-                  "use": "official",
-                  "system": "http://hospital.example.org/encounter-id",
-                  "value": "ENC-0056-01"
-                },
-                {
-                  "use": "usual",
-                  "type": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                        "code": "VN",
-                        "display": "Visit Number"
-                      }
-                    ]
-                  },
-                  "system": "http://hospital.example.org/visit-number",
-                  "value": "V192245"
-                }
-              ],
-              "status": "in-progress",
-              "class": {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-                "code": "IMP",
-                "display": "inpatient encounter"
-              },
-              "type": [
-                {
-                  "coding": [
-                    {
-                      "system": "http://snomed.info/sct",
-                      "code": "32485007",
-                      "display": "Hospital admission"
-                    }
-                  ]
-                }
-              ],
-              "priority": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
-                    "code": "UR",
-                    "display": "emergency"
-                  }
-                ]
-              },
-              "subject": {
-                "reference": "Patient/0056",
-                "display": "Avery Brown"
-              },
-              "participant": [
-                {
-                  "type": [
-                    {
-                      "coding": [
-                        {
-                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
-                          "code": "ATND",
-                          "display": "attender"
-                        }
-                      ]
-                    }
-                  ],
-                  "individual": {
-                    "reference": "Practitioner/dr-010",
-                    "display": "Dr. Christopher Lee"
-                  }
-                },
-                {
-                  "type": [
-                    {
-                      "coding": [
-                        {
-                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
-                          "code": "ADM",
-                          "display": "admitter"
-                        }
-                      ]
-                    }
-                  ],
-                  "individual": {
-                    "reference": "Practitioner/dr-010",
-                    "display": "Dr. Christopher Lee"
-                  }
-                }
-              ],
-              "period": {
-                "start": "2024-08-24T04:12:47Z"
-              },
-              "reasonCode": [
-                {
-                  "coding": [
-                    {
-                      "system": "http://snomed.info/sct",
-                      "code": "56265001",
-                      "display": "Atrial fibrillation"
-                    }
-                  ],
-                  "text": "New onset AFib"
-                }
-              ],
-              "diagnosis": [
-                {
-                  "condition": {
-                    "display": "New onset AFib"
-                  },
-                  "use": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
-                        "code": "AD",
-                        "display": "Admission diagnosis"
-                      }
-                    ]
-                  },
-                  "rank": 1
-                }
-              ],
-              "location": [
-                {
-                  "location": {
-                    "reference": "Location/loc-0056-01-t02",
-                    "display": "Telemetry Unit - Room 347, Bed C"
-                  },
-                  "status": "active",
-                  "physicalType": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
-                        "code": "bd",
-                        "display": "Bed"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "serviceProvider": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
-              }
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:location-loc-0056-01-t02",
-            "resource": {
-              "resourceType": "Location",
-              "id": "loc-0056-01-t02",
-              "meta": {
-                "lastUpdated": "2025-12-11T04:12:47Z"
-              },
-              "identifier": [
-                {
-                  "system": "http://hospital.example.org/location-id",
-                  "value": "LOC-TELE-347-C"
-                }
-              ],
-              "status": "active",
-              "name": "Telemetry Unit - Room 347, Bed C",
-              "description": "Bed C in Room 347 of Telemetry Unit",
-              "mode": "instance",
-              "type": [
-                {
-                  "coding": [
-                    {
-                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-                      "code": "HU",
-                      "display": "Telemetry Unit"
-                    }
-                  ]
-                }
-              ],
-              "physicalType": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
-                    "code": "bd",
-                    "display": "Bed"
-                  }
-                ]
-              },
-              "partOf": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
-              },
-              "managingOrganization": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
-              }
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:adt-msg-5",
-      "resource": {
-        "resourceType": "Bundle",
-        "id": "adt-msg-0056-005",
-        "type": "message",
-        "timestamp": "2024-08-29T09:12:47Z",
-        "entry": [
-          {
-            "fullUrl": "urn:uuid:8476c578-abd6-4e08-a214-083f56a807b4",
-            "resource": {
-              "resourceType": "MessageHeader",
-              "id": "msg-0056-005",
-              "meta": {
-                "lastUpdated": "2024-08-29T09:12:47Z"
+                "lastUpdated": "2024-12-30T05:12:46Z"
               },
               "eventCoding": {
                 "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
@@ -1513,14 +2645,14 @@
               "destination": [
                 {
                   "name": "Hospital ADT System",
-                  "endpoint": "http://mayo-clinic-hospital.example.org/fhir/adt"
+                  "endpoint": "http://mass-general-hospital.example.org/fhir/adt"
                 }
               ],
               "source": {
-                "name": "Mayo Clinic Hospital",
+                "name": "Mass General Hospital",
                 "software": "Hospital Information System",
                 "version": "5.2.1",
-                "endpoint": "http://mayo-clinic-hospital.example.org/fhir"
+                "endpoint": "http://mass-general-hospital.example.org/fhir"
               },
               "reason": {
                 "coding": [
@@ -1533,21 +2665,21 @@
               },
               "focus": [
                 {
-                  "reference": "Patient/0056"
+                  "reference": "Patient/0034"
                 },
                 {
-                  "reference": "Encounter/0056-01"
+                  "reference": "Encounter/0034-02"
                 }
               ]
             }
           },
           {
-            "fullUrl": "urn:uuid:patient-0056",
+            "fullUrl": "urn:uuid:patient-0034",
             "resource": {
               "resourceType": "Patient",
-              "id": "0056",
+              "id": "0034",
               "meta": {
-                "lastUpdated": "2024-12-18T23:12:47Z"
+                "lastUpdated": "2024-08-21T16:12:46Z"
               },
               "identifier": [
                 {
@@ -1562,7 +2694,7 @@
                     ]
                   },
                   "system": "http://hospital.example.org/mrn",
-                  "value": "MRN-0056"
+                  "value": "MRN-0034"
                 },
                 {
                   "use": "official",
@@ -1576,47 +2708,47 @@
                     ]
                   },
                   "system": "http://hl7.org/fhir/sid/us-ssn",
-                  "value": "803-15-7882"
+                  "value": "819-80-1922"
                 }
               ],
               "active": true,
               "name": [
                 {
                   "use": "official",
-                  "family": "Brown",
+                  "family": "Lewis",
                   "given": [
-                    "Avery"
+                    "Caleb"
                   ]
                 }
               ],
               "telecom": [
                 {
                   "system": "phone",
-                  "value": "(812) 680-8428",
+                  "value": "(479) 682-8862",
                   "use": "home"
                 },
                 {
                   "system": "phone",
-                  "value": "(503) 973-6447",
+                  "value": "(867) 294-2638",
                   "use": "mobile"
                 },
                 {
                   "system": "email",
-                  "value": "avery.brown@email.com"
+                  "value": "caleb.lewis@email.com"
                 }
               ],
-              "gender": "female",
-              "birthDate": "1992-12-15",
+              "gender": "male",
+              "birthDate": "1990-10-10",
               "address": [
                 {
                   "use": "home",
                   "type": "physical",
                   "line": [
-                    "9105 Oak Boulevard"
+                    "9349 Cedar Avenue"
                   ],
-                  "city": "Minneapolis",
-                  "state": "MN",
-                  "postalCode": "55401",
+                  "city": "Austin",
+                  "state": "TX",
+                  "postalCode": "78701",
                   "country": "USA"
                 }
               ],
@@ -1624,7 +2756,7 @@
                 "coding": [
                   {
                     "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-                    "code": "D"
+                    "code": "W"
                   }
                 ]
               },
@@ -1642,15 +2774,15 @@
                     }
                   ],
                   "name": {
-                    "family": "Brown",
+                    "family": "Lewis",
                     "given": [
-                      "Jacob"
+                      "Liam"
                     ]
                   },
                   "telecom": [
                     {
                       "system": "phone",
-                      "value": "(494) 660-7522"
+                      "value": "(721) 506-2407"
                     }
                   ]
                 }
@@ -1658,18 +2790,18 @@
             }
           },
           {
-            "fullUrl": "urn:uuid:encounter-0056-01",
+            "fullUrl": "urn:uuid:encounter-0034-02",
             "resource": {
               "resourceType": "Encounter",
-              "id": "0056-01",
+              "id": "0034-02",
               "meta": {
-                "lastUpdated": "2024-08-24T04:12:47Z"
+                "lastUpdated": "2024-12-24T22:12:46Z"
               },
               "identifier": [
                 {
                   "use": "official",
                   "system": "http://hospital.example.org/encounter-id",
-                  "value": "ENC-0056-01"
+                  "value": "ENC-0034-02"
                 },
                 {
                   "use": "usual",
@@ -1683,7 +2815,7 @@
                     ]
                   },
                   "system": "http://hospital.example.org/visit-number",
-                  "value": "V899794"
+                  "value": "V173237"
                 }
               ],
               "status": "finished",
@@ -1707,14 +2839,14 @@
                 "coding": [
                   {
                     "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
-                    "code": "UR",
-                    "display": "emergency"
+                    "code": "EM",
+                    "display": "urgent"
                   }
                 ]
               },
               "subject": {
-                "reference": "Patient/0056",
-                "display": "Avery Brown"
+                "reference": "Patient/0034",
+                "display": "Caleb Lewis"
               },
               "participant": [
                 {
@@ -1730,8 +2862,8 @@
                     }
                   ],
                   "individual": {
-                    "reference": "Practitioner/dr-010",
-                    "display": "Dr. Christopher Lee"
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
                   }
                 },
                 {
@@ -1747,31 +2879,31 @@
                     }
                   ],
                   "individual": {
-                    "reference": "Practitioner/dr-010",
-                    "display": "Dr. Christopher Lee"
+                    "reference": "Practitioner/dr-005",
+                    "display": "Dr. Lisa Patel"
                   }
                 }
               ],
               "period": {
-                "start": "2024-08-24T04:12:47Z",
-                "end": "2024-08-29T09:12:47Z"
+                "start": "2024-12-24T22:12:46Z",
+                "end": "2024-12-30T05:12:46Z"
               },
               "reasonCode": [
                 {
                   "coding": [
                     {
                       "system": "http://snomed.info/sct",
-                      "code": "56265001",
-                      "display": "Atrial fibrillation"
+                      "code": "40055000",
+                      "display": "GI bleeding"
                     }
                   ],
-                  "text": "New onset AFib"
+                  "text": "Upper GI hemorrhage"
                 }
               ],
               "diagnosis": [
                 {
                   "condition": {
-                    "display": "New onset AFib"
+                    "display": "Upper GI hemorrhage"
                   },
                   "use": {
                     "coding": [
@@ -1788,8 +2920,8 @@
               "location": [
                 {
                   "location": {
-                    "reference": "Location/loc-0056-01-t02",
-                    "display": "Telemetry Unit - Room 347, Bed C"
+                    "reference": "Location/loc-0034-02-t02",
+                    "display": "Telemetry Unit - Room 470, Bed B"
                   },
                   "status": "active",
                   "physicalType": {
@@ -1804,15 +2936,15 @@
                 }
               ],
               "serviceProvider": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               },
               "hospitalization": {
                 "admitSource": {
                   "coding": [
                     {
                       "system": "http://terminology.hl7.org/CodeSystem/admit-source",
-                      "code": "hosp-trans",
+                      "code": "emd",
                       "display": "From ED"
                     }
                   ]
@@ -1831,22 +2963,22 @@
             }
           },
           {
-            "fullUrl": "urn:uuid:location-loc-0056-01-t02",
+            "fullUrl": "urn:uuid:location-loc-0034-02-t02",
             "resource": {
               "resourceType": "Location",
-              "id": "loc-0056-01-t02",
+              "id": "loc-0034-02-t02",
               "meta": {
-                "lastUpdated": "2025-12-11T04:12:47Z"
+                "lastUpdated": "2025-12-11T04:12:46Z"
               },
               "identifier": [
                 {
                   "system": "http://hospital.example.org/location-id",
-                  "value": "LOC-TELE-347-C"
+                  "value": "LOC-TELE-470-B"
                 }
               ],
               "status": "active",
-              "name": "Telemetry Unit - Room 347, Bed C",
-              "description": "Bed C in Room 347 of Telemetry Unit",
+              "name": "Telemetry Unit - Room 470, Bed B",
+              "description": "Bed B in Room 470 of Telemetry Unit",
               "mode": "instance",
               "type": [
                 {
@@ -1869,12 +3001,12 @@
                 ]
               },
               "partOf": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               },
               "managingOrganization": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               }
             }
           }
@@ -1882,20 +3014,390 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:adt-msg-6",
+      "fullUrl": "urn:uuid:adt-msg-9",
       "resource": {
         "resourceType": "Bundle",
-        "id": "adt-msg-0056-006",
+        "id": "adt-msg-0034-009",
         "type": "message",
-        "timestamp": "2024-12-13T09:12:47Z",
+        "timestamp": "2025-08-06T05:12:46Z",
         "entry": [
           {
-            "fullUrl": "urn:uuid:8f050c86-7bea-41fa-b8e7-b2ec031d3d03",
+            "fullUrl": "urn:uuid:33611d26-b724-47cb-b6f2-49f521eb9b8f",
             "resource": {
               "resourceType": "MessageHeader",
-              "id": "msg-0056-006",
+              "id": "msg-0034-009",
               "meta": {
-                "lastUpdated": "2024-12-13T09:12:47Z"
+                "lastUpdated": "2025-08-06T05:12:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A04",
+                "display": "ADT/ACK - Register a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://mass-general-hospital.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Mass General Hospital",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://mass-general-hospital.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "register",
+                    "display": "Register"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0034"
+                },
+                {
+                  "reference": "Encounter/0034-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0034",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0034",
+              "meta": {
+                "lastUpdated": "2024-08-21T16:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0034"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "819-80-1922"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Lewis",
+                  "given": [
+                    "Caleb"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 682-8862",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(867) 294-2638",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "caleb.lewis@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1990-10-10",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "9349 Cedar Avenue"
+                  ],
+                  "city": "Austin",
+                  "state": "TX",
+                  "postalCode": "78701",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Lewis",
+                    "given": [
+                      "Liam"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(721) 506-2407"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0034-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0034-03",
+              "meta": {
+                "lastUpdated": "2025-08-06T05:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0034-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V741547"
+                }
+              ],
+              "status": "planned",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "EMER",
+                "display": "emergency"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0034",
+                "display": "Caleb Lewis"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-08-06T05:12:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "197480006",
+                      "display": "Acute appendicitis"
+                    }
+                  ],
+                  "text": "Appendicitis"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Appendicitis"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0034-03-reg",
+                    "display": "Emergency Department - Room 5, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0034-03-reg",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0034-03-reg",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-5-C"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 5, Bed C",
+              "description": "Bed C in Room 5 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-10",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0034-010",
+        "type": "message",
+        "timestamp": "2025-08-06T07:04:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:be7f545a-00d9-4f14-8cb0-1ede651aaf82",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0034-010",
+              "meta": {
+                "lastUpdated": "2025-08-06T07:04:46Z"
               },
               "eventCoding": {
                 "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
@@ -1905,14 +3407,14 @@
               "destination": [
                 {
                   "name": "Hospital ADT System",
-                  "endpoint": "http://mayo-clinic-hospital.example.org/fhir/adt"
+                  "endpoint": "http://mass-general-hospital.example.org/fhir/adt"
                 }
               ],
               "source": {
-                "name": "Mayo Clinic Hospital",
+                "name": "Mass General Hospital",
                 "software": "Hospital Information System",
                 "version": "5.2.1",
-                "endpoint": "http://mayo-clinic-hospital.example.org/fhir"
+                "endpoint": "http://mass-general-hospital.example.org/fhir"
               },
               "reason": {
                 "coding": [
@@ -1925,21 +3427,21 @@
               },
               "focus": [
                 {
-                  "reference": "Patient/0056"
+                  "reference": "Patient/0034"
                 },
                 {
-                  "reference": "Encounter/0056-02"
+                  "reference": "Encounter/0034-03"
                 }
               ]
             }
           },
           {
-            "fullUrl": "urn:uuid:patient-0056",
+            "fullUrl": "urn:uuid:patient-0034",
             "resource": {
               "resourceType": "Patient",
-              "id": "0056",
+              "id": "0034",
               "meta": {
-                "lastUpdated": "2024-12-18T23:12:47Z"
+                "lastUpdated": "2024-08-21T16:12:46Z"
               },
               "identifier": [
                 {
@@ -1954,7 +3456,7 @@
                     ]
                   },
                   "system": "http://hospital.example.org/mrn",
-                  "value": "MRN-0056"
+                  "value": "MRN-0034"
                 },
                 {
                   "use": "official",
@@ -1968,47 +3470,47 @@
                     ]
                   },
                   "system": "http://hl7.org/fhir/sid/us-ssn",
-                  "value": "803-15-7882"
+                  "value": "819-80-1922"
                 }
               ],
               "active": true,
               "name": [
                 {
                   "use": "official",
-                  "family": "Brown",
+                  "family": "Lewis",
                   "given": [
-                    "Avery"
+                    "Caleb"
                   ]
                 }
               ],
               "telecom": [
                 {
                   "system": "phone",
-                  "value": "(812) 680-8428",
+                  "value": "(479) 682-8862",
                   "use": "home"
                 },
                 {
                   "system": "phone",
-                  "value": "(503) 973-6447",
+                  "value": "(867) 294-2638",
                   "use": "mobile"
                 },
                 {
                   "system": "email",
-                  "value": "avery.brown@email.com"
+                  "value": "caleb.lewis@email.com"
                 }
               ],
-              "gender": "female",
-              "birthDate": "1992-12-15",
+              "gender": "male",
+              "birthDate": "1990-10-10",
               "address": [
                 {
                   "use": "home",
                   "type": "physical",
                   "line": [
-                    "9105 Oak Boulevard"
+                    "9349 Cedar Avenue"
                   ],
-                  "city": "Minneapolis",
-                  "state": "MN",
-                  "postalCode": "55401",
+                  "city": "Austin",
+                  "state": "TX",
+                  "postalCode": "78701",
                   "country": "USA"
                 }
               ],
@@ -2016,7 +3518,7 @@
                 "coding": [
                   {
                     "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-                    "code": "D"
+                    "code": "W"
                   }
                 ]
               },
@@ -2034,15 +3536,15 @@
                     }
                   ],
                   "name": {
-                    "family": "Brown",
+                    "family": "Lewis",
                     "given": [
-                      "Jacob"
+                      "Liam"
                     ]
                   },
                   "telecom": [
                     {
                       "system": "phone",
-                      "value": "(494) 660-7522"
+                      "value": "(721) 506-2407"
                     }
                   ]
                 }
@@ -2050,18 +3552,18 @@
             }
           },
           {
-            "fullUrl": "urn:uuid:encounter-0056-02",
+            "fullUrl": "urn:uuid:encounter-0034-03",
             "resource": {
               "resourceType": "Encounter",
-              "id": "0056-02",
+              "id": "0034-03",
               "meta": {
-                "lastUpdated": "2024-12-13T09:12:47Z"
+                "lastUpdated": "2025-08-06T07:04:46Z"
               },
               "identifier": [
                 {
                   "use": "official",
                   "system": "http://hospital.example.org/encounter-id",
-                  "value": "ENC-0056-02"
+                  "value": "ENC-0034-03"
                 },
                 {
                   "use": "usual",
@@ -2075,7 +3577,7 @@
                     ]
                   },
                   "system": "http://hospital.example.org/visit-number",
-                  "value": "V403593"
+                  "value": "V362983"
                 }
               ],
               "status": "in-progress",
@@ -2099,754 +3601,14 @@
                 "coding": [
                   {
                     "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
-                    "code": "R",
-                    "display": "routine"
-                  }
-                ]
-              },
-              "subject": {
-                "reference": "Patient/0056",
-                "display": "Avery Brown"
-              },
-              "participant": [
-                {
-                  "type": [
-                    {
-                      "coding": [
-                        {
-                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
-                          "code": "ATND",
-                          "display": "attender"
-                        }
-                      ]
-                    }
-                  ],
-                  "individual": {
-                    "reference": "Practitioner/dr-008",
-                    "display": "Dr. David Wilson"
-                  }
-                },
-                {
-                  "type": [
-                    {
-                      "coding": [
-                        {
-                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
-                          "code": "ADM",
-                          "display": "admitter"
-                        }
-                      ]
-                    }
-                  ],
-                  "individual": {
-                    "reference": "Practitioner/dr-008",
-                    "display": "Dr. David Wilson"
-                  }
-                }
-              ],
-              "period": {
-                "start": "2024-12-13T09:12:47Z"
-              },
-              "reasonCode": [
-                {
-                  "coding": [
-                    {
-                      "system": "http://snomed.info/sct",
-                      "code": "73211009",
-                      "display": "Congestive heart failure"
-                    }
-                  ],
-                  "text": "CHF exacerbation"
-                }
-              ],
-              "diagnosis": [
-                {
-                  "condition": {
-                    "display": "CHF exacerbation"
-                  },
-                  "use": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
-                        "code": "AD",
-                        "display": "Admission diagnosis"
-                      }
-                    ]
-                  },
-                  "rank": 1
-                }
-              ],
-              "location": [
-                {
-                  "location": {
-                    "reference": "Location/loc-0056-02-01",
-                    "display": "Cardiac Care Unit - Room 164, Bed C"
-                  },
-                  "status": "active",
-                  "physicalType": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
-                        "code": "bd",
-                        "display": "Bed"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "serviceProvider": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
-              }
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:location-loc-0056-02-01",
-            "resource": {
-              "resourceType": "Location",
-              "id": "loc-0056-02-01",
-              "meta": {
-                "lastUpdated": "2025-12-11T04:12:47Z"
-              },
-              "identifier": [
-                {
-                  "system": "http://hospital.example.org/location-id",
-                  "value": "LOC-CCU-164-C"
-                }
-              ],
-              "status": "active",
-              "name": "Cardiac Care Unit - Room 164, Bed C",
-              "description": "Bed C in Room 164 of Cardiac Care Unit",
-              "mode": "instance",
-              "type": [
-                {
-                  "coding": [
-                    {
-                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-                      "code": "ICU",
-                      "display": "Cardiac Care Unit"
-                    }
-                  ]
-                }
-              ],
-              "physicalType": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
-                    "code": "bd",
-                    "display": "Bed"
-                  }
-                ]
-              },
-              "partOf": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
-              },
-              "managingOrganization": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
-              }
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:adt-msg-7",
-      "resource": {
-        "resourceType": "Bundle",
-        "id": "adt-msg-0056-007",
-        "type": "message",
-        "timestamp": "2024-12-14T20:12:47Z",
-        "entry": [
-          {
-            "fullUrl": "urn:uuid:2bd2574c-79aa-4658-ba33-b74f3ab7037d",
-            "resource": {
-              "resourceType": "MessageHeader",
-              "id": "msg-0056-007",
-              "meta": {
-                "lastUpdated": "2024-12-14T20:12:47Z"
-              },
-              "eventCoding": {
-                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
-                "code": "A02",
-                "display": "ADT/ACK - Transfer a Patient"
-              },
-              "destination": [
-                {
-                  "name": "Hospital ADT System",
-                  "endpoint": "http://mayo-clinic-hospital.example.org/fhir/adt"
-                }
-              ],
-              "source": {
-                "name": "Mayo Clinic Hospital",
-                "software": "Hospital Information System",
-                "version": "5.2.1",
-                "endpoint": "http://mayo-clinic-hospital.example.org/fhir"
-              },
-              "reason": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
-                    "code": "transfer",
-                    "display": "Transfer"
-                  }
-                ]
-              },
-              "focus": [
-                {
-                  "reference": "Patient/0056"
-                },
-                {
-                  "reference": "Encounter/0056-02"
-                }
-              ]
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:patient-0056",
-            "resource": {
-              "resourceType": "Patient",
-              "id": "0056",
-              "meta": {
-                "lastUpdated": "2024-12-18T23:12:47Z"
-              },
-              "identifier": [
-                {
-                  "use": "usual",
-                  "type": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                        "code": "MR",
-                        "display": "Medical Record Number"
-                      }
-                    ]
-                  },
-                  "system": "http://hospital.example.org/mrn",
-                  "value": "MRN-0056"
-                },
-                {
-                  "use": "official",
-                  "type": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                        "code": "SS",
-                        "display": "Social Security Number"
-                      }
-                    ]
-                  },
-                  "system": "http://hl7.org/fhir/sid/us-ssn",
-                  "value": "803-15-7882"
-                }
-              ],
-              "active": true,
-              "name": [
-                {
-                  "use": "official",
-                  "family": "Brown",
-                  "given": [
-                    "Avery"
-                  ]
-                }
-              ],
-              "telecom": [
-                {
-                  "system": "phone",
-                  "value": "(812) 680-8428",
-                  "use": "home"
-                },
-                {
-                  "system": "phone",
-                  "value": "(503) 973-6447",
-                  "use": "mobile"
-                },
-                {
-                  "system": "email",
-                  "value": "avery.brown@email.com"
-                }
-              ],
-              "gender": "female",
-              "birthDate": "1992-12-15",
-              "address": [
-                {
-                  "use": "home",
-                  "type": "physical",
-                  "line": [
-                    "9105 Oak Boulevard"
-                  ],
-                  "city": "Minneapolis",
-                  "state": "MN",
-                  "postalCode": "55401",
-                  "country": "USA"
-                }
-              ],
-              "maritalStatus": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-                    "code": "D"
-                  }
-                ]
-              },
-              "contact": [
-                {
-                  "relationship": [
-                    {
-                      "coding": [
-                        {
-                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
-                          "code": "N",
-                          "display": "Next-of-Kin"
-                        }
-                      ]
-                    }
-                  ],
-                  "name": {
-                    "family": "Brown",
-                    "given": [
-                      "Jacob"
-                    ]
-                  },
-                  "telecom": [
-                    {
-                      "system": "phone",
-                      "value": "(494) 660-7522"
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:encounter-0056-02",
-            "resource": {
-              "resourceType": "Encounter",
-              "id": "0056-02",
-              "meta": {
-                "lastUpdated": "2024-12-13T09:12:47Z"
-              },
-              "identifier": [
-                {
-                  "use": "official",
-                  "system": "http://hospital.example.org/encounter-id",
-                  "value": "ENC-0056-02"
-                },
-                {
-                  "use": "usual",
-                  "type": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                        "code": "VN",
-                        "display": "Visit Number"
-                      }
-                    ]
-                  },
-                  "system": "http://hospital.example.org/visit-number",
-                  "value": "V766887"
-                }
-              ],
-              "status": "in-progress",
-              "class": {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-                "code": "IMP",
-                "display": "inpatient encounter"
-              },
-              "type": [
-                {
-                  "coding": [
-                    {
-                      "system": "http://snomed.info/sct",
-                      "code": "32485007",
-                      "display": "Hospital admission"
-                    }
-                  ]
-                }
-              ],
-              "priority": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
-                    "code": "R",
-                    "display": "routine"
-                  }
-                ]
-              },
-              "subject": {
-                "reference": "Patient/0056",
-                "display": "Avery Brown"
-              },
-              "participant": [
-                {
-                  "type": [
-                    {
-                      "coding": [
-                        {
-                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
-                          "code": "ATND",
-                          "display": "attender"
-                        }
-                      ]
-                    }
-                  ],
-                  "individual": {
-                    "reference": "Practitioner/dr-008",
-                    "display": "Dr. David Wilson"
-                  }
-                },
-                {
-                  "type": [
-                    {
-                      "coding": [
-                        {
-                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
-                          "code": "ADM",
-                          "display": "admitter"
-                        }
-                      ]
-                    }
-                  ],
-                  "individual": {
-                    "reference": "Practitioner/dr-008",
-                    "display": "Dr. David Wilson"
-                  }
-                }
-              ],
-              "period": {
-                "start": "2024-12-13T09:12:47Z"
-              },
-              "reasonCode": [
-                {
-                  "coding": [
-                    {
-                      "system": "http://snomed.info/sct",
-                      "code": "73211009",
-                      "display": "Congestive heart failure"
-                    }
-                  ],
-                  "text": "CHF exacerbation"
-                }
-              ],
-              "diagnosis": [
-                {
-                  "condition": {
-                    "display": "CHF exacerbation"
-                  },
-                  "use": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
-                        "code": "AD",
-                        "display": "Admission diagnosis"
-                      }
-                    ]
-                  },
-                  "rank": 1
-                }
-              ],
-              "location": [
-                {
-                  "location": {
-                    "reference": "Location/loc-0056-02-t01",
-                    "display": "Cardiac Catheterization Lab - Room 380, Bed D"
-                  },
-                  "status": "active",
-                  "physicalType": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
-                        "code": "bd",
-                        "display": "Bed"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "serviceProvider": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
-              }
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:location-loc-0056-02-t01",
-            "resource": {
-              "resourceType": "Location",
-              "id": "loc-0056-02-t01",
-              "meta": {
-                "lastUpdated": "2025-12-11T04:12:47Z"
-              },
-              "identifier": [
-                {
-                  "system": "http://hospital.example.org/location-id",
-                  "value": "LOC-CATH-380-D"
-                }
-              ],
-              "status": "active",
-              "name": "Cardiac Catheterization Lab - Room 380, Bed D",
-              "description": "Bed D in Room 380 of Cardiac Catheterization Lab",
-              "mode": "instance",
-              "type": [
-                {
-                  "coding": [
-                    {
-                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-                      "code": "HU",
-                      "display": "Cardiac Catheterization Lab"
-                    }
-                  ]
-                }
-              ],
-              "physicalType": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
-                    "code": "bd",
-                    "display": "Bed"
-                  }
-                ]
-              },
-              "partOf": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
-              },
-              "managingOrganization": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
-              }
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "urn:uuid:adt-msg-8",
-      "resource": {
-        "resourceType": "Bundle",
-        "id": "adt-msg-0056-008",
-        "type": "message",
-        "timestamp": "2024-12-17T05:12:47Z",
-        "entry": [
-          {
-            "fullUrl": "urn:uuid:bc934405-31d9-4bc0-8a4c-9c87f8edf2fa",
-            "resource": {
-              "resourceType": "MessageHeader",
-              "id": "msg-0056-008",
-              "meta": {
-                "lastUpdated": "2024-12-17T05:12:47Z"
-              },
-              "eventCoding": {
-                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
-                "code": "A02",
-                "display": "ADT/ACK - Transfer a Patient"
-              },
-              "destination": [
-                {
-                  "name": "Hospital ADT System",
-                  "endpoint": "http://mayo-clinic-hospital.example.org/fhir/adt"
-                }
-              ],
-              "source": {
-                "name": "Mayo Clinic Hospital",
-                "software": "Hospital Information System",
-                "version": "5.2.1",
-                "endpoint": "http://mayo-clinic-hospital.example.org/fhir"
-              },
-              "reason": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
-                    "code": "transfer",
-                    "display": "Transfer"
-                  }
-                ]
-              },
-              "focus": [
-                {
-                  "reference": "Patient/0056"
-                },
-                {
-                  "reference": "Encounter/0056-02"
-                }
-              ]
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:patient-0056",
-            "resource": {
-              "resourceType": "Patient",
-              "id": "0056",
-              "meta": {
-                "lastUpdated": "2024-12-18T23:12:47Z"
-              },
-              "identifier": [
-                {
-                  "use": "usual",
-                  "type": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                        "code": "MR",
-                        "display": "Medical Record Number"
-                      }
-                    ]
-                  },
-                  "system": "http://hospital.example.org/mrn",
-                  "value": "MRN-0056"
-                },
-                {
-                  "use": "official",
-                  "type": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                        "code": "SS",
-                        "display": "Social Security Number"
-                      }
-                    ]
-                  },
-                  "system": "http://hl7.org/fhir/sid/us-ssn",
-                  "value": "803-15-7882"
-                }
-              ],
-              "active": true,
-              "name": [
-                {
-                  "use": "official",
-                  "family": "Brown",
-                  "given": [
-                    "Avery"
-                  ]
-                }
-              ],
-              "telecom": [
-                {
-                  "system": "phone",
-                  "value": "(812) 680-8428",
-                  "use": "home"
-                },
-                {
-                  "system": "phone",
-                  "value": "(503) 973-6447",
-                  "use": "mobile"
-                },
-                {
-                  "system": "email",
-                  "value": "avery.brown@email.com"
-                }
-              ],
-              "gender": "female",
-              "birthDate": "1992-12-15",
-              "address": [
-                {
-                  "use": "home",
-                  "type": "physical",
-                  "line": [
-                    "9105 Oak Boulevard"
-                  ],
-                  "city": "Minneapolis",
-                  "state": "MN",
-                  "postalCode": "55401",
-                  "country": "USA"
-                }
-              ],
-              "maritalStatus": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-                    "code": "D"
-                  }
-                ]
-              },
-              "contact": [
-                {
-                  "relationship": [
-                    {
-                      "coding": [
-                        {
-                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
-                          "code": "N",
-                          "display": "Next-of-Kin"
-                        }
-                      ]
-                    }
-                  ],
-                  "name": {
-                    "family": "Brown",
-                    "given": [
-                      "Jacob"
-                    ]
-                  },
-                  "telecom": [
-                    {
-                      "system": "phone",
-                      "value": "(494) 660-7522"
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:encounter-0056-02",
-            "resource": {
-              "resourceType": "Encounter",
-              "id": "0056-02",
-              "meta": {
-                "lastUpdated": "2024-12-13T09:12:47Z"
-              },
-              "identifier": [
-                {
-                  "use": "official",
-                  "system": "http://hospital.example.org/encounter-id",
-                  "value": "ENC-0056-02"
-                },
-                {
-                  "use": "usual",
-                  "type": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                        "code": "VN",
-                        "display": "Visit Number"
-                      }
-                    ]
-                  },
-                  "system": "http://hospital.example.org/visit-number",
-                  "value": "V801558"
-                }
-              ],
-              "status": "in-progress",
-              "class": {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-                "code": "IMP",
-                "display": "inpatient encounter"
-              },
-              "type": [
-                {
-                  "coding": [
-                    {
-                      "system": "http://snomed.info/sct",
-                      "code": "32485007",
-                      "display": "Hospital admission"
-                    }
-                  ]
-                }
-              ],
-              "priority": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
-                    "code": "EM",
+                    "code": "UR",
                     "display": "emergency"
                   }
                 ]
               },
               "subject": {
-                "reference": "Patient/0056",
-                "display": "Avery Brown"
+                "reference": "Patient/0034",
+                "display": "Caleb Lewis"
               },
               "participant": [
                 {
@@ -2862,8 +3624,8 @@
                     }
                   ],
                   "individual": {
-                    "reference": "Practitioner/dr-008",
-                    "display": "Dr. David Wilson"
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
                   }
                 },
                 {
@@ -2879,30 +3641,30 @@
                     }
                   ],
                   "individual": {
-                    "reference": "Practitioner/dr-008",
-                    "display": "Dr. David Wilson"
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
                   }
                 }
               ],
               "period": {
-                "start": "2024-12-13T09:12:47Z"
+                "start": "2025-08-06T07:04:46Z"
               },
               "reasonCode": [
                 {
                   "coding": [
                     {
                       "system": "http://snomed.info/sct",
-                      "code": "73211009",
-                      "display": "Congestive heart failure"
+                      "code": "197480006",
+                      "display": "Acute appendicitis"
                     }
                   ],
-                  "text": "CHF exacerbation"
+                  "text": "Appendicitis"
                 }
               ],
               "diagnosis": [
                 {
                   "condition": {
-                    "display": "CHF exacerbation"
+                    "display": "Appendicitis"
                   },
                   "use": {
                     "coding": [
@@ -2919,8 +3681,8 @@
               "location": [
                 {
                   "location": {
-                    "reference": "Location/loc-0056-02-t02",
-                    "display": "Observation Unit - Room 156, Bed D"
+                    "reference": "Location/loc-0034-03-01",
+                    "display": "Surgical Floor - Room 148, Bed B"
                   },
                   "status": "active",
                   "physicalType": {
@@ -2935,28 +3697,28 @@
                 }
               ],
               "serviceProvider": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               }
             }
           },
           {
-            "fullUrl": "urn:uuid:location-loc-0056-02-t02",
+            "fullUrl": "urn:uuid:location-loc-0034-03-01",
             "resource": {
               "resourceType": "Location",
-              "id": "loc-0056-02-t02",
+              "id": "loc-0034-03-01",
               "meta": {
-                "lastUpdated": "2025-12-11T04:12:47Z"
+                "lastUpdated": "2025-12-11T04:12:46Z"
               },
               "identifier": [
                 {
                   "system": "http://hospital.example.org/location-id",
-                  "value": "LOC-OBS-156-D"
+                  "value": "LOC-SURG-148-B"
                 }
               ],
               "status": "active",
-              "name": "Observation Unit - Room 156, Bed D",
-              "description": "Bed D in Room 156 of Observation Unit",
+              "name": "Surgical Floor - Room 148, Bed B",
+              "description": "Bed B in Room 148 of Surgical Floor",
               "mode": "instance",
               "type": [
                 {
@@ -2964,7 +3726,7 @@
                     {
                       "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
                       "code": "HU",
-                      "display": "Observation Unit"
+                      "display": "Surgical Floor"
                     }
                   ]
                 }
@@ -2979,12 +3741,12 @@
                 ]
               },
               "partOf": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               },
               "managingOrganization": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               }
             }
           }
@@ -2992,64 +3754,64 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:adt-msg-9",
+      "fullUrl": "urn:uuid:adt-msg-11",
       "resource": {
         "resourceType": "Bundle",
-        "id": "adt-msg-0056-009",
+        "id": "adt-msg-0034-011",
         "type": "message",
-        "timestamp": "2024-12-18T23:12:47Z",
+        "timestamp": "2025-08-07T17:04:46Z",
         "entry": [
           {
-            "fullUrl": "urn:uuid:afe4eb03-75e0-4434-9580-5238952dba12",
+            "fullUrl": "urn:uuid:e6e377ac-0268-4152-b28f-33b0a8836f31",
             "resource": {
               "resourceType": "MessageHeader",
-              "id": "msg-0056-009",
+              "id": "msg-0034-011",
               "meta": {
-                "lastUpdated": "2024-12-18T23:12:47Z"
+                "lastUpdated": "2025-08-07T17:04:46Z"
               },
               "eventCoding": {
                 "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
-                "code": "A08",
-                "display": "ADT/ACK - Update Patient Information"
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
               },
               "destination": [
                 {
                   "name": "Hospital ADT System",
-                  "endpoint": "http://mayo-clinic-hospital.example.org/fhir/adt"
+                  "endpoint": "http://mass-general-hospital.example.org/fhir/adt"
                 }
               ],
               "source": {
-                "name": "Mayo Clinic Hospital",
+                "name": "Mass General Hospital",
                 "software": "Hospital Information System",
                 "version": "5.2.1",
-                "endpoint": "http://mayo-clinic-hospital.example.org/fhir"
+                "endpoint": "http://mass-general-hospital.example.org/fhir"
               },
               "reason": {
                 "coding": [
                   {
                     "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
-                    "code": "update",
-                    "display": "Update"
+                    "code": "transfer",
+                    "display": "Transfer"
                   }
                 ]
               },
               "focus": [
                 {
-                  "reference": "Patient/0056"
+                  "reference": "Patient/0034"
                 },
                 {
-                  "reference": "Encounter/0056-02"
+                  "reference": "Encounter/0034-03"
                 }
               ]
             }
           },
           {
-            "fullUrl": "urn:uuid:patient-0056",
+            "fullUrl": "urn:uuid:patient-0034",
             "resource": {
               "resourceType": "Patient",
-              "id": "0056",
+              "id": "0034",
               "meta": {
-                "lastUpdated": "2024-12-18T23:12:47Z"
+                "lastUpdated": "2024-08-21T16:12:46Z"
               },
               "identifier": [
                 {
@@ -3064,7 +3826,7 @@
                     ]
                   },
                   "system": "http://hospital.example.org/mrn",
-                  "value": "MRN-0056"
+                  "value": "MRN-0034"
                 },
                 {
                   "use": "official",
@@ -3078,47 +3840,47 @@
                     ]
                   },
                   "system": "http://hl7.org/fhir/sid/us-ssn",
-                  "value": "803-15-7882"
+                  "value": "819-80-1922"
                 }
               ],
               "active": true,
               "name": [
                 {
                   "use": "official",
-                  "family": "Brown",
+                  "family": "Lewis",
                   "given": [
-                    "Avery"
+                    "Caleb"
                   ]
                 }
               ],
               "telecom": [
                 {
                   "system": "phone",
-                  "value": "(812) 680-8428",
+                  "value": "(479) 682-8862",
                   "use": "home"
                 },
                 {
                   "system": "phone",
-                  "value": "(503) 973-6447",
+                  "value": "(867) 294-2638",
                   "use": "mobile"
                 },
                 {
                   "system": "email",
-                  "value": "avery.brown@email.com"
+                  "value": "caleb.lewis@email.com"
                 }
               ],
-              "gender": "female",
-              "birthDate": "1992-12-15",
+              "gender": "male",
+              "birthDate": "1990-10-10",
               "address": [
                 {
                   "use": "home",
                   "type": "physical",
                   "line": [
-                    "9105 Oak Boulevard"
+                    "9349 Cedar Avenue"
                   ],
-                  "city": "Minneapolis",
-                  "state": "MN",
-                  "postalCode": "55401",
+                  "city": "Austin",
+                  "state": "TX",
+                  "postalCode": "78701",
                   "country": "USA"
                 }
               ],
@@ -3126,7 +3888,7 @@
                 "coding": [
                   {
                     "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-                    "code": "D"
+                    "code": "W"
                   }
                 ]
               },
@@ -3144,15 +3906,15 @@
                     }
                   ],
                   "name": {
-                    "family": "Brown",
+                    "family": "Lewis",
                     "given": [
-                      "Jacob"
+                      "Liam"
                     ]
                   },
                   "telecom": [
                     {
                       "system": "phone",
-                      "value": "(494) 660-7522"
+                      "value": "(721) 506-2407"
                     }
                   ]
                 }
@@ -3160,18 +3922,18 @@
             }
           },
           {
-            "fullUrl": "urn:uuid:encounter-0056-02",
+            "fullUrl": "urn:uuid:encounter-0034-03",
             "resource": {
               "resourceType": "Encounter",
-              "id": "0056-02",
+              "id": "0034-03",
               "meta": {
-                "lastUpdated": "2024-12-13T09:12:47Z"
+                "lastUpdated": "2025-08-06T07:04:46Z"
               },
               "identifier": [
                 {
                   "use": "official",
                   "system": "http://hospital.example.org/encounter-id",
-                  "value": "ENC-0056-02"
+                  "value": "ENC-0034-03"
                 },
                 {
                   "use": "usual",
@@ -3185,7 +3947,7 @@
                     ]
                   },
                   "system": "http://hospital.example.org/visit-number",
-                  "value": "V681646"
+                  "value": "V981210"
                 }
               ],
               "status": "in-progress",
@@ -3209,14 +3971,14 @@
                 "coding": [
                   {
                     "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
-                    "code": "EM",
-                    "display": "urgent"
+                    "code": "UR",
+                    "display": "routine"
                   }
                 ]
               },
               "subject": {
-                "reference": "Patient/0056",
-                "display": "Avery Brown"
+                "reference": "Patient/0034",
+                "display": "Caleb Lewis"
               },
               "participant": [
                 {
@@ -3232,8 +3994,8 @@
                     }
                   ],
                   "individual": {
-                    "reference": "Practitioner/dr-008",
-                    "display": "Dr. David Wilson"
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
                   }
                 },
                 {
@@ -3249,30 +4011,30 @@
                     }
                   ],
                   "individual": {
-                    "reference": "Practitioner/dr-008",
-                    "display": "Dr. David Wilson"
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
                   }
                 }
               ],
               "period": {
-                "start": "2024-12-13T09:12:47Z"
+                "start": "2025-08-06T07:04:46Z"
               },
               "reasonCode": [
                 {
                   "coding": [
                     {
                       "system": "http://snomed.info/sct",
-                      "code": "73211009",
-                      "display": "Congestive heart failure"
+                      "code": "197480006",
+                      "display": "Acute appendicitis"
                     }
                   ],
-                  "text": "CHF exacerbation"
+                  "text": "Appendicitis"
                 }
               ],
               "diagnosis": [
                 {
                   "condition": {
-                    "display": "CHF exacerbation"
+                    "display": "Appendicitis"
                   },
                   "use": {
                     "coding": [
@@ -3289,8 +4051,8 @@
               "location": [
                 {
                   "location": {
-                    "reference": "Location/loc-0056-02-t02",
-                    "display": "Observation Unit - Room 156, Bed D"
+                    "reference": "Location/loc-0034-03-t01",
+                    "display": "Medical Floor - Room 392, Bed A"
                   },
                   "status": "active",
                   "physicalType": {
@@ -3305,28 +4067,28 @@
                 }
               ],
               "serviceProvider": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               }
             }
           },
           {
-            "fullUrl": "urn:uuid:location-loc-0056-02-t02",
+            "fullUrl": "urn:uuid:location-loc-0034-03-t01",
             "resource": {
               "resourceType": "Location",
-              "id": "loc-0056-02-t02",
+              "id": "loc-0034-03-t01",
               "meta": {
-                "lastUpdated": "2025-12-11T04:12:47Z"
+                "lastUpdated": "2025-12-11T04:12:46Z"
               },
               "identifier": [
                 {
                   "system": "http://hospital.example.org/location-id",
-                  "value": "LOC-OBS-156-D"
+                  "value": "LOC-MED-392-A"
                 }
               ],
               "status": "active",
-              "name": "Observation Unit - Room 156, Bed D",
-              "description": "Bed D in Room 156 of Observation Unit",
+              "name": "Medical Floor - Room 392, Bed A",
+              "description": "Bed A in Room 392 of Medical Floor",
               "mode": "instance",
               "type": [
                 {
@@ -3334,7 +4096,7 @@
                     {
                       "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
                       "code": "HU",
-                      "display": "Observation Unit"
+                      "display": "Medical Floor"
                     }
                   ]
                 }
@@ -3349,12 +4111,12 @@
                 ]
               },
               "partOf": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               },
               "managingOrganization": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               }
             }
           }
@@ -3362,20 +4124,20 @@
       }
     },
     {
-      "fullUrl": "urn:uuid:adt-msg-10",
+      "fullUrl": "urn:uuid:adt-msg-12",
       "resource": {
         "resourceType": "Bundle",
-        "id": "adt-msg-0056-010",
+        "id": "adt-msg-0034-012",
         "type": "message",
-        "timestamp": "2024-12-19T05:12:47Z",
+        "timestamp": "2025-08-10T14:04:46Z",
         "entry": [
           {
-            "fullUrl": "urn:uuid:23c4bd0d-df55-48c3-95bb-ee611fe79c12",
+            "fullUrl": "urn:uuid:22424726-3f57-4932-9f9d-666e9dec9511",
             "resource": {
               "resourceType": "MessageHeader",
-              "id": "msg-0056-010",
+              "id": "msg-0034-012",
               "meta": {
-                "lastUpdated": "2024-12-19T05:12:47Z"
+                "lastUpdated": "2025-08-10T14:04:46Z"
               },
               "eventCoding": {
                 "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
@@ -3385,14 +4147,14 @@
               "destination": [
                 {
                   "name": "Hospital ADT System",
-                  "endpoint": "http://mayo-clinic-hospital.example.org/fhir/adt"
+                  "endpoint": "http://mass-general-hospital.example.org/fhir/adt"
                 }
               ],
               "source": {
-                "name": "Mayo Clinic Hospital",
+                "name": "Mass General Hospital",
                 "software": "Hospital Information System",
                 "version": "5.2.1",
-                "endpoint": "http://mayo-clinic-hospital.example.org/fhir"
+                "endpoint": "http://mass-general-hospital.example.org/fhir"
               },
               "reason": {
                 "coding": [
@@ -3405,21 +4167,21 @@
               },
               "focus": [
                 {
-                  "reference": "Patient/0056"
+                  "reference": "Patient/0034"
                 },
                 {
-                  "reference": "Encounter/0056-02"
+                  "reference": "Encounter/0034-03"
                 }
               ]
             }
           },
           {
-            "fullUrl": "urn:uuid:patient-0056",
+            "fullUrl": "urn:uuid:patient-0034",
             "resource": {
               "resourceType": "Patient",
-              "id": "0056",
+              "id": "0034",
               "meta": {
-                "lastUpdated": "2024-12-18T23:12:47Z"
+                "lastUpdated": "2024-08-21T16:12:46Z"
               },
               "identifier": [
                 {
@@ -3434,7 +4196,7 @@
                     ]
                   },
                   "system": "http://hospital.example.org/mrn",
-                  "value": "MRN-0056"
+                  "value": "MRN-0034"
                 },
                 {
                   "use": "official",
@@ -3448,47 +4210,47 @@
                     ]
                   },
                   "system": "http://hl7.org/fhir/sid/us-ssn",
-                  "value": "803-15-7882"
+                  "value": "819-80-1922"
                 }
               ],
               "active": true,
               "name": [
                 {
                   "use": "official",
-                  "family": "Brown",
+                  "family": "Lewis",
                   "given": [
-                    "Avery"
+                    "Caleb"
                   ]
                 }
               ],
               "telecom": [
                 {
                   "system": "phone",
-                  "value": "(812) 680-8428",
+                  "value": "(479) 682-8862",
                   "use": "home"
                 },
                 {
                   "system": "phone",
-                  "value": "(503) 973-6447",
+                  "value": "(867) 294-2638",
                   "use": "mobile"
                 },
                 {
                   "system": "email",
-                  "value": "avery.brown@email.com"
+                  "value": "caleb.lewis@email.com"
                 }
               ],
-              "gender": "female",
-              "birthDate": "1992-12-15",
+              "gender": "male",
+              "birthDate": "1990-10-10",
               "address": [
                 {
                   "use": "home",
                   "type": "physical",
                   "line": [
-                    "9105 Oak Boulevard"
+                    "9349 Cedar Avenue"
                   ],
-                  "city": "Minneapolis",
-                  "state": "MN",
-                  "postalCode": "55401",
+                  "city": "Austin",
+                  "state": "TX",
+                  "postalCode": "78701",
                   "country": "USA"
                 }
               ],
@@ -3496,7 +4258,7 @@
                 "coding": [
                   {
                     "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-                    "code": "D"
+                    "code": "W"
                   }
                 ]
               },
@@ -3514,15 +4276,15 @@
                     }
                   ],
                   "name": {
-                    "family": "Brown",
+                    "family": "Lewis",
                     "given": [
-                      "Jacob"
+                      "Liam"
                     ]
                   },
                   "telecom": [
                     {
                       "system": "phone",
-                      "value": "(494) 660-7522"
+                      "value": "(721) 506-2407"
                     }
                   ]
                 }
@@ -3530,18 +4292,18 @@
             }
           },
           {
-            "fullUrl": "urn:uuid:encounter-0056-02",
+            "fullUrl": "urn:uuid:encounter-0034-03",
             "resource": {
               "resourceType": "Encounter",
-              "id": "0056-02",
+              "id": "0034-03",
               "meta": {
-                "lastUpdated": "2024-12-13T09:12:47Z"
+                "lastUpdated": "2025-08-06T07:04:46Z"
               },
               "identifier": [
                 {
                   "use": "official",
                   "system": "http://hospital.example.org/encounter-id",
-                  "value": "ENC-0056-02"
+                  "value": "ENC-0034-03"
                 },
                 {
                   "use": "usual",
@@ -3555,7 +4317,7 @@
                     ]
                   },
                   "system": "http://hospital.example.org/visit-number",
-                  "value": "V676421"
+                  "value": "V783287"
                 }
               ],
               "status": "finished",
@@ -3579,14 +4341,14 @@
                 "coding": [
                   {
                     "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
-                    "code": "R",
+                    "code": "UR",
                     "display": "urgent"
                   }
                 ]
               },
               "subject": {
-                "reference": "Patient/0056",
-                "display": "Avery Brown"
+                "reference": "Patient/0034",
+                "display": "Caleb Lewis"
               },
               "participant": [
                 {
@@ -3602,8 +4364,8 @@
                     }
                   ],
                   "individual": {
-                    "reference": "Practitioner/dr-008",
-                    "display": "Dr. David Wilson"
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
                   }
                 },
                 {
@@ -3619,31 +4381,31 @@
                     }
                   ],
                   "individual": {
-                    "reference": "Practitioner/dr-008",
-                    "display": "Dr. David Wilson"
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
                   }
                 }
               ],
               "period": {
-                "start": "2024-12-13T09:12:47Z",
-                "end": "2024-12-19T05:12:47Z"
+                "start": "2025-08-06T07:04:46Z",
+                "end": "2025-08-10T14:04:46Z"
               },
               "reasonCode": [
                 {
                   "coding": [
                     {
                       "system": "http://snomed.info/sct",
-                      "code": "73211009",
-                      "display": "Congestive heart failure"
+                      "code": "197480006",
+                      "display": "Acute appendicitis"
                     }
                   ],
-                  "text": "CHF exacerbation"
+                  "text": "Appendicitis"
                 }
               ],
               "diagnosis": [
                 {
                   "condition": {
-                    "display": "CHF exacerbation"
+                    "display": "Appendicitis"
                   },
                   "use": {
                     "coding": [
@@ -3660,8 +4422,8 @@
               "location": [
                 {
                   "location": {
-                    "reference": "Location/loc-0056-02-t02",
-                    "display": "Observation Unit - Room 156, Bed D"
+                    "reference": "Location/loc-0034-03-t01",
+                    "display": "Medical Floor - Room 392, Bed A"
                   },
                   "status": "active",
                   "physicalType": {
@@ -3676,15 +4438,15 @@
                 }
               ],
               "serviceProvider": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               },
               "hospitalization": {
                 "admitSource": {
                   "coding": [
                     {
                       "system": "http://terminology.hl7.org/CodeSystem/admit-source",
-                      "code": "hosp-trans",
+                      "code": "emd",
                       "display": "From ED"
                     }
                   ]
@@ -3693,32 +4455,32 @@
                   "coding": [
                     {
                       "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
-                      "code": "rehab",
-                      "display": "Rehabilitation Facility"
+                      "code": "snf",
+                      "display": "Skilled Nursing Facility"
                     }
                   ],
-                  "text": "Discharged to rehab"
+                  "text": "Discharged to SNF"
                 }
               }
             }
           },
           {
-            "fullUrl": "urn:uuid:location-loc-0056-02-t02",
+            "fullUrl": "urn:uuid:location-loc-0034-03-t01",
             "resource": {
               "resourceType": "Location",
-              "id": "loc-0056-02-t02",
+              "id": "loc-0034-03-t01",
               "meta": {
-                "lastUpdated": "2025-12-11T04:12:47Z"
+                "lastUpdated": "2025-12-11T04:12:46Z"
               },
               "identifier": [
                 {
                   "system": "http://hospital.example.org/location-id",
-                  "value": "LOC-OBS-156-D"
+                  "value": "LOC-MED-392-A"
                 }
               ],
               "status": "active",
-              "name": "Observation Unit - Room 156, Bed D",
-              "description": "Bed D in Room 156 of Observation Unit",
+              "name": "Medical Floor - Room 392, Bed A",
+              "description": "Bed A in Room 392 of Medical Floor",
               "mode": "instance",
               "type": [
                 {
@@ -3726,7 +4488,7 @@
                     {
                       "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
                       "code": "HU",
-                      "display": "Observation Unit"
+                      "display": "Medical Floor"
                     }
                   ]
                 }
@@ -3741,12 +4503,12 @@
                 ]
               },
               "partOf": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               },
               "managingOrganization": {
-                "reference": "Organization/hosp-009",
-                "display": "Mayo Clinic Hospital"
+                "reference": "Organization/hosp-006",
+                "display": "Mass General Hospital"
               }
             }
           }

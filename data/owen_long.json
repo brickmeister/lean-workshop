@@ -1,0 +1,5651 @@
+{
+  "resourceType": "Bundle",
+  "id": "adt-patient-bundle-0029",
+  "type": "collection",
+  "timestamp": "2025-12-11T04:12:46Z",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bundle"
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:adt-msg-1",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0029-001",
+        "type": "message",
+        "timestamp": "2024-07-03T04:12:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:8adac00c-aa15-424d-b1c3-88dc52f6b002",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0029-001",
+              "meta": {
+                "lastUpdated": "2024-07-03T04:12:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://seattle-medical-center.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Seattle Medical Center",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://seattle-medical-center.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0029"
+                },
+                {
+                  "reference": "Encounter/0029-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0029",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0029",
+              "meta": {
+                "lastUpdated": "2026-11-30T15:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0029"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "946-47-1783"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Long",
+                  "given": [
+                    "Owen"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 206-2894",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(887) 609-5634",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "owen.long@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "2002-05-26",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "8509 Second Lane"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Long",
+                    "given": [
+                      "Christopher"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(351) 258-1874"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0029-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0029-01",
+              "meta": {
+                "lastUpdated": "2024-07-03T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0029-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V803323"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0029",
+                "display": "Owen Long"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-07-03T04:12:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "197480006",
+                      "display": "Acute appendicitis"
+                    }
+                  ],
+                  "text": "Appendicitis"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Appendicitis"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0029-01-01",
+                    "display": "Emergency Department - Room 316, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0029-01-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0029-01-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-316-C"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 316, Bed C",
+              "description": "Bed C in Room 316 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-2",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0029-002",
+        "type": "message",
+        "timestamp": "2024-07-03T09:12:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:ed6196f4-9ea6-4938-8ece-51141f76d6ab",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0029-002",
+              "meta": {
+                "lastUpdated": "2024-07-03T09:12:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://seattle-medical-center.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Seattle Medical Center",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://seattle-medical-center.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0029"
+                },
+                {
+                  "reference": "Encounter/0029-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0029",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0029",
+              "meta": {
+                "lastUpdated": "2026-11-30T15:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0029"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "946-47-1783"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Long",
+                  "given": [
+                    "Owen"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 206-2894",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(887) 609-5634",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "owen.long@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "2002-05-26",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "8509 Second Lane"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Long",
+                    "given": [
+                      "Christopher"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(351) 258-1874"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0029-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0029-01",
+              "meta": {
+                "lastUpdated": "2024-07-03T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0029-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V583469"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0029",
+                "display": "Owen Long"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-07-03T04:12:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "197480006",
+                      "display": "Acute appendicitis"
+                    }
+                  ],
+                  "text": "Appendicitis"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Appendicitis"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0029-01-t01",
+                    "display": "Operating Room - Room 476, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0029-01-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0029-01-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-OR-476-C"
+                }
+              ],
+              "status": "active",
+              "name": "Operating Room - Room 476, Bed C",
+              "description": "Bed C in Room 476 of Operating Room",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "OR",
+                      "display": "Operating Room"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-3",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0029-003",
+        "type": "message",
+        "timestamp": "2024-07-05T21:12:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:e2e9f084-0d4f-4d8c-9ac0-fe30309c202d",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0029-003",
+              "meta": {
+                "lastUpdated": "2024-07-05T21:12:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://seattle-medical-center.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Seattle Medical Center",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://seattle-medical-center.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0029"
+                },
+                {
+                  "reference": "Encounter/0029-01"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0029",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0029",
+              "meta": {
+                "lastUpdated": "2026-11-30T15:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0029"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "946-47-1783"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Long",
+                  "given": [
+                    "Owen"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 206-2894",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(887) 609-5634",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "owen.long@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "2002-05-26",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "8509 Second Lane"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Long",
+                    "given": [
+                      "Christopher"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(351) 258-1874"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0029-01",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0029-01",
+              "meta": {
+                "lastUpdated": "2024-07-03T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0029-01"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V157384"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0029",
+                "display": "Owen Long"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-07-03T04:12:46Z",
+                "end": "2024-07-05T21:12:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "197480006",
+                      "display": "Acute appendicitis"
+                    }
+                  ],
+                  "text": "Appendicitis"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Appendicitis"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0029-01-t01",
+                    "display": "Operating Room - Room 476, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "emd",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "home",
+                      "display": "Home"
+                    }
+                  ],
+                  "text": "Patient discharged to home"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0029-01-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0029-01-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-OR-476-C"
+                }
+              ],
+              "status": "active",
+              "name": "Operating Room - Room 476, Bed C",
+              "description": "Bed C in Room 476 of Operating Room",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "OR",
+                      "display": "Operating Room"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-4",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0029-004",
+        "type": "message",
+        "timestamp": "2024-12-24T21:12:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:e6df9cb3-aef9-4eb6-b0fc-fed5309017df",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0029-004",
+              "meta": {
+                "lastUpdated": "2024-12-24T21:12:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A04",
+                "display": "ADT/ACK - Register a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://seattle-medical-center.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Seattle Medical Center",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://seattle-medical-center.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "register",
+                    "display": "Register"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0029"
+                },
+                {
+                  "reference": "Encounter/0029-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0029",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0029",
+              "meta": {
+                "lastUpdated": "2026-11-30T15:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0029"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "946-47-1783"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Long",
+                  "given": [
+                    "Owen"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 206-2894",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(887) 609-5634",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "owen.long@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "2002-05-26",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "8509 Second Lane"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Long",
+                    "given": [
+                      "Christopher"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(351) 258-1874"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0029-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0029-02",
+              "meta": {
+                "lastUpdated": "2024-12-24T21:12:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0029-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V375851"
+                }
+              ],
+              "status": "planned",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "EMER",
+                "display": "emergency"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0029",
+                "display": "Owen Long"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-010",
+                    "display": "Dr. Christopher Lee"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-010",
+                    "display": "Dr. Christopher Lee"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-12-24T21:12:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "35489007",
+                      "display": "Chest pain"
+                    }
+                  ],
+                  "text": "Rule out ACS"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Rule out ACS"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0029-02-reg",
+                    "display": "Emergency Department - Room 18, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0029-02-reg",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0029-02-reg",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-ED-18-C"
+                }
+              ],
+              "status": "active",
+              "name": "Emergency Department - Room 18, Bed C",
+              "description": "Bed C in Room 18 of Emergency Department",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ER",
+                      "display": "Emergency Department"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-5",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0029-005",
+        "type": "message",
+        "timestamp": "2024-12-24T21:57:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:9e5e73b6-e596-4a97-a8ca-06e967048a1c",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0029-005",
+              "meta": {
+                "lastUpdated": "2024-12-24T21:57:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://seattle-medical-center.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Seattle Medical Center",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://seattle-medical-center.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0029"
+                },
+                {
+                  "reference": "Encounter/0029-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0029",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0029",
+              "meta": {
+                "lastUpdated": "2026-11-30T15:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0029"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "946-47-1783"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Long",
+                  "given": [
+                    "Owen"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 206-2894",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(887) 609-5634",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "owen.long@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "2002-05-26",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "8509 Second Lane"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Long",
+                    "given": [
+                      "Christopher"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(351) 258-1874"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0029-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0029-02",
+              "meta": {
+                "lastUpdated": "2024-12-24T21:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0029-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V522678"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0029",
+                "display": "Owen Long"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-010",
+                    "display": "Dr. Christopher Lee"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-010",
+                    "display": "Dr. Christopher Lee"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-12-24T21:57:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "35489007",
+                      "display": "Chest pain"
+                    }
+                  ],
+                  "text": "Rule out ACS"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Rule out ACS"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0029-02-01",
+                    "display": "Pediatric Unit - Room 441, Bed D"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0029-02-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0029-02-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-PEDS-441-D"
+                }
+              ],
+              "status": "active",
+              "name": "Pediatric Unit - Room 441, Bed D",
+              "description": "Bed D in Room 441 of Pediatric Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Pediatric Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-6",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0029-006",
+        "type": "message",
+        "timestamp": "2024-12-26T13:57:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:bde5f66d-66d4-4efd-ac0c-e3267f8d32cb",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0029-006",
+              "meta": {
+                "lastUpdated": "2024-12-26T13:57:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://seattle-medical-center.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Seattle Medical Center",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://seattle-medical-center.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0029"
+                },
+                {
+                  "reference": "Encounter/0029-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0029",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0029",
+              "meta": {
+                "lastUpdated": "2026-11-30T15:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0029"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "946-47-1783"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Long",
+                  "given": [
+                    "Owen"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 206-2894",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(887) 609-5634",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "owen.long@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "2002-05-26",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "8509 Second Lane"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Long",
+                    "given": [
+                      "Christopher"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(351) 258-1874"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0029-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0029-02",
+              "meta": {
+                "lastUpdated": "2024-12-24T21:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0029-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V649573"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0029",
+                "display": "Owen Long"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-010",
+                    "display": "Dr. Christopher Lee"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-010",
+                    "display": "Dr. Christopher Lee"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-12-24T21:57:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "35489007",
+                      "display": "Chest pain"
+                    }
+                  ],
+                  "text": "Rule out ACS"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Rule out ACS"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0029-02-t01",
+                    "display": "Telemetry Unit - Room 412, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0029-02-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0029-02-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-TELE-412-A"
+                }
+              ],
+              "status": "active",
+              "name": "Telemetry Unit - Room 412, Bed A",
+              "description": "Bed A in Room 412 of Telemetry Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Telemetry Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-7",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0029-007",
+        "type": "message",
+        "timestamp": "2024-12-29T02:57:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:76226b5f-d0c7-4bea-95c6-e63efac95eb5",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0029-007",
+              "meta": {
+                "lastUpdated": "2024-12-29T02:57:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://seattle-medical-center.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Seattle Medical Center",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://seattle-medical-center.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0029"
+                },
+                {
+                  "reference": "Encounter/0029-02"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0029",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0029",
+              "meta": {
+                "lastUpdated": "2026-11-30T15:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0029"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "946-47-1783"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Long",
+                  "given": [
+                    "Owen"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 206-2894",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(887) 609-5634",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "owen.long@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "2002-05-26",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "8509 Second Lane"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Long",
+                    "given": [
+                      "Christopher"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(351) 258-1874"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0029-02",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0029-02",
+              "meta": {
+                "lastUpdated": "2024-12-24T21:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0029-02"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V442206"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0029",
+                "display": "Owen Long"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-010",
+                    "display": "Dr. Christopher Lee"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-010",
+                    "display": "Dr. Christopher Lee"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2024-12-24T21:57:46Z",
+                "end": "2024-12-29T02:57:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "35489007",
+                      "display": "Chest pain"
+                    }
+                  ],
+                  "text": "Rule out ACS"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Rule out ACS"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0029-02-t01",
+                    "display": "Telemetry Unit - Room 412, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "outp",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "rehab",
+                      "display": "Rehabilitation Facility"
+                    }
+                  ],
+                  "text": "Discharged to rehab"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0029-02-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0029-02-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-TELE-412-A"
+                }
+              ],
+              "status": "active",
+              "name": "Telemetry Unit - Room 412, Bed A",
+              "description": "Bed A in Room 412 of Telemetry Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Telemetry Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-8",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0029-008",
+        "type": "message",
+        "timestamp": "2025-11-04T02:57:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:8e18383a-22cf-4530-922b-876a6b4793aa",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0029-008",
+              "meta": {
+                "lastUpdated": "2025-11-04T02:57:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://seattle-medical-center.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Seattle Medical Center",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://seattle-medical-center.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0029"
+                },
+                {
+                  "reference": "Encounter/0029-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0029",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0029",
+              "meta": {
+                "lastUpdated": "2026-11-30T15:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0029"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "946-47-1783"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Long",
+                  "given": [
+                    "Owen"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 206-2894",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(887) 609-5634",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "owen.long@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "2002-05-26",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "8509 Second Lane"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Long",
+                    "given": [
+                      "Christopher"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(351) 258-1874"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0029-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0029-03",
+              "meta": {
+                "lastUpdated": "2025-11-04T02:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0029-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V215648"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0029",
+                "display": "Owen Long"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-11-04T02:57:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "22298006",
+                      "display": "Myocardial infarction"
+                    }
+                  ],
+                  "text": "Acute MI"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Acute MI"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0029-03-01",
+                    "display": "Medical ICU - Room 196, Bed C"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0029-03-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0029-03-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-MICU-196-C"
+                }
+              ],
+              "status": "active",
+              "name": "Medical ICU - Room 196, Bed C",
+              "description": "Bed C in Room 196 of Medical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Medical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-9",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0029-009",
+        "type": "message",
+        "timestamp": "2025-11-05T11:57:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:f7c70ee2-69c9-4b3f-a953-bda61573a594",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0029-009",
+              "meta": {
+                "lastUpdated": "2025-11-05T11:57:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://seattle-medical-center.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Seattle Medical Center",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://seattle-medical-center.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0029"
+                },
+                {
+                  "reference": "Encounter/0029-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0029",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0029",
+              "meta": {
+                "lastUpdated": "2026-11-30T15:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0029"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "946-47-1783"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Long",
+                  "given": [
+                    "Owen"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 206-2894",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(887) 609-5634",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "owen.long@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "2002-05-26",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "8509 Second Lane"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Long",
+                    "given": [
+                      "Christopher"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(351) 258-1874"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0029-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0029-03",
+              "meta": {
+                "lastUpdated": "2025-11-04T02:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0029-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V464214"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0029",
+                "display": "Owen Long"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-11-04T02:57:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "22298006",
+                      "display": "Myocardial infarction"
+                    }
+                  ],
+                  "text": "Acute MI"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Acute MI"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0029-03-t01",
+                    "display": "Medical Floor - Room 471, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0029-03-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0029-03-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-MED-471-B"
+                }
+              ],
+              "status": "active",
+              "name": "Medical Floor - Room 471, Bed B",
+              "description": "Bed B in Room 471 of Medical Floor",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Medical Floor"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-10",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0029-010",
+        "type": "message",
+        "timestamp": "2025-11-07T22:57:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:12b4bbfc-9653-4d80-a655-589b27ca0faa",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0029-010",
+              "meta": {
+                "lastUpdated": "2025-11-07T22:57:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://seattle-medical-center.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Seattle Medical Center",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://seattle-medical-center.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0029"
+                },
+                {
+                  "reference": "Encounter/0029-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0029",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0029",
+              "meta": {
+                "lastUpdated": "2026-11-30T15:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0029"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "946-47-1783"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Long",
+                  "given": [
+                    "Owen"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 206-2894",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(887) 609-5634",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "owen.long@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "2002-05-26",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "8509 Second Lane"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Long",
+                    "given": [
+                      "Christopher"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(351) 258-1874"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0029-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0029-03",
+              "meta": {
+                "lastUpdated": "2025-11-04T02:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0029-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V916256"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0029",
+                "display": "Owen Long"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-11-04T02:57:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "22298006",
+                      "display": "Myocardial infarction"
+                    }
+                  ],
+                  "text": "Acute MI"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Acute MI"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0029-03-t02",
+                    "display": "Operating Room - Room 124, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0029-03-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0029-03-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-OR-124-B"
+                }
+              ],
+              "status": "active",
+              "name": "Operating Room - Room 124, Bed B",
+              "description": "Bed B in Room 124 of Operating Room",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "OR",
+                      "display": "Operating Room"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-11",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0029-011",
+        "type": "message",
+        "timestamp": "2025-11-09T17:57:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:c4562adb-6b00-4fd5-9ad4-8a3722e4e640",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0029-011",
+              "meta": {
+                "lastUpdated": "2025-11-09T17:57:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://seattle-medical-center.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Seattle Medical Center",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://seattle-medical-center.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0029"
+                },
+                {
+                  "reference": "Encounter/0029-03"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0029",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0029",
+              "meta": {
+                "lastUpdated": "2026-11-30T15:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0029"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "946-47-1783"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Long",
+                  "given": [
+                    "Owen"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 206-2894",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(887) 609-5634",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "owen.long@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "2002-05-26",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "8509 Second Lane"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Long",
+                    "given": [
+                      "Christopher"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(351) 258-1874"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0029-03",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0029-03",
+              "meta": {
+                "lastUpdated": "2025-11-04T02:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0029-03"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V585602"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0029",
+                "display": "Owen Long"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2025-11-04T02:57:46Z",
+                "end": "2025-11-09T17:57:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "22298006",
+                      "display": "Myocardial infarction"
+                    }
+                  ],
+                  "text": "Acute MI"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "Acute MI"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0029-03-t02",
+                    "display": "Operating Room - Room 124, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "gp",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "rehab",
+                      "display": "Rehabilitation Facility"
+                    }
+                  ],
+                  "text": "Discharged to rehab"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0029-03-t02",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0029-03-t02",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-OR-124-B"
+                }
+              ],
+              "status": "active",
+              "name": "Operating Room - Room 124, Bed B",
+              "description": "Bed B in Room 124 of Operating Room",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "OR",
+                      "display": "Operating Room"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-12",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0029-012",
+        "type": "message",
+        "timestamp": "2026-11-25T17:57:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:3c2f948d-8f9d-459b-b107-004679ef7f39",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0029-012",
+              "meta": {
+                "lastUpdated": "2026-11-25T17:57:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A01",
+                "display": "ADT/ACK - Admit/Visit Notification"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://seattle-medical-center.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Seattle Medical Center",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://seattle-medical-center.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "admit",
+                    "display": "Admit"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0029"
+                },
+                {
+                  "reference": "Encounter/0029-04"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0029",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0029",
+              "meta": {
+                "lastUpdated": "2026-11-30T15:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0029"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "946-47-1783"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Long",
+                  "given": [
+                    "Owen"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 206-2894",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(887) 609-5634",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "owen.long@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "2002-05-26",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "8509 Second Lane"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Long",
+                    "given": [
+                      "Christopher"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(351) 258-1874"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0029-04",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0029-04",
+              "meta": {
+                "lastUpdated": "2026-11-25T17:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0029-04"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V990872"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "urgent"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0029",
+                "display": "Owen Long"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2026-11-25T17:57:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "386661006",
+                      "display": "Fever of unknown origin"
+                    }
+                  ],
+                  "text": "FUO workup"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "FUO workup"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0029-04-01",
+                    "display": "Observation Unit - Room 222, Bed B"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0029-04-01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0029-04-01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-OBS-222-B"
+                }
+              ],
+              "status": "active",
+              "name": "Observation Unit - Room 222, Bed B",
+              "description": "Bed B in Room 222 of Observation Unit",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "HU",
+                      "display": "Observation Unit"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-13",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0029-013",
+        "type": "message",
+        "timestamp": "2026-11-27T16:57:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:65889253-9d23-425d-bd09-48a3300a2d3b",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0029-013",
+              "meta": {
+                "lastUpdated": "2026-11-27T16:57:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A02",
+                "display": "ADT/ACK - Transfer a Patient"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://seattle-medical-center.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Seattle Medical Center",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://seattle-medical-center.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "transfer",
+                    "display": "Transfer"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0029"
+                },
+                {
+                  "reference": "Encounter/0029-04"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0029",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0029",
+              "meta": {
+                "lastUpdated": "2026-11-30T15:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0029"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "946-47-1783"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Long",
+                  "given": [
+                    "Owen"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 206-2894",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(887) 609-5634",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "owen.long@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "2002-05-26",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "8509 Second Lane"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Long",
+                    "given": [
+                      "Christopher"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(351) 258-1874"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0029-04",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0029-04",
+              "meta": {
+                "lastUpdated": "2026-11-25T17:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0029-04"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V878691"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "R",
+                    "display": "routine"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0029",
+                "display": "Owen Long"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2026-11-25T17:57:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "386661006",
+                      "display": "Fever of unknown origin"
+                    }
+                  ],
+                  "text": "FUO workup"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "FUO workup"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0029-04-t01",
+                    "display": "Medical ICU - Room 254, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0029-04-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0029-04-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-MICU-254-A"
+                }
+              ],
+              "status": "active",
+              "name": "Medical ICU - Room 254, Bed A",
+              "description": "Bed A in Room 254 of Medical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Medical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-14",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0029-014",
+        "type": "message",
+        "timestamp": "2026-11-30T15:57:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:a399e3af-f966-47d6-b149-ca9843360ea7",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0029-014",
+              "meta": {
+                "lastUpdated": "2026-11-30T15:57:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A08",
+                "display": "ADT/ACK - Update Patient Information"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://seattle-medical-center.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Seattle Medical Center",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://seattle-medical-center.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "update",
+                    "display": "Update"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0029"
+                },
+                {
+                  "reference": "Encounter/0029-04"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0029",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0029",
+              "meta": {
+                "lastUpdated": "2026-11-30T15:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0029"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "946-47-1783"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Long",
+                  "given": [
+                    "Owen"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 206-2894",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(887) 609-5634",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "owen.long@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "2002-05-26",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "8509 Second Lane"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Long",
+                    "given": [
+                      "Christopher"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(351) 258-1874"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0029-04",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0029-04",
+              "meta": {
+                "lastUpdated": "2026-11-25T17:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0029-04"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V370857"
+                }
+              ],
+              "status": "in-progress",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "UR",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0029",
+                "display": "Owen Long"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2026-11-25T17:57:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "386661006",
+                      "display": "Fever of unknown origin"
+                    }
+                  ],
+                  "text": "FUO workup"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "FUO workup"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0029-04-t01",
+                    "display": "Medical ICU - Room 254, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0029-04-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0029-04-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-MICU-254-A"
+                }
+              ],
+              "status": "active",
+              "name": "Medical ICU - Room 254, Bed A",
+              "description": "Bed A in Room 254 of Medical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Medical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:adt-msg-15",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "adt-msg-0029-015",
+        "type": "message",
+        "timestamp": "2026-11-30T17:57:46Z",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:e0054457-fcfb-4b84-8ec1-5db9b0ad5abb",
+            "resource": {
+              "resourceType": "MessageHeader",
+              "id": "msg-0029-015",
+              "meta": {
+                "lastUpdated": "2026-11-30T17:57:46Z"
+              },
+              "eventCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0003",
+                "code": "A03",
+                "display": "ADT/ACK - Discharge/End Visit"
+              },
+              "destination": [
+                {
+                  "name": "Hospital ADT System",
+                  "endpoint": "http://seattle-medical-center.example.org/fhir/adt"
+                }
+              ],
+              "source": {
+                "name": "Seattle Medical Center",
+                "software": "Hospital Information System",
+                "version": "5.2.1",
+                "endpoint": "http://seattle-medical-center.example.org/fhir"
+              },
+              "reason": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/message-reasons-encounter",
+                    "code": "discharge",
+                    "display": "Discharge"
+                  }
+                ]
+              },
+              "focus": [
+                {
+                  "reference": "Patient/0029"
+                },
+                {
+                  "reference": "Encounter/0029-04"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:patient-0029",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "0029",
+              "meta": {
+                "lastUpdated": "2026-11-30T15:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "MR",
+                        "display": "Medical Record Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/mrn",
+                  "value": "MRN-0029"
+                },
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "SS",
+                        "display": "Social Security Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hl7.org/fhir/sid/us-ssn",
+                  "value": "946-47-1783"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Long",
+                  "given": [
+                    "Owen"
+                  ]
+                }
+              ],
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "(479) 206-2894",
+                  "use": "home"
+                },
+                {
+                  "system": "phone",
+                  "value": "(887) 609-5634",
+                  "use": "mobile"
+                },
+                {
+                  "system": "email",
+                  "value": "owen.long@email.com"
+                }
+              ],
+              "gender": "male",
+              "birthDate": "2002-05-26",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "line": [
+                    "8509 Second Lane"
+                  ],
+                  "city": "Philadelphia",
+                  "state": "PA",
+                  "postalCode": "19101",
+                  "country": "USA"
+                }
+              ],
+              "maritalStatus": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                    "code": "W"
+                  }
+                ]
+              },
+              "contact": [
+                {
+                  "relationship": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                          "code": "N",
+                          "display": "Next-of-Kin"
+                        }
+                      ]
+                    }
+                  ],
+                  "name": {
+                    "family": "Long",
+                    "given": [
+                      "Christopher"
+                    ]
+                  },
+                  "telecom": [
+                    {
+                      "system": "phone",
+                      "value": "(351) 258-1874"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:encounter-0029-04",
+            "resource": {
+              "resourceType": "Encounter",
+              "id": "0029-04",
+              "meta": {
+                "lastUpdated": "2026-11-25T17:57:46Z"
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "http://hospital.example.org/encounter-id",
+                  "value": "ENC-0029-04"
+                },
+                {
+                  "use": "usual",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                        "code": "VN",
+                        "display": "Visit Number"
+                      }
+                    ]
+                  },
+                  "system": "http://hospital.example.org/visit-number",
+                  "value": "V231430"
+                }
+              ],
+              "status": "finished",
+              "class": {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              },
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "32485007",
+                      "display": "Hospital admission"
+                    }
+                  ]
+                }
+              ],
+              "priority": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
+                    "code": "EM",
+                    "display": "emergency"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "Patient/0029",
+                "display": "Owen Long"
+              },
+              "participant": [
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ATND",
+                          "display": "attender"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                },
+                {
+                  "type": [
+                    {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                          "code": "ADM",
+                          "display": "admitter"
+                        }
+                      ]
+                    }
+                  ],
+                  "individual": {
+                    "reference": "Practitioner/dr-007",
+                    "display": "Dr. Jennifer Martinez"
+                  }
+                }
+              ],
+              "period": {
+                "start": "2026-11-25T17:57:46Z",
+                "end": "2026-11-30T17:57:46Z"
+              },
+              "reasonCode": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "386661006",
+                      "display": "Fever of unknown origin"
+                    }
+                  ],
+                  "text": "FUO workup"
+                }
+              ],
+              "diagnosis": [
+                {
+                  "condition": {
+                    "display": "FUO workup"
+                  },
+                  "use": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                        "code": "AD",
+                        "display": "Admission diagnosis"
+                      }
+                    ]
+                  },
+                  "rank": 1
+                }
+              ],
+              "location": [
+                {
+                  "location": {
+                    "reference": "Location/loc-0029-04-t01",
+                    "display": "Medical ICU - Room 254, Bed A"
+                  },
+                  "status": "active",
+                  "physicalType": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                        "code": "bd",
+                        "display": "Bed"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "serviceProvider": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "hospitalization": {
+                "admitSource": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/admit-source",
+                      "code": "hosp-trans",
+                      "display": "From ED"
+                    }
+                  ]
+                },
+                "dischargeDisposition": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                      "code": "home",
+                      "display": "Home"
+                    }
+                  ],
+                  "text": "Patient discharged to home"
+                }
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:location-loc-0029-04-t01",
+            "resource": {
+              "resourceType": "Location",
+              "id": "loc-0029-04-t01",
+              "meta": {
+                "lastUpdated": "2025-12-11T04:12:46Z"
+              },
+              "identifier": [
+                {
+                  "system": "http://hospital.example.org/location-id",
+                  "value": "LOC-MICU-254-A"
+                }
+              ],
+              "status": "active",
+              "name": "Medical ICU - Room 254, Bed A",
+              "description": "Bed A in Room 254 of Medical ICU",
+              "mode": "instance",
+              "type": [
+                {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                      "code": "ICU",
+                      "display": "Medical ICU"
+                    }
+                  ]
+                }
+              ],
+              "physicalType": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                    "code": "bd",
+                    "display": "Bed"
+                  }
+                ]
+              },
+              "partOf": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              },
+              "managingOrganization": {
+                "reference": "Organization/hosp-002",
+                "display": "Seattle Medical Center"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
